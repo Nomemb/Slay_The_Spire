@@ -10,6 +10,7 @@ public class ButtonInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public GameObject button;
     public Image image;
     public GameObject text;
+    public GameObject connectMenu;
 
     private RectTransform textTransform;           
     private Vector2 initOffset;                     // 초기의 RectTransform Left 값
@@ -29,20 +30,16 @@ public class ButtonInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     IEnumerator OnPointerInteraction()
     {
-        Debug.Log("OnPointer");
         image.color = new Color(image.color.r, image.color.g, image.color.b, 255);
-
 
         // 즉시 이동
         textTransform.offsetMin = new Vector2(initOffset.x + moveUIDistance, initOffset.y);
-        Debug.Log(textTransform.offsetMin);
 
         yield return null;
     }
 
     IEnumerator OutPointerInteraction()
     {
-        Debug.Log("OutPointer");
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
 
         // 즉시 이동
