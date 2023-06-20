@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum characterType { Ironclad, Silent, Defect, Watcher}
-public abstract class BaseCharacter
+public abstract class BaseCharacter : MonoBehaviour
 {
     public int hp { get; protected set; }               // 현재 체력
     public int maxHp { get; protected set; }            // 최대 체력   
