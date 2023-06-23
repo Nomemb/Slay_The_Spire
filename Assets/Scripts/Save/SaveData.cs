@@ -1,12 +1,14 @@
 using System.Collections.Generic;
-using System.IO;
+
 
 [System.Serializable]
 public class SaveData
 {
-    public List<string> testDataA = new List<string>();
-    public List<int> testDataB = new List<int>();
+    public List<string> cardData = new List<string>();
 
+    public characterType characterType;
+    public int hp;
+    public int maxHp;
     public int gold;
-    public int power;
+    public int addedStrength;
 }
