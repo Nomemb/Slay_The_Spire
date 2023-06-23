@@ -31,68 +31,13 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 102900000, guid: 0d21d08576f41f743a1e72535542cd3f, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: 2062059000, guid: e7befb1006651684f9faca450ae0a78e, type: 3}
-  - {fileID: 21300000, guid: 29c6cf80a1912124c9602cfcb986e90c, type: 3}
-  - {fileID: 21300000, guid: be5e4ef07e6b9d3439bcbc8674a385a1, type: 3}
-  - {fileID: 21300000, guid: e29ff01117c277a43883b9b53c8ec565, type: 3}
-  - {fileID: -811105410, guid: dcfd6331beb91be43aec99e94c6935f1, type: 3}
-  - {fileID: 21300000, guid: 3511c4617a8d48b4285078a3dcee4b47, type: 3}
-  - {fileID: 21300000, guid: c1c331a179b48fe438c847609576e4f0, type: 3}
-  - {fileID: 21300000, guid: 146ddb530648ab245ac3fccb70a4dcf3, type: 3}
-  - {fileID: 21300000, guid: 4d1515f42e1b29847af1b3e2f5c1f68d, type: 3}
-  - {fileID: 21300000, guid: b831e365c62a16642bb5056f3fbfb652, type: 3}
-  - {fileID: 21300000, guid: 6a6fbc563c12387498a0b97a15301238, type: 3}
-  - {fileID: 21300000, guid: a68818769580d8049a3b771a309d62d8, type: 3}
-  - {fileID: 21300000, guid: a3940b38d727eaa4a98988935c2bc6d2, type: 3}
-  - {fileID: 21300000, guid: 9c2c5398cf022f443ad910d3749b78f0, type: 3}
-  - {fileID: 403634510, guid: d604d9c85e0cf5f488e685e76b1ec3d6, type: 3}
-  - {fileID: 21300000, guid: 260d2ad9fe9e1fc4bb73a65f250ddf0f, type: 3}
-  - {fileID: 21300000, guid: 19e7e36a33bec0c4985fd0d1a5df2ab8, type: 3}
-  - {fileID: -1499275737, guid: db2a337a90dd67d449e151628221b1f9, type: 3}
-  - {fileID: 21300000, guid: 172e1bfcb8bd6224f8555e4756f0ea3b, type: 3}
-  - {fileID: 21300000, guid: f686747d60f39524aa4b44ba95ec9b75, type: 3}
-  - {fileID: 21300000, guid: b53fa8ad894b127429b1ad54e38e1054, type: 3}
-  - {fileID: 21300000, guid: 33f80ddd0bdf7014ba9496ce99610989, type: 3}
-  - {fileID: 21300000, guid: f9dbae2e41be71d4fbd8dfd3de297ada, type: 3}
-  - {fileID: 21300000, guid: 61a57a7e0fc345d4a83250f12e763dab, type: 3}
-  - {fileID: 21300000, guid: 6ea1fb9e8cb6eac4681811cf48b015d8, type: 3}
-  - {fileID: 21300000, guid: 8c1c80be04d7a81478bbdf20f16e1f12, type: 3}
-  - {fileID: 21300000, guid: d073bf0f81dbe2946b0a935fc0a829d6, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - menuPanel_0
-  - menu_option_highlight
-  - loop
-  - lock
-  - menuPanelFrame_0
-  - standard
-  - scrollBarTrackTop
-  - input_settings
-  - history
-  - card
-  - daily
-  - charstat
-  - menuPanel4
-  - scrollBarTrackMid
-  - menuPanel2_0
-  - leaderboards
-  - scrollBarTrackLeft
-  - menuPanel3_0
-  - credits
-  - gamesettings
-  - scrollBarTrackBottom
-  - scrollBarTrackHorizontalMid
-  - relics
-  - scrollBarHorizontalTrain
-  - scrollBarTrain
-  - scrollBarTrackRight
-  - potion
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
