@@ -1,0 +1,1883 @@
+fileFormatVersion: 2
+guid: 3261c67e4c354fc4bacbbc55a93f5b99
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue/attack/all_for_one
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 733
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49f78ca7cc277350800000000000000
+      internalID: 6014325063481293133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/ball_lightning
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 542
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e070e25489fc9c0800000000000000
+      internalID: -3904734929014551029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/barrage
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 351
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601c2f300999ed560800000000000000
+      internalID: 7340473286481068294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/doom_and_gloom
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 160
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5044f74cfbdce90800000000000000
+      internalID: -7003730994821593657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/meteor_strike
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 921
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a509a0bf81ce0c80800000000000000
+      internalID: -8354527435837340256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/strike
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1109
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37854771199a4b9d0800000000000000
+      internalID: -2759394231042418573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/sweeping_beam
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1486
+        width: 249
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860fb179300484a50800000000000000
+      internalID: 6505520045900951656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/creative_ai
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 924
+        width: 250
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de943c064dad38e50800000000000000
+      internalID: 6810527667205655021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/echo_form
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1112
+        width: 250
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78fba9ae52280a40800000000000000
+      internalID: 5334551548589242491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/machine_learning
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 160
+        width: 250
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aeb2d63d85ad7a40800000000000000
+      internalID: 5367628356824252069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/self_repair
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1299
+        width: 250
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f84d9da11e344e0800000000000000
+      internalID: -1998506304182382724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/static_discharge
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 160
+        width: 250
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d64fca599451ae0800000000000000
+      internalID: -1579275187122836126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/hologram
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1287
+        width: 245
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9c8f564bc9eed30800000000000000
+      internalID: 4462676579389589948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/turbo
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1478
+        width: 245
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631ab5a906d61f030800000000000000
+      internalID: 3526720244881793334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/dramatic_entrance
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1657
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4db75b21dfe8e080800000000000000
+      internalID: -9157806160603529905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/expunger
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1656
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1c235d9e4872120800000000000000
+      internalID: 2389024267182457336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/flash_of_steel
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1291
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12420c0cc1eda6e50800000000000000
+      internalID: 6803494402170823713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/hand_of_greed
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 539
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6804b25c551599350800000000000000
+      internalID: 6023935405406765190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/mind_blast
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 347
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f772b4810010f10800000000000000
+      internalID: 2234066994492571528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/ritual_dagger
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1470
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad00fc9be30bbefe0800000000000000
+      internalID: -1158638695665958694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/smite
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 908
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1757f5111287da970800000000000000
+      internalID: 8767796132980946289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/swift_strike
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1095
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4918ebbe25074e0800000000000000
+      internalID: -1985996263203433251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/through_violence
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1282
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae8259412b76a580800000000000000
+      internalID: -8816223837636882784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/become_almighty
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 160
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc837c9fbe58d770800000000000000
+      internalID: 8635756462539508946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/omega
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 542
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0c2ad2e1f6c9f80800000000000000
+      internalID: -8098475854513651537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/dagger_throw
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 160
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88da934db2c08500800000000000000
+      internalID: 396530885347432587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/dash
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1669
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1da53ca1e085b60800000000000000
+      internalID: 7734947868118274558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/die_die_die
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1297
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39bf6c3eb0bbce760800000000000000
+      internalID: 7488565940150795155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/endless_agony
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1861
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c667754f49776660800000000000000
+      internalID: 7378999895844677317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/eviscerate
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1843
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29998dbb5932c0f0800000000000000
+      internalID: -1098252292940261075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/finisher
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1104
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba1e137c0c2ef3c0800000000000000
+      internalID: -4323970160246515024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/flechettes
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1478
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e282187555139d20800000000000000
+      internalID: 3283992010114106083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/flying_knee
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 1843
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51c40b7b65a3b8c0800000000000000
+      internalID: -3984659364248764069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/glass_knife
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1665
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddcb501b05d0ce00800000000000000
+      internalID: 1063083755555245523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/grand_finale
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1852
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1640f0c23ff7a470800000000000000
+      internalID: 8405967822960739867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/heel_hook
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1100
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0a7b572cdd16140800000000000000
+      internalID: 4711290512474611940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/predator
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 535
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2164e16e8c5f525b0800000000000000
+      internalID: -5393634735503292910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/skewer
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 721
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc595ab6009b4d780800000000000000
+      internalID: -8659092772069468721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/slice
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 721
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a8298ed2aecf0b0800000000000000
+      internalID: -5693418346006803968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/sneaky_strike
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 908
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bb47f19edc9ed00800000000000000
+      internalID: 1002558793205463873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/empty_fist
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1844
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5754b6f9fd3792d80800000000000000
+      internalID: -8274955436027067019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/eruption
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 730
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebfac13f2b0da210800000000000000
+      internalID: 1345744160980401120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/fear_no_evil
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 917
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c12d27f1a752630800000000000000
+      internalID: 3901658927675350037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/flurry_of_blows
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1484
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5af1ed77f8862c0800000000000000
+      internalID: -4438139687783127640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/flying_sleeves
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1671
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee688347d3df8360800000000000000
+      internalID: 7174185652928933602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/follow_up
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1858
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac622c7eb08778b0800000000000000
+      internalID: -5154509692887470933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/just_lucky
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 347
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424f69c3f47b1f270800000000000000
+      internalID: 8282602740657878052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/lessons_learned
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 347
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021d8e5cfbea0b0d0800000000000000
+      internalID: -3409032779237109472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/ragnarok
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 722
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be706c039fdb2710800000000000000
+      internalID: 1669673909531737778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/reach_heaven
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1096
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62dcdfbb8237ac600800000000000000
+      internalID: 489330128312978726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/sands_of_time
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 534
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c7dd900a0ced0a0800000000000000
+      internalID: -6854829789218505588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/sash_whip
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 534
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f104e3b63b93f50800000000000000
+      internalID: 6861712780462923531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/signature_move
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 721
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c9f75611e130a60800000000000000
+      internalID: 7638982453016632353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/strike
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 908
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42576779d7b0406f0800000000000000
+      internalID: -719437406432496348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/talk_to_the_hand
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1095
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1ab699ee5fe06a0800000000000000
+      internalID: -6480972408614575658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/tantrum
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1095
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57320c80eec4e0890800000000000000
+      internalID: -7489964545037819019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/wallop
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1282
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091961a1a8e106d50800000000000000
+      internalID: 6728411421783527824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/weave
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1469
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f669dd378c3d93e0800000000000000
+      internalID: -2045412104200427792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/wheel_kick
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1469
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5c1102ff62f9190800000000000000
+      internalID: -7953595539716454935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/windmill_strike
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1656
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ed378d22d7ea890800000000000000
+      internalID: -7444875545383018919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/devotion
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 160
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b085c3ddaf3eaa0800000000000000
+      internalID: -6132782439441364212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/establishment
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 542
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb85b4b84cace6b50800000000000000
+      internalID: 6588426250388986047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/fasting
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 351
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c60c932eeb9bf60800000000000000
+      internalID: 8050675687742270548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/like_water
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 160
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126cf9de0e611e3a0800000000000000
+      internalID: -6637999220452243935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/master_reality
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 733
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbdfb614c47cab2c0800000000000000
+      internalID: -4414997354354311748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/rushdown
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 351
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb9c992b8e44df40800000000000000
+      internalID: 5752308983664516085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/study
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 160
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983f2c316655447e0800000000000000
+      internalID: -1782205655625305207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/deceive_reality
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 250
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f53ec0ef2a05af0800000000000000
+      internalID: -409648354069094502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/drop_kick
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1674
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a23850a03a35f300800000000000000
+      internalID: 285198131930870433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/feed
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1843
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3387dc755e30d27f0800000000000000
+      internalID: -635847688833894349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/fiend_fire
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1656
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bd4b5c2355b9370800000000000000
+      internalID: 8330345612305554267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/headbutt
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 726
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b7391bb39b86940800000000000000
+      internalID: 5289681428380089199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/heavy_blade
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 913
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c40217f9cbfc060800000000000000
+      internalID: 6976001740803951677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/immolate
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1856
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b729c7e5c8cbc1f90800000000000000
+      internalID: -6981498011264445829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/iron_wave
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 348
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e88f1511bb64300800000000000000
+      internalID: 236081713547611699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/rampage
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 909
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c7571ad5631b480800000000000000
+      internalID: -8885260814056588252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/reaper
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1283
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87be092f5b5dce010800000000000000
+      internalID: 1219584576545942392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/searing_blow
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 534
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91513cb6389843ad0800000000000000
+      internalID: -2723400677110639335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/uppercut
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1282
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e685d72d182579390800000000000000
+      internalID: -7811684311115147154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/wild_strike
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1469
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee98e761e5a9ec3a0800000000000000
+      internalID: -6643202671429907986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blue/attack/all_for_one: 6014325063481293133
+      blue/attack/ball_lightning: -3904734929014551029
+      blue/attack/barrage: 7340473286481068294
+      blue/attack/doom_and_gloom: -7003730994821593657
+      blue/attack/meteor_strike: -8354527435837340256
+      blue/attack/strike: -2759394231042418573
+      blue/attack/sweeping_beam: 6505520045900951656
+      blue/power/creative_ai: 6810527667205655021
+      blue/power/echo_form: 5334551548589242491
+      blue/power/machine_learning: 5367628356824252069
+      blue/power/self_repair: -1998506304182382724
+      blue/power/static_discharge: -1579275187122836126
+      blue/skill/hologram: 4462676579389589948
+      blue/skill/turbo: 3526720244881793334
+      colorless/attack/dramatic_entrance: -9157806160603529905
+      colorless/attack/expunger: 2389024267182457336
+      colorless/attack/flash_of_steel: 6803494402170823713
+      colorless/attack/hand_of_greed: 6023935405406765190
+      colorless/attack/mind_blast: 2234066994492571528
+      colorless/attack/ritual_dagger: -1158638695665958694
+      colorless/attack/smite: 8767796132980946289
+      colorless/attack/swift_strike: -1985996263203433251
+      colorless/attack/through_violence: -8816223837636882784
+      colorless/power/become_almighty: 8635756462539508946
+      colorless/power/omega: -8098475854513651537
+      green/attack/dagger_throw: 396530885347432587
+      green/attack/dash: 7734947868118274558
+      green/attack/die_die_die: 7488565940150795155
+      green/attack/endless_agony: 7378999895844677317
+      green/attack/eviscerate: -1098252292940261075
+      green/attack/finisher: -4323970160246515024
+      green/attack/flechettes: 3283992010114106083
+      green/attack/flying_knee: -3984659364248764069
+      green/attack/glass_knife: 1063083755555245523
+      green/attack/grand_finale: 8405967822960739867
+      green/attack/heel_hook: 4711290512474611940
+      green/attack/predator: -5393634735503292910
+      green/attack/skewer: -8659092772069468721
+      green/attack/slice: -5693418346006803968
+      green/attack/sneaky_strike: 1002558793205463873
+      purple/attack/empty_fist: -8274955436027067019
+      purple/attack/eruption: 1345744160980401120
+      purple/attack/fear_no_evil: 3901658927675350037
+      purple/attack/flurry_of_blows: -4438139687783127640
+      purple/attack/flying_sleeves: 7174185652928933602
+      purple/attack/follow_up: -5154509692887470933
+      purple/attack/just_lucky: 8282602740657878052
+      purple/attack/lessons_learned: -3409032779237109472
+      purple/attack/ragnarok: 1669673909531737778
+      purple/attack/reach_heaven: 489330128312978726
+      purple/attack/sands_of_time: -6854829789218505588
+      purple/attack/sash_whip: 6861712780462923531
+      purple/attack/signature_move: 7638982453016632353
+      purple/attack/strike: -719437406432496348
+      purple/attack/talk_to_the_hand: -6480972408614575658
+      purple/attack/tantrum: -7489964545037819019
+      purple/attack/wallop: 6728411421783527824
+      purple/attack/weave: -2045412104200427792
+      purple/attack/wheel_kick: -7953595539716454935
+      purple/attack/windmill_strike: -7444875545383018919
+      purple/power/devotion: -6132782439441364212
+      purple/power/establishment: 6588426250388986047
+      purple/power/fasting: 8050675687742270548
+      purple/power/like_water: -6637999220452243935
+      purple/power/master_reality: -4414997354354311748
+      purple/power/rushdown: 5752308983664516085
+      purple/power/study: -1782205655625305207
+      purple/skill/deceive_reality: -409648354069094502
+      red/attack/drop_kick: 285198131930870433
+      red/attack/feed: -635847688833894349
+      red/attack/fiend_fire: 8330345612305554267
+      red/attack/headbutt: 5289681428380089199
+      red/attack/heavy_blade: 6976001740803951677
+      red/attack/immolate: -6981498011264445829
+      red/attack/iron_wave: 236081713547611699
+      red/attack/rampage: -8885260814056588252
+      red/attack/reaper: 1219584576545942392
+      red/attack/searing_blow: -2723400677110639335
+      red/attack/uppercut: -7811684311115147154
+      red/attack/wild_strike: -6643202671429907986
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

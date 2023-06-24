@@ -32,7 +32,7 @@ public class DataManager : MonoBehaviour
         {
             for (int i = 0; i < saveData.cardData.Count; i++)
             {
-                GameManager.instance.cardData.Add(saveData.cardData[i]);
+                GameManager.instance.fixedDeck.Add(saveData.cardData[i]);
             }
 
             GameManager.instance.currentType = saveData.characterType;
@@ -49,9 +49,9 @@ public class DataManager : MonoBehaviour
     {
         SaveData saveData = new SaveData();
 
-        for(int i=0; i < 10; i++)
+        for(int i=0; i < GameManager.instance.fixedDeck.Count; i++)
         {
-            saveData.cardData.Add("카드 데이터 no." + i);
+            saveData.cardData.Add(GameManager.instance.fixedDeck[i]);
         }
 
         saveData.characterType = GameManager.instance.currentType;

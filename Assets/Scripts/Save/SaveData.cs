@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class SaveData
 {
-    public List<string> cardData = new List<string>();
+    public List<Card> cardData = new List<Card>();
 
     public characterType characterType;
     public int hp;

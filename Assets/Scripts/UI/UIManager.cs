@@ -45,7 +45,7 @@ public class UIManager : MonoBehaviour
         playerInfo.heartText.text = GameManager.instance.playerHp + "/" + GameManager.instance.playerMaxHp;
         playerInfo.goldText.text = GameManager.instance.playerGold.ToString();
 
-        deckCount.text = GameManager.instance.cardData.Count.ToString();
+        deckCount.text = GameManager.instance.fixedDeck.Count.ToString();
     }
 
     public void HpUIUpdate()
@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
 
     public void DeckCountUIUpdate()
     {
-        deckCount.text = GameManager.instance.cardData.Count.ToString();
+        deckCount.text = GameManager.instance.fixedDeck.Count.ToString();
     }
 
 }

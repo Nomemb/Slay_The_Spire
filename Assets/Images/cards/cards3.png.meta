@@ -1,0 +1,2059 @@
+fileFormatVersion: 2
+guid: 00d48660e6b34f04db0d9666ab6658e0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue/attack/beam_cell
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1483
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722c5fd4ceda68b70800000000000000
+      internalID: 8900992943976202791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/blizzard
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1483
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89463a7bed931d600800000000000000
+      internalID: 491237463086556312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/claw
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1674
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e92800f6fd0e740800000000000000
+      internalID: 5179385239318994497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/cold_snap
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1857
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edbdff168d5d09d0800000000000000
+      internalID: -2806484162138227232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/compile_driver
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1857
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c8ac64e17317480800000000000000
+      internalID: -8903274385158534070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/core_surge
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1858
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a53f827b3a9daf0800000000000000
+      internalID: -371085487219975662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/biased_cognition
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 367
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4250486f7b4d9e460800000000000000
+      internalID: 7271576959946327332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/buffer
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 370
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2333f6a2a7d69d00800000000000000
+      internalID: 979207062585291563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/capacitor
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1670
+        width: 250
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0ba8a476c170ae0800000000000000
+      internalID: -1583265514039627568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/defragment
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 553
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5950b34c5c6f6c0800000000000000
+      internalID: -4109880163334515215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/electrodynamics
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 556
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa44d8b4b42990d0800000000000000
+      internalID: -3415658483770176852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/heatsinks
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 742
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e24b33d79066710800000000000000
+      internalID: 1686045543839837850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/hello_world
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 742
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b0cc28de6b315960800000000000000
+      internalID: 7588912194355249337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/loop
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 925
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4037397140b4971f0800000000000000
+      internalID: -1046722957439438076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/power/storm
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 1114
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ae824ced1730840800000000000000
+      internalID: 5189116397248637514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/white_noise
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6891489d0c119dbf0800000000000000
+      internalID: -299188380262721146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/zap
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e34375011baf5a30800000000000000
+      internalID: 4206268666581566438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/attack/bite
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1483
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2aa3453761539d30800000000000000
+      internalID: 4436979561607178797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/live_forever
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 925
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a9e6dc7470fcbbc0800000000000000
+      internalID: -3765870805287245403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/magnetism
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 925
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276f3a46f47555fb0800000000000000
+      internalID: -4659722240942410126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/mayhem
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 928
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa82c495b66c2610800000000000000
+      internalID: 1597764897880574714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/panache
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1111
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab3e105f47d7e1e0800000000000000
+      internalID: -2168527959909057627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/power/sadistic_nature
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1111
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e54738079493c00800000000000000
+      internalID: 880815949718249107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/violence
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c6f985ba1f059d0800000000000000
+      internalID: -2787462451113792390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/wrath
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31fcd52d6d57eacb0800000000000000
+      internalID: -4850810183118631149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/writhe
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03aa231630b02d7f0800000000000000
+      internalID: -589396492088595920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/all_out_attack
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1297
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ebb77758d5cc7e0800000000000000
+      internalID: -1743916127882592716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/backstab
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1297
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0bc9de805f052200800000000000000
+      internalID: 154546600882588429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/bane
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1300
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df819838dc1edc2c0800000000000000
+      internalID: -4409620187334502147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/choke
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1671
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e7c09cf1a47cb40800000000000000
+      internalID: 5460414573587496597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/attack/dagger_spray
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 1861
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6503442ee14588b0800000000000000
+      internalID: -5150638107761900179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/a_thousand_cuts
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 184
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b313c552b8d18e0800000000000000
+      internalID: -1721066490008880363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/accuracy
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 367
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8800546aad4b1d080800000000000000
+      internalID: -9164344915536838520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/after_image
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 367
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6103eb6471225f750800000000000000
+      internalID: 6338009533960302614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/caltrops
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 553
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9db5fb517d8dbf60800000000000000
+      internalID: 8051747226821967258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/envenom
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 739
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253d1fa9150b3c810800000000000000
+      internalID: 1784463741907227474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/footwork
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 739
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1678e57d90cbc2ed0800000000000000
+      internalID: -2437366547860256927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/infinite_blades
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 925
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac7849db85351df0800000000000000
+      internalID: -210202932840727377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/noxious_fumes
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1111
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7338266503899a410800000000000000
+      internalID: 1488888485197808439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/tools_of_the_trade
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 1114
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e8b181819a3ce20800000000000000
+      internalID: 3369722867152031283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/venomology
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1297
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b871774d6d712d0800000000000000
+      internalID: -3307939193260897456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/well_laid_plans
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1297
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3d449953ba2f6e0800000000000000
+      internalID: -1805192253929106494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/power/wraith_form
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1297
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9d45a72c46245b0800000000000000
+      internalID: -5385631417942877743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/bowling_bash
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1487
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ceeb50f55183a9b0800000000000000
+      internalID: -5070066549384286523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/brilliance
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1487
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1df61d41cc3bc40800000000000000
+      internalID: 5526985557498909129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/carve_reality
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1671
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7e1ae0b83cbe9e0800000000000000
+      internalID: -1590963041331976265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/conclude
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1858
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b9e47f7557262c0800000000000000
+      internalID: -4439857261962159281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/consecrate
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1858
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdaeba311c60dee0800000000000000
+      internalID: -1238371076271067724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/crush_joints
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1861
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97cca958664a0b40800000000000000
+      internalID: 5407211716606740380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/attack/cut_through_fate
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 1861
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210d4e9f4d2ce6c60800000000000000
+      internalID: 7813396623515766802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/battle_hymn
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 367
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e18bddf4aae31610800000000000000
+      internalID: 1590873087746474468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/deva_form
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 556
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44717d6dc5329fc0800000000000000
+      internalID: -3489667604837993396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/foresight
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 739
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6063ffa7d1aa48aa0800000000000000
+      internalID: -6159611346741676538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/mental_fortress
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 928
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267cd197d043829e0800000000000000
+      internalID: -1646008431332702366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/power/nirvana
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1111
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5df8b08fbe95950800000000000000
+      internalID: 6438436592881227253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/unraveling
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f048987cb8845c0800000000000000
+      internalID: -4230978160792694882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/vault
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b1a51835f45a8f0800000000000000
+      internalID: -529930161075119335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/vigilance
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bb03e000a943250800000000000000
+      internalID: 5923528734927797052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/wave_of_the_hand
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb1254c383b0daf0800000000000000
+      internalID: -373601390555948033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/wish
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ecb40ca0961d01e0800000000000000
+      internalID: -2230101429861434138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/worship
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9211f119a38ef60800000000000000
+      internalID: 8063759527772760523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/wreathe_of_flame
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc60c6ad45cdb7010800000000000000
+      internalID: 1187785183742133967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/anger
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1297
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3abf9e706b05570800000000000000
+      internalID: 8453456645681030126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/bash
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1300
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e561e0686d95c0ca0800000000000000
+      internalID: -6049361421558475170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/blood_for_blood
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1484
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47051279c762aac80800000000000000
+      internalID: -8310787845805485964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/bludgeon
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1484
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3e52b5c445c98d0800000000000000
+      internalID: -2838300978226797624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/body_slam
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1484
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc88f549da0b6630800000000000000
+      internalID: 3921239828854246578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/carnage
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1670
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0444bc1e553faf820800000000000000
+      internalID: 2952940055880746048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/clash
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1671
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784ccfa17fe1dbf40800000000000000
+      internalID: 5745782746253149319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/cleave
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1674
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8261f5b1cffd7520800000000000000
+      internalID: 2701596558938432140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/clothesline
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 1674
+        width: 249
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75550f5a0b40c0fd0800000000000000
+      internalID: -2374517746786347689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/barricade
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 367
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0c18a6622b697d0800000000000000
+      internalID: -2911944230983057244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/berserk
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 367
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47116c4c7cd820e80800000000000000
+      internalID: -8213846881231040140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/brutality
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 370
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f51905a8a5c9310800000000000000
+      internalID: 1413103933191184206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/combust
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 553
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80deefe8f2413c30800000000000000
+      internalID: 4337321553079226506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/corruption
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 553
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f3f880983043c40800000000000000
+      internalID: 5491017732760485780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/dark_embrace
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 553
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9da980f107e5b770800000000000000
+      internalID: 8626054656814591390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/demon_form
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 553
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129ba6d46db06d2c0800000000000000
+      internalID: -4407322170285704927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/evolve
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 739
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff789d2b0757de90800000000000000
+      internalID: -7001031390202920971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/feel_no_pain
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 739
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8173a75575c9ad0800000000000000
+      internalID: -2694182452440131347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/fire_breathing
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 739
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a46945f49290b70800000000000000
+      internalID: 8865662762153822857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/inflame
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 925
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3083c9b1e77caaed0800000000000000
+      internalID: -2401888106805708797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/juggernaut
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 925
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7055dcca789f8e0800000000000000
+      internalID: -1659145811460290609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/metallicize
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1111
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1c611d135f98340800000000000000
+      internalID: 4866690466660663778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/power/rupture
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1111
+        width: 250
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eca1ea82931a5820800000000000000
+      internalID: 2907658029537275111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/warcry
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651d49b5ff0186cb0800000000000000
+      internalID: -4870624308062006954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: status/void
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a58799387b0ad00800000000000000
+      internalID: 981986494610168336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: status/wound
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 184
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372c6983015e18d70800000000000000
+      internalID: 9043761384568308339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blue/attack/beam_cell: 8900992943976202791
+      blue/attack/blizzard: 491237463086556312
+      blue/attack/claw: 5179385239318994497
+      blue/attack/cold_snap: -2806484162138227232
+      blue/attack/compile_driver: -8903274385158534070
+      blue/attack/core_surge: -371085487219975662
+      blue/power/biased_cognition: 7271576959946327332
+      blue/power/buffer: 979207062585291563
+      blue/power/capacitor: -1583265514039627568
+      blue/power/defragment: -4109880163334515215
+      blue/power/electrodynamics: -3415658483770176852
+      blue/power/heatsinks: 1686045543839837850
+      blue/power/hello_world: 7588912194355249337
+      blue/power/loop: -1046722957439438076
+      blue/power/storm: 5189116397248637514
+      blue/skill/white_noise: -299188380262721146
+      blue/skill/zap: 4206268666581566438
+      colorless/attack/bite: 4436979561607178797
+      colorless/power/live_forever: -3765870805287245403
+      colorless/power/magnetism: -4659722240942410126
+      colorless/power/mayhem: 1597764897880574714
+      colorless/power/panache: -2168527959909057627
+      colorless/power/sadistic_nature: 880815949718249107
+      colorless/skill/violence: -2787462451113792390
+      colorless/skill/wrath: -4850810183118631149
+      curse/writhe: -589396492088595920
+      green/attack/all_out_attack: -1743916127882592716
+      green/attack/backstab: 154546600882588429
+      green/attack/bane: -4409620187334502147
+      green/attack/choke: 5460414573587496597
+      green/attack/dagger_spray: -5150638107761900179
+      green/power/a_thousand_cuts: -1721066490008880363
+      green/power/accuracy: -9164344915536838520
+      green/power/after_image: 6338009533960302614
+      green/power/caltrops: 8051747226821967258
+      green/power/envenom: 1784463741907227474
+      green/power/footwork: -2437366547860256927
+      green/power/infinite_blades: -210202932840727377
+      green/power/noxious_fumes: 1488888485197808439
+      green/power/tools_of_the_trade: 3369722867152031283
+      green/power/venomology: -3307939193260897456
+      green/power/well_laid_plans: -1805192253929106494
+      green/power/wraith_form: -5385631417942877743
+      purple/attack/bowling_bash: -5070066549384286523
+      purple/attack/brilliance: 5526985557498909129
+      purple/attack/carve_reality: -1590963041331976265
+      purple/attack/conclude: -4439857261962159281
+      purple/attack/consecrate: -1238371076271067724
+      purple/attack/crush_joints: 5407211716606740380
+      purple/attack/cut_through_fate: 7813396623515766802
+      purple/power/battle_hymn: 1590873087746474468
+      purple/power/deva_form: -3489667604837993396
+      purple/power/foresight: -6159611346741676538
+      purple/power/mental_fortress: -1646008431332702366
+      purple/power/nirvana: 6438436592881227253
+      purple/skill/unraveling: -4230978160792694882
+      purple/skill/vault: -529930161075119335
+      purple/skill/vigilance: 5923528734927797052
+      purple/skill/wave_of_the_hand: -373601390555948033
+      purple/skill/wish: -2230101429861434138
+      purple/skill/worship: 8063759527772760523
+      purple/skill/wreathe_of_flame: 1187785183742133967
+      red/attack/anger: 8453456645681030126
+      red/attack/bash: -6049361421558475170
+      red/attack/blood_for_blood: -8310787845805485964
+      red/attack/bludgeon: -2838300978226797624
+      red/attack/body_slam: 3921239828854246578
+      red/attack/carnage: 2952940055880746048
+      red/attack/clash: 5745782746253149319
+      red/attack/cleave: 2701596558938432140
+      red/attack/clothesline: -2374517746786347689
+      red/power/barricade: -2911944230983057244
+      red/power/berserk: -8213846881231040140
+      red/power/brutality: 1413103933191184206
+      red/power/combust: 4337321553079226506
+      red/power/corruption: 5491017732760485780
+      red/power/dark_embrace: 8626054656814591390
+      red/power/demon_form: -4407322170285704927
+      red/power/evolve: -7001031390202920971
+      red/power/feel_no_pain: -2694182452440131347
+      red/power/fire_breathing: 8865662762153822857
+      red/power/inflame: -2401888106805708797
+      red/power/juggernaut: -1659145811460290609
+      red/power/metallicize: 4866690466660663778
+      red/power/rupture: 2907658029537275111
+      red/skill/warcry: -4870624308062006954
+      status/void: 981986494610168336
+      status/wound: 9043761384568308339
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

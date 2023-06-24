@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f72288804b02c7469618a3b473af2b3
+guid: e05ddc44500d2a54db8de749491604f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scene2_0
+      name: blue/attack/ftl
       rect:
         serializedVersion: 2
-        x: 2
-        y: 908
-        width: 198
-        height: 114
+        x: 1
+        y: 89
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f64e1fd3000000000800000000000000
-      internalID: 1039262831
+      spriteID: 23b5e3ac5178f8bf0800000000000000
+      internalID: -319888520862868686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_1
+      name: blue/attack/go_for_the_eyes
       rect:
         serializedVersion: 2
-        x: 2
-        y: 865
-        width: 245
-        height: 41
+        x: 1
+        y: 276
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b10d88a6000000000800000000000000
-      internalID: 1787351067
+      spriteID: 97853e7da23eb7530800000000000000
+      internalID: 3853923679295723641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_2
+      name: blue/attack/hyper_beam
       rect:
         serializedVersion: 2
-        x: 9
-        y: 624
-        width: 690
-        height: 239
+        x: 1
+        y: 463
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a76d591000000000800000000000000
-      internalID: 425551776
+      spriteID: 18fda4f1b2bd33720800000000000000
+      internalID: 2824842369546510209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_3
+      name: blue/attack/lock_on
       rect:
         serializedVersion: 2
-        x: 1496
-        y: 498
-        width: 193
-        height: 208
+        x: 250
+        y: 276
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fe0fd16000000000800000000000000
-      internalID: 1642008313
+      spriteID: 4a6f5882c003add20800000000000000
+      internalID: 3304006105407288996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_4
+      name: blue/attack/melter
       rect:
         serializedVersion: 2
-        x: 1692
-        y: 498
-        width: 194
-        height: 206
+        x: 1
+        y: 650
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,83 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 209c6196000000000800000000000000
-      internalID: 1763100930
+      spriteID: 3d0cb3dbf321d1010800000000000000
+      internalID: 1161104343898505427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_5
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 50
-        width: 745
-        height: 571
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfdbaf77000000000800000000000000
-      internalID: 2012921341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: scene2_6
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 586
-        width: 204
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1af1ed6dffffffff0800000000000000
-      internalID: -690085983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: scene2_7
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 588
-        width: 170
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dac167f2000000000800000000000000
-      internalID: 796269741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: scene2_8
+      name: blue/attack/rebound
       rect:
         serializedVersion: 2
         x: 748
-        y: 50
-        width: 745
-        height: 548
+        y: 276
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,20 +224,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1f1fd73000000000800000000000000
-      internalID: 937369373
+      spriteID: 45934e04dc5ad9020800000000000000
+      internalID: 2350216881532844372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_9
+      name: blue/attack/rip_and_tear
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 650
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e8ece0fa8f01dd0800000000000000
+      internalID: -2517238760948724092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/scrape
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 463
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12123ebfaa3268f60800000000000000
+      internalID: 8036149802366607649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/streamline
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 837
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12de3dc5a7052e90800000000000000
+      internalID: -7051221232884198885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/attack/sunder
       rect:
         serializedVersion: 2
         x: 1495
-        y: 50
-        width: 403
-        height: 445
+        y: 89
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50228924000000000800000000000000
-      internalID: 1117266437
+      spriteID: f2c8c6abc1170e0c0800000000000000
+      internalID: -4548511255443502033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_10
+      name: blue/attack/thunder_strike
       rect:
         serializedVersion: 2
-        x: 1900
-        y: 299
-        width: 95
-        height: 181
+        x: 1246
+        y: 463
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc5fae0effffffff0800000000000000
-      internalID: -521472563
+      spriteID: 56625b0922f4e2b00800000000000000
+      internalID: 805668393221170789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scene2_11
+      name: colorless/attack/shiv
       rect:
         serializedVersion: 2
-        x: 1900
-        y: 50
-        width: 130
-        height: 247
+        x: 1246
+        y: 89
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a89938dffffffff0800000000000000
-      internalID: -667314011
+      spriteID: 9e4320645c74d56b0800000000000000
+      internalID: -5306005873363897111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: campfire
+      name: green/attack/masterful_stab
       rect:
         serializedVersion: 2
-        x: 2
-        y: 910
-        width: 1920
-        height: 1136
+        x: 499
+        y: 89
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 9559a8c3ab6d2a830800000000000000
+      internalID: 4081060307719066969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/campfireGlow
+      name: green/attack/neutralize
       rect:
         serializedVersion: 2
-        x: 2
-        y: 624
-        width: 697
-        height: 239
+        x: 250
+        y: 463
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,20 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 7159ec219eed416f0800000000000000
+      internalID: -714701348220791529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/ceilingMod1
+      name: green/attack/poisoned_stab
       rect:
         serializedVersion: 2
-        x: 1900
-        y: 50
-        width: 130
-        height: 247
+        x: 748
+        y: 89
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,20 +413,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: dcc36ef720af44790800000000000000
+      internalID: -7546632186923434803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/ceilingMod2
+      name: green/attack/quick_slash
       rect:
         serializedVersion: 2
-        x: 2
-        y: 865
-        width: 245
-        height: 41
+        x: 499
+        y: 463
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,20 +434,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: fa4b86f985ac48db0800000000000000
+      internalID: -4790481621634992977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/ceilingMod3
+      name: green/attack/riddle_with_holes
       rect:
         serializedVersion: 2
-        x: 1900
-        y: 299
-        width: 95
-        height: 181
+        x: 250
+        y: 837
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 359c0572cf84929d0800000000000000
+      internalID: -2798625445605488301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/ceilingMod4
+      name: green/attack/strike
       rect:
         serializedVersion: 2
-        x: 1692
-        y: 497
-        width: 194
-        height: 207
+        x: 748
+        y: 650
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,20 +476,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: df2b1e714c8447930800000000000000
+      internalID: 4140013964511785725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/ceilingMod5
+      name: green/attack/sucker_punch
       rect:
         serializedVersion: 2
-        x: 2
-        y: 908
-        width: 198
-        height: 114
+        x: 1246
+        y: 276
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,20 +497,230 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 4bf036c25a0d51270800000000000000
+      internalID: 8220706102667579316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/ceilingMod6
+      name: green/attack/unload
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 89
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5811b9244a254d50800000000000000
+      internalID: 6720824491165947994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/hemokinesis
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 89
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c781253c40609eb20800000000000000
+      internalID: 3164066830731057276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/perfected_strike
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 276
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c349d74a5b1ae90800000000000000
+      internalID: -7016127026380391355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/pommel_strike
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 837
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8cbc4793b4ae340800000000000000
+      internalID: 4893806655236196599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/pummel
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 650
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb76d99bea8de7540800000000000000
+      internalID: 5007678080632580031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/reckless_charge
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 89
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c99d135d446b930800000000000000
+      internalID: 4158586988378299468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/sever_soul
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 276
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08f23da188e300b0800000000000000
+      internalID: -5763507454449879029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/strike
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 463
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097f48fb402ea30f0800000000000000
+      internalID: -1136347445936719984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/sword_boomerang
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 837
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db35a3dd92741cb0800000000000000
+      internalID: -4894160872858633255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/thunder_clap
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 650
+        width: 248
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfd910d51d3c6460800000000000000
+      internalID: 7236225865172508610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/attack/twin_strike
       rect:
         serializedVersion: 2
         x: 1495
-        y: 497
-        width: 195
-        height: 209
+        y: 276
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,20 +728,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: db679e3e6e4acf8e0800000000000000
+      internalID: -1658269251206023491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mod/midWall
+      name: red/attack/whirlwind
       rect:
         serializedVersion: 2
-        x: 1495
-        y: 50
-        width: 403
-        height: 445
+        x: 997
+        y: 837
+        width: 248
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,50 +749,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mod/mod1
-      rect:
-        serializedVersion: 2
-        x: 749
-        y: 50
-        width: 744
-        height: 548
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mod/mod2
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 50
-        width: 745
-        height: 572
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: ac177fd80875cdd80800000000000000
+      internalID: -8224602609836133942
       vertices: []
       indices: 
       edges: []
@@ -598,29 +766,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      campfire: 0
-      mod/campfireGlow: 0
-      mod/ceilingMod1: 0
-      mod/ceilingMod2: 0
-      mod/ceilingMod3: 0
-      mod/ceilingMod4: 0
-      mod/ceilingMod5: 0
-      mod/ceilingMod6: 0
-      mod/midWall: 0
-      mod/mod1: 0
-      mod/mod2: 0
-      scene2_0: 1039262831
-      scene2_1: 1787351067
-      scene2_10: -521472563
-      scene2_11: -667314011
-      scene2_2: 425551776
-      scene2_3: 1642008313
-      scene2_4: 1763100930
-      scene2_5: 2012921341
-      scene2_6: -690085983
-      scene2_7: 796269741
-      scene2_8: 937369373
-      scene2_9: 1117266437
+      blue/attack/ftl: -319888520862868686
+      blue/attack/go_for_the_eyes: 3853923679295723641
+      blue/attack/hyper_beam: 2824842369546510209
+      blue/attack/lock_on: 3304006105407288996
+      blue/attack/melter: 1161104343898505427
+      blue/attack/rebound: 2350216881532844372
+      blue/attack/rip_and_tear: -2517238760948724092
+      blue/attack/scrape: 8036149802366607649
+      blue/attack/streamline: -7051221232884198885
+      blue/attack/sunder: -4548511255443502033
+      blue/attack/thunder_strike: 805668393221170789
+      colorless/attack/shiv: -5306005873363897111
+      green/attack/masterful_stab: 4081060307719066969
+      green/attack/neutralize: -714701348220791529
+      green/attack/poisoned_stab: -7546632186923434803
+      green/attack/quick_slash: -4790481621634992977
+      green/attack/riddle_with_holes: -2798625445605488301
+      green/attack/strike: 4140013964511785725
+      green/attack/sucker_punch: 8220706102667579316
+      green/attack/unload: 6720824491165947994
+      red/attack/hemokinesis: 3164066830731057276
+      red/attack/perfected_strike: -7016127026380391355
+      red/attack/pommel_strike: 4893806655236196599
+      red/attack/pummel: 5007678080632580031
+      red/attack/reckless_charge: 4158586988378299468
+      red/attack/sever_soul: -5763507454449879029
+      red/attack/strike: -1136347445936719984
+      red/attack/sword_boomerang: -4894160872858633255
+      red/attack/thunder_clap: 7236225865172508610
+      red/attack/twin_strike: -1658269251206023491
+      red/attack/whirlwind: -8224602609836133942
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

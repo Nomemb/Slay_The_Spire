@@ -1,0 +1,2059 @@
+fileFormatVersion: 2
+guid: 2137a94d2580a2d49874a2aedc29bc7d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue/skill/leap
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e730b5869ca36d0800000000000000
+      internalID: -3009871950903017964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/multicast
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 401
+        width: 245
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e1cc9fa931fd460800000000000000
+      internalID: 7268549879936065177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/overclock
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 584
+        width: 245
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b0bdb08cad6c140800000000000000
+      internalID: 4739716210581244780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/rainbow
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c948c43e922bedff0800000000000000
+      internalID: -9374256231316324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/reboot
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2e4cafc641fde20800000000000000
+      internalID: 3377440703847391991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/recursion
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50113a5d95257c20800000000000000
+      internalID: 3203508067697234011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/recycle
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e4a3d546aca0080800000000000000
+      internalID: -9220334754678026663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/reinforced_body
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c68fbd059d13f60800000000000000
+      internalID: 8012424153379925069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/reprogram
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1133
+        width: 245
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447c13f4fe10a39b0800000000000000
+      internalID: -5099761500706191548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/seek
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1316
+        width: 245
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872dd31ecb61b50b0800000000000000
+      internalID: -5738968299664977288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/skim
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77433f8143562f510800000000000000
+      internalID: 1581437693591762039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/stack
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3430d32c697e5370800000000000000
+      internalID: 8313215467536790587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/steam_barrier
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6a00aef374a5b60800000000000000
+      internalID: 7735573649796671205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue/skill/tempest
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0ed7d2f8da18590800000000000000
+      internalID: -7673661459607461671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/good_instincts
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2b9c6ed17759620800000000000000
+      internalID: 2780259315280884444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/impatience
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26395df9f3489f30800000000000000
+      internalID: 4582487361825879596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/insight
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b842be156be92790800000000000000
+      internalID: -7554248080398071625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/jack_of_all_trades
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f738a74c6e270550800000000000000
+      internalID: 6126916860654401524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/jax
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69890580a85f8b50800000000000000
+      internalID: 6597589425571072365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/madness
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c054b2c9e30e2ea0800000000000000
+      internalID: -5895770559652540222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/master_of_strategy
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ac058873ca2b580800000000000000
+      internalID: -8812792166300464496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/metamorphosis
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1feec07f99a6fbc60800000000000000
+      internalID: 7836099086155312881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/miracle
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f742486d82b08a0800000000000000
+      internalID: -6337927148788744309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/panacea
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 767
+        width: 250
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017ca0635a297d980800000000000000
+      internalID: -8514175332246698224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/panic_button
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2610747b1fab8c840800000000000000
+      internalID: 5244647313397711202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/purity
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6250af77e0d4fc0800000000000000
+      internalID: -3509132626193209653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/safety
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a9a1481dd263b00800000000000000
+      internalID: 807883561047333390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/secret_technique
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddedaaf085f512560800000000000000
+      internalID: 7287210503886790365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/secret_weapon
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e713879de5f8c140800000000000000
+      internalID: 4740309008605452262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/the_bomb
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd915a087503d13b0800000000000000
+      internalID: -5540218814217250340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/thinking_ahead
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc456ff859897dc30800000000000000
+      internalID: 4384140530401301707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/transmutation
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d77adaa0d74016a0800000000000000
+      internalID: -6480600902240929834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorless/skill/trip
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c0e99e84f01f300800000000000000
+      internalID: 284025057332563089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/injury
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1ee5631e91cb8f0800000000000000
+      internalID: -523515001611296266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/necronomicurse
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3929aae45bd20e030800000000000000
+      internalID: 3521865165335859859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/normality
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b539ba0e3f64940800000000000000
+      internalID: 5280175759415270202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/pain
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf1a385cf68229e0800000000000000
+      internalID: -1647606095294095428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/parasite
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df46f73f252679ae0800000000000000
+      internalID: -1542656238939052803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/pride
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4e817871ac0bbe0800000000000000
+      internalID: -1463447676495797048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/regret
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e390308c7ddf000800000000000000
+      internalID: 71450423152164365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: curse/shame
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee66deeeb2fd1c9e0800000000000000
+      internalID: -1602754612582062354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/leg_sweep
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4277dc8f014861960800000000000000
+      internalID: 7572385031898625828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/malaise
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335c8f523c7ed3fb0800000000000000
+      internalID: -4666318813544266445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/nightmare
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa59dae80211e3ad0800000000000000
+      internalID: -2720718293354834513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/outmaneuver
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11c60fa21c34ad50800000000000000
+      internalID: 6747584192651378975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/phantasmal_killer
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857d48a46ec01a320800000000000000
+      internalID: 2567347445810124632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/piercing_wail
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab56abe88349211f0800000000000000
+      internalID: -1075634390354467398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/prepared
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6bb972fa08041b10800000000000000
+      internalID: 1951193381669026670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/reflex
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1133
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5fe186e29a063d0800000000000000
+      internalID: -3215384117162084869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/setup
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e260709dc5bd2f0800000000000000
+      internalID: -947061209435853261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/storm_of_steel
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb17da00e08ce9310800000000000000
+      internalID: 1413787295507378622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/survivor
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95451e7e2882fbc0800000000000000
+      internalID: -3750785806381005412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/tactician
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b8681ff77b7ad30800000000000000
+      internalID: 4442721317565139849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green/skill/terror
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485ed9094369ff000800000000000000
+      internalID: 71941271569950084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/halt
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33250ee3774b2d870800000000000000
+      internalID: 8706219453909586483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/indignation
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2dbc54e6222ff60800000000000000
+      internalID: 8066547739586712297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/inner_peace
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893048cb8923e06e0800000000000000
+      internalID: -1869501163732991080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/judgment
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 802cb297716ed1ae0800000000000000
+      internalID: -1576851306018258424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/meditate
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb1201cb0ce88f70800000000000000
+      internalID: 9189854574876433372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/omniscience
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319f7467ed488a3b0800000000000000
+      internalID: -5501000853831026413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/perseverance
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14f907c9d5acacd0800000000000000
+      internalID: -2545477334605368292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/pray
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd402566d647fc00800000000000000
+      internalID: 934293334336228827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/pressure_points
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531031a167c89c9f0800000000000000
+      internalID: -447672249075171019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/prostrate
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9549848f441da10800000000000000
+      internalID: 1932401548278913450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/protect
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c86a5649588f3f0800000000000000
+      internalID: -866796055861752772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/sanctity
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089ed7276b5840da0800000000000000
+      internalID: -5979507386589779584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/scrawl
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3789801e7a31140800000000000000
+      internalID: 4689276221976507383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/simmering_fury
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe5876d0c428ca50800000000000000
+      internalID: 6541518869406179059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/spirit_shield
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000ec97d44ec4aed0800000000000000
+      internalID: -2403569506038521856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/swivel
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839f77f2e3c1bc0c0800000000000000
+      internalID: -4554515544745182920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/third_eye
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87b6a125a3e95cc0800000000000000
+      internalID: -3721693318671321204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple/skill/tranquility
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe2b3cdf786d0210800000000000000
+      internalID: 1300810765744942778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/havoc
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e0ec2f76e219920800000000000000
+      internalID: 2995226251168190065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/impervious
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caaf8008b1b157150800000000000000
+      internalID: 5869627494273448620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/infernal_blade
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 35
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c9897319214d2e0800000000000000
+      internalID: -2102034711162872793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/intimidate
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 218
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f251ae3a50d4f2950800000000000000
+      internalID: 6426439879901189423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/limit_break
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 401
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce74775d5d9c4780800000000000000
+      internalID: -8697403756134498622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/offering
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 584
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5dee366cc7d4910800000000000000
+      internalID: 1823250615676884416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/power_through
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 767
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ae3664998084a20800000000000000
+      internalID: 3046694602320112243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/rage
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 950
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af06be8c992ff34c0800000000000000
+      internalID: -4305455976428117766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/second_wind
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ce0cd8b030bb1d0800000000000000
+      internalID: -3334067750979965893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/seeing_red
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0ddb82e9d678460800000000000000
+      internalID: 7243879051704520883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/sentinel
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 1316
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0651c2e30327024e0800000000000000
+      internalID: -2008479882280168096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/shockwave
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13393888df333ce30800000000000000
+      internalID: 4522515614820176689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/shrug_it_off
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d93e06fc193a450800000000000000
+      internalID: 6098878640259570974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/spot_weakness
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1682
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61be7be8d2a068120800000000000000
+      internalID: 2415629440915073814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red/skill/true_grit
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1865
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f295009c5717410800000000000000
+      internalID: 1473088059281583907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: status/slimed
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1499
+        width: 244
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f24abdf16577fbb0800000000000000
+      internalID: -4902320605640375568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blue/skill/leap: -3009871950903017964
+      blue/skill/multicast: 7268549879936065177
+      blue/skill/overclock: 4739716210581244780
+      blue/skill/rainbow: -9374256231316324
+      blue/skill/reboot: 3377440703847391991
+      blue/skill/recursion: 3203508067697234011
+      blue/skill/recycle: -9220334754678026663
+      blue/skill/reinforced_body: 8012424153379925069
+      blue/skill/reprogram: -5099761500706191548
+      blue/skill/seek: -5738968299664977288
+      blue/skill/skim: 1581437693591762039
+      blue/skill/stack: 8313215467536790587
+      blue/skill/steam_barrier: 7735573649796671205
+      blue/skill/tempest: -7673661459607461671
+      colorless/skill/good_instincts: 2780259315280884444
+      colorless/skill/impatience: 4582487361825879596
+      colorless/skill/insight: -7554248080398071625
+      colorless/skill/jack_of_all_trades: 6126916860654401524
+      colorless/skill/jax: 6597589425571072365
+      colorless/skill/madness: -5895770559652540222
+      colorless/skill/master_of_strategy: -8812792166300464496
+      colorless/skill/metamorphosis: 7836099086155312881
+      colorless/skill/miracle: -6337927148788744309
+      colorless/skill/panacea: -8514175332246698224
+      colorless/skill/panic_button: 5244647313397711202
+      colorless/skill/purity: -3509132626193209653
+      colorless/skill/safety: 807883561047333390
+      colorless/skill/secret_technique: 7287210503886790365
+      colorless/skill/secret_weapon: 4740309008605452262
+      colorless/skill/the_bomb: -5540218814217250340
+      colorless/skill/thinking_ahead: 4384140530401301707
+      colorless/skill/transmutation: -6480600902240929834
+      colorless/skill/trip: 284025057332563089
+      curse/injury: -523515001611296266
+      curse/necronomicurse: 3521865165335859859
+      curse/normality: 5280175759415270202
+      curse/pain: -1647606095294095428
+      curse/parasite: -1542656238939052803
+      curse/pride: -1463447676495797048
+      curse/regret: 71450423152164365
+      curse/shame: -1602754612582062354
+      green/skill/leg_sweep: 7572385031898625828
+      green/skill/malaise: -4666318813544266445
+      green/skill/nightmare: -2720718293354834513
+      green/skill/outmaneuver: 6747584192651378975
+      green/skill/phantasmal_killer: 2567347445810124632
+      green/skill/piercing_wail: -1075634390354467398
+      green/skill/prepared: 1951193381669026670
+      green/skill/reflex: -3215384117162084869
+      green/skill/setup: -947061209435853261
+      green/skill/storm_of_steel: 1413787295507378622
+      green/skill/survivor: -3750785806381005412
+      green/skill/tactician: 4442721317565139849
+      green/skill/terror: 71941271569950084
+      purple/skill/halt: 8706219453909586483
+      purple/skill/indignation: 8066547739586712297
+      purple/skill/inner_peace: -1869501163732991080
+      purple/skill/judgment: -1576851306018258424
+      purple/skill/meditate: 9189854574876433372
+      purple/skill/omniscience: -5501000853831026413
+      purple/skill/perseverance: -2545477334605368292
+      purple/skill/pray: 934293334336228827
+      purple/skill/pressure_points: -447672249075171019
+      purple/skill/prostrate: 1932401548278913450
+      purple/skill/protect: -866796055861752772
+      purple/skill/sanctity: -5979507386589779584
+      purple/skill/scrawl: 4689276221976507383
+      purple/skill/simmering_fury: 6541518869406179059
+      purple/skill/spirit_shield: -2403569506038521856
+      purple/skill/swivel: -4554515544745182920
+      purple/skill/third_eye: -3721693318671321204
+      purple/skill/tranquility: 1300810765744942778
+      red/skill/havoc: 2995226251168190065
+      red/skill/impervious: 5869627494273448620
+      red/skill/infernal_blade: -2102034711162872793
+      red/skill/intimidate: 6426439879901189423
+      red/skill/limit_break: -8697403756134498622
+      red/skill/offering: 1823250615676884416
+      red/skill/power_through: 3046694602320112243
+      red/skill/rage: -4305455976428117766
+      red/skill/second_wind: -3334067750979965893
+      red/skill/seeing_red: 7243879051704520883
+      red/skill/sentinel: -2008479882280168096
+      red/skill/shockwave: 4522515614820176689
+      red/skill/shrug_it_off: 6098878640259570974
+      red/skill/spot_weakness: 2415629440915073814
+      red/skill/true_grit: 1473088059281583907
+      status/slimed: -4902320605640375568
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
