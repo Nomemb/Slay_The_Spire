@@ -6,7 +6,7 @@ public class SaveData
 {
     public List<Card> cardData = new List<Card>();
 
-    public characterType characterType;
+    public CharacterType characterType;
     public int hp;
     public int maxHp;
     public int gold;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,11 @@ public class DataManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+        
+    }
+
+    private void Start()
+    {
         path = Path.Combine(Application.dataPath + "/PlayData/", "database.json");     // datapath는 프로젝트 디렉토리/Assets
     }
 

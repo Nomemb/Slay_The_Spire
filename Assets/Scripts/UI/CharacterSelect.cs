@@ -10,12 +10,12 @@ public class CharacterSelect : MonoBehaviour
     public Image[] characterButtonBackgrounds;
 
 
-    public characterType characterType;
+    public CharacterType characterType;
 
     public void SelectCharacter(int _typeNum)
     {
         backgroundImage.gameObject.SetActive(true);
-        characterType = (characterType)_typeNum;
+        characterType = (CharacterType)_typeNum;
         Debug.Log(characterType.ToString());
         GameManager.instance.currentType = characterType;                   // 선택된 캐릭터로 게임매니저 바꿔줌
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum characterType { Ironclad, Silent, Defect, Watcher}
+public enum CharacterType { Ironclad, Silent, Defect, Watcher}
 public abstract class BaseCharacter
 {
     public int hp { get; protected set; }               // 현재 체력
@@ -12,13 +12,13 @@ public abstract class BaseCharacter
 
     public int gold { get; protected set; }            // 돈
 
-    public BaseCharacter()
+    protected BaseCharacter()
     {
         addedStrength = 0;
         gold = 99;
     }
 
-    public virtual void Attack(int _damage)
+    public virtual void Attack(int damage)
     {
         Debug.Log("Attack ");
     }
@@ -29,5 +29,10 @@ public abstract class BaseCharacter
         GameManager.instance.playerMaxHp = this.maxHp;
         GameManager.instance.playerGold = this.gold;
         GameManager.instance.playerPower = this.addedStrength;
+    }
+
+    public virtual void InitCard()
+    {
+        
     }
 }
