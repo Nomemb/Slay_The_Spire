@@ -142,4 +142,10 @@ public class GameManager : MonoBehaviour
         DataManager.instance.JsonSave();
         SceneManager.LoadScene("BattleScene");
     }
+
+    public void UseCard(int index)
+    {
+        hand[index].UseCard();
+        hand.RemoveAt(index);
+    }
 }

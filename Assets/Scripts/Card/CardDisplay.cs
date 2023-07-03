@@ -1,17 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.U2D;
 using UnityEngine.UI;
-using UnityEngine.XR;
 
 public class CardDisplay : MonoBehaviour
 {
     public List<Card> cards;
     public GameObject cardPrefab;
     public GameObject handUI;
-    
 
+    public List<GameObject> cardUI;
     
     void Start()
     {
@@ -27,7 +27,12 @@ public class CardDisplay : MonoBehaviour
             GameObject newCard = Instantiate(cardPrefab, handUI.transform);
             CardInfo cardInfo = newCard.GetComponent<CardInfo>();
             cardInfo.card = cards[i];
+            cardUI.Add(newCard);
         }
     }
-    
+
+    private void OnMouseDrag()
+    {
+        Debug.Log(gameObject);
+    }
 }

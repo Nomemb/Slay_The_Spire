@@ -614,6 +614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 82929242, guid: 60fa233b4521bf0468c861e746001fe1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 92816893, guid: 60fa233b4521bf0468c861e746001fe1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -769,6 +773,7 @@ MonoBehaviour:
   cards: []
   cardPrefab: {fileID: 3892924776348316509, guid: dd5316ca6abe82c45a63e7c557f43714, type: 3}
   handUI: {fileID: 2009746207}
+  cardUI: []
 --- !u!1001 &8676442985820476843
 PrefabInstance:
   m_ObjectHideFlags: 0
