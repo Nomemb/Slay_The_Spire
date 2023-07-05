@@ -7,7 +7,7 @@ public class Silent : BaseCharacter
     public Silent()
     {
         Debug.Log("Silent Start");
-        this.maxHp = 70;
-        this.hp = maxHp;
+        this.MaxHp = 70;
+        this.Hp = MaxHp;
     }
 }

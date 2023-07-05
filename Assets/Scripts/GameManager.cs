@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public CharacterType currentType;
     public bool isPlayerTurn = true;
     public PlayerController player;
+    [SerializeField] private GameObject tm = null;
 
     // 덱 관련
     public List<Card> fixedDeck = new List<Card>();         // 게임 내내 보유하고 있는 카드풀
@@ -48,56 +49,52 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         DataManager.instance.JsonLoad();
-        //EventManager.instance.playerTurnEvent += DrawCard;
     }
 
     public void BattleStart()
     {
-        drawDeck.Clear();                               // 혹시 모르니 비워 줌
-        drawDeck = fixedDeck.ToList();                  // fixedDeck을 복사해 옴
-        Shuffle(drawDeck);
-        
-        //EventManager.PlayerTurnEvent();
-
+        DataManager.instance.JsonLoad();
+        Debug.Log("Gm. GameStart");
+        usedDeck.Clear();                               // 혹시 모르니 비워 줌
+        drawDeck.Clear();
+        usedDeck = fixedDeck.ToList();                  // fixedDeck을 복사해 옴
+        Shuffle();
     }
 
-    private void Shuffle(List<Card> shuffleDeck)
+    public void Shuffle()
     {
-        var count = shuffleDeck.Count;
+        Debug.Log("Shuffle");
+        var count = usedDeck.Count;
         for(var i=0; i<count; i++)
         {
-            var rand = Random.Range(0, shuffleDeck.Count);
-            drawDeck.Add(shuffleDeck[rand]);
-            shuffleDeck.RemoveAt(rand);
+            var rand = Random.Range(0, usedDeck.Count);
+            drawDeck.Add(usedDeck[rand]);
+            usedDeck.RemoveAt(rand);
         }
-
-        if (shuffleDeck.Equals(usedDeck))
-        {
-            shuffleDeck.Clear();
-        }
+        usedDeck.Clear();
+        UIManager.instance.UpdateCardCount();
     }
     public void DrawCard(int count)
     {
-        while(count > 0)
+        Debug.Log(count);
+        if (hand.Count >= maxHandCount) // 최대 손패보다 적을때만 적용됨.
         {
-            if(hand.Count < maxHandCount)                       // 최대 손패보다 적을때만 적용됨.
+            return;
+        }
+        
+        for (var i = 0; i < count; i++)
+        {
+            if (drawDeck.Count == 0)
             {
-                if(drawDeck.Count > 0)                          // 뽑을 카드가 있으면
-                {
-                    hand.Add(drawDeck[0]);
-                    drawDeck.RemoveAt(0);
-                }
-                else
-                {
-                    Shuffle(usedDeck);                                  // 사용된 덱을 셔플한 후 뽑을 카드에 넣음
-                    DrawCard(count);
-                }
-            }
-            else
-            {
+                Shuffle();
+                DrawCard(count - i);
                 return;
             }
-            count--;
+
+            hand.Add(drawDeck[0]);
+            drawDeck.RemoveAt(0);
+            UIManager.instance.UpdateCardCount();
+
         }
     }
 
@@ -140,12 +137,21 @@ public class GameManager : MonoBehaviour
             }
         }
         DataManager.instance.JsonSave();
-        SceneManager.LoadScene("BattleScene");
+        SceneManager.LoadScene("NeowScene");
     }
 
     public void UseCard(int index)
     {
         hand[index].UseCard();
         hand.RemoveAt(index);
+    }
+
+    public void EndPlayerTurn()
+    {
+        while (hand.Count != 0)
+        {
+            usedDeck.Add(hand[0]);
+            hand.RemoveAt(0);
+        }
     }
 }

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public UnityEvent playerTurnStart;
     public UnityEvent playerTurnEnd;
+    public UnityEvent playerCardCountChange;
 
     private void Start()
     {
@@ -21,13 +22,19 @@ public class PlayerController : MonoBehaviour
 
     public void TurnStart()
     {
-        playerTurnStart.Invoke();
         Debug.Log("플레이어 턴 시작!");
+        playerTurnStart.Invoke();
     }
     public void TurnEnd()
     {
+        Debug.Log("플레이어 턴 종료!");
         GameManager.instance.isPlayerTurn = false;
         playerTurnEnd.Invoke();
-        Debug.Log("플레이어 턴 종료!");
+    }
+
+    public void PlayerCardCountChange()
+    {
+        Debug.Log("플레이어 드로우!");
+        playerCardCountChange.Invoke();
     }
 }

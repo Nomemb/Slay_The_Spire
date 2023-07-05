@@ -16,7 +16,6 @@ public class CharacterSelect : MonoBehaviour
     {
         backgroundImage.gameObject.SetActive(true);
         characterType = (CharacterType)_typeNum;
-        Debug.Log(characterType.ToString());
         GameManager.instance.currentType = characterType;                   // 선택된 캐릭터로 게임매니저 바꿔줌
 
         backgroundImage.sprite = characterBackgroundImages[(int)characterType];    // 해당 캐릭터 이미지로 BGI 변경

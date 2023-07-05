@@ -13,24 +13,26 @@ public class CardDisplay : MonoBehaviour
 
     public List<GameObject> cardUI;
     
-    void Start()
+    public void ImageSetting()
     {
-        ImageSetting();
-    }
-
-    void ImageSetting()
-    {
-        Debug.Log("ImageSetting");
         cards = GameManager.instance.hand;
-        for (int i = 0; i < cards.Count; ++i)
-        { 
-            GameObject newCard = Instantiate(cardPrefab, handUI.transform);
-            CardInfo cardInfo = newCard.GetComponent<CardInfo>();
-            cardInfo.card = cards[i];
+        foreach (var card in cards)
+        {
+            var newCard = Instantiate(cardPrefab, handUI.transform);
+            var cardInfo = newCard.GetComponent<CardInfo>();
+            cardInfo.card = card;
             cardUI.Add(newCard);
         }
     }
 
+    public void EndPlayerTurn()
+    {
+        while (cardUI.Any())
+        {
+            Destroy(cardUI[0]);
+            cardUI.RemoveAt(0);
+        }
+    }
     private void OnMouseDrag()
     {
         Debug.Log(gameObject);

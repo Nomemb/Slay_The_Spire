@@ -39,7 +39,6 @@ public class CardInfo : MonoBehaviour
     {
         Sprite img = null;
         var path = card.cardColor + "/" + card.cardType + "/" + card.cardImageName;
-        Debug.Log(cardUIName + ": " + path);
         foreach (var sprite in cardImagesSprites)
         {
             if (sprite.name != path) continue;
@@ -53,7 +52,6 @@ public class CardInfo : MonoBehaviour
     {
         Sprite img = null;
         var path = "512/bg_" + card.cardType + "_" + card.cardColor;
-        Debug.Log(cardUIName + ": " + path);
         foreach (var sprite in cardBackGroundSprites)
         {
             if (sprite.name != path) continue;
@@ -93,7 +91,6 @@ public class CardInfo : MonoBehaviour
     {
         Sprite img = null;
         var path ="512/banner_" + card.cardRarity;
-        Debug.Log(cardUIName + ": " + path);
         foreach (var sprite in cardBannerSprites)
         {
             if (sprite.name != path) continue;
