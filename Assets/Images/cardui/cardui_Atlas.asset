@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: cardui_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 4444b50e58aef4945acf6fbe036e059c, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 055828274bf70ea4bb02ec6ea87f7d81, type: 2}
+  - {fileID: 2100000, guid: 3e208413fb0899e468af8116445d2af5, type: 2}
+  - {fileID: 2100000, guid: 4101751bdac46e54d92bf864c2958bcd, type: 2}
+  - {fileID: 2100000, guid: e4845d0e21699b545a3d4c25491cafd0, type: 2}

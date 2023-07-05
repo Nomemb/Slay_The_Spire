@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using System.IO;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-    private string path;
+    [SerializeField] private string path;
 
     void Awake()
     {
@@ -17,22 +18,22 @@ public class DataManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-        path = Path.Combine(Application.dataPath + "/PlayData/", "database.json");     // datapath는 프로젝트 디렉토리/Assets
+        path = Path.Combine(Application.dataPath + "/PlayData/", "database.json");     // dataPath는 프로젝트 디렉토리/Assets
     }
 
     public void JsonLoad()
     {
         Debug.Log("JsonLoad");
-        SaveData saveData = new SaveData();
 
-        string loadJson = File.ReadAllText(path);
-        saveData = JsonUtility.FromJson<SaveData>(loadJson);
+        var loadJson = File.ReadAllText(path);
+        var saveData = JsonUtility.FromJson<SaveData>(loadJson);
 
         if (saveData != null)
         {
-            for (int i = 0; i < saveData.cardData.Count; i++)
+            GameManager.instance.fixedDeck.Clear();
+            foreach (var card in saveData.cardData)
             {
-                GameManager.instance.cardData.Add(saveData.cardData[i]);
+                GameManager.instance.fixedDeck.Add(card);
             }
 
             GameManager.instance.currentType = saveData.characterType;
@@ -48,10 +49,10 @@ public class DataManager : MonoBehaviour
     public void JsonSave()
     {
         SaveData saveData = new SaveData();
-
-        for(int i=0; i < 10; i++)
+        saveData.cardData.Clear();
+        foreach (var card in GameManager.instance.fixedDeck)
         {
-            saveData.cardData.Add("카드 데이터 no." + i);
+            saveData.cardData.Add(card);
         }
 
         saveData.characterType = GameManager.instance.currentType;

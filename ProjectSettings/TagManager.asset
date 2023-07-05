@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 2412594997
+    locked: 0
+  - name: UI
+    uniqueID: 1061029917
+    locked: 0
+  - name: Card
+    uniqueID: 3125884217
+    locked: 0
