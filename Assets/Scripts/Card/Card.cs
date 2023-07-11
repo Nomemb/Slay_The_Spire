@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum CardColor{red, green, blue, purple, colorless, status, curse}
@@ -48,6 +45,8 @@ public class Card
         if (cardType != CardType.power)
         {
             gm.usedDeck.Add(this);
+            gm.hand.Remove(this);
+            Debug.Log(cardName + " 사용");
         }
     }
 

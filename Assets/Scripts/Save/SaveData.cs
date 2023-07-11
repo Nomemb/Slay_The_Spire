@@ -11,4 +11,5 @@ public class SaveData
     public int maxHp;
     public int gold;
     public int addedStrength;
+    public int ascensionLevel;
 }

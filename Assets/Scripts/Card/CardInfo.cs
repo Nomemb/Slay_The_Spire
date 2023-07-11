@@ -1,16 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CardInfo : MonoBehaviour
+public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
+    // 카드 이미지 풀 변수들
     [SerializeField] private Sprite[] cardImagesSprites;
     [SerializeField] private Sprite[] cardBackGroundSprites;
     [SerializeField] private Sprite[] cardFrameSprites;
     [SerializeField] private Sprite[] cardBannerSprites;
+    
+    // 카드 드래그, 드랍 관련 변수
+    public Vector3 originPos;
     
     public Card card;
     public Image cardBackGround;                                                 // 카드 배경 ( 색상, 카드 타입 )
@@ -100,4 +102,26 @@ public class CardInfo : MonoBehaviour
         return img;
     }
     
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        originPos = transform.position;
+        if (transform != null) transform.position = eventData.position;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        transform.position = originPos;
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        card.UseCard();
+        UIManager.instance.UpdateCardCount();
+        Destroy(this.gameObject, 0.5f);
+    }
 }

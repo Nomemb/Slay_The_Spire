@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,7 +12,6 @@ public class GameManager : MonoBehaviour
     public CharacterType currentType;
     public bool isPlayerTurn = true;
     public PlayerController player;
-    [SerializeField] private GameObject tm = null;
 
     // 덱 관련
     public List<Card> fixedDeck = new List<Card>();         // 게임 내내 보유하고 있는 카드풀
@@ -30,6 +27,7 @@ public class GameManager : MonoBehaviour
     public int playerMaxHp;
     public int playerGold;
     public int playerPower;
+    public int ascensionLevel;
 
     // 게임 규칙 관련
     [SerializeField] private int maxHandCount = 10;              // 최대로 들고있을 수 있는 카드의 수
@@ -44,6 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+        ascensionLevel = 0;
     }
 
     private void Start()
@@ -63,7 +62,6 @@ public class GameManager : MonoBehaviour
 
     public void Shuffle()
     {
-        Debug.Log("Shuffle");
         var count = usedDeck.Count;
         for(var i=0; i<count; i++)
         {
@@ -148,6 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void EndPlayerTurn()
     {
+        isPlayerTurn = false;
         while (hand.Count != 0)
         {
             usedDeck.Add(hand[0]);

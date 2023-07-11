@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour
 {
@@ -32,9 +29,5 @@ public class CardDisplay : MonoBehaviour
             Destroy(cardUI[0]);
             cardUI.RemoveAt(0);
         }
-    }
-    private void OnMouseDrag()
-    {
-        Debug.Log(gameObject);
     }
 }

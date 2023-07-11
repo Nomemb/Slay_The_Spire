@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,6 +20,7 @@ public class TurnManager : MonoBehaviour
     public UnityEvent changePlayerCardCount;
     public UnityEvent changePlayerHp;
 
+    public List<BaseMonster> monsterList = null;
     private void Start()
     {
         isPlayerTurn = GameManager.instance.isPlayerTurn;
@@ -59,7 +60,7 @@ public class TurnManager : MonoBehaviour
         changePlayerHp.AddListener(um.UpdateHpUI);
 
     }
-    public void StartBattle()
+    private void StartBattle()
     {
         Debug.Log("전투 시작!");
 
@@ -77,22 +78,22 @@ public class TurnManager : MonoBehaviour
         if (!isPlayerTurn) return;
         
         Debug.Log("플레이어 턴 종료!");
-        gm.isPlayerTurn = false;
-
         endPlayerTurn.Invoke();
     }
 
-    public void StartEnemyTurn()
+    private void StartEnemyTurn()
     {
         if (gm.isPlayerTurn) return;
         
         Debug.Log("상대 턴 시작!");
-        //startEnemyTurn.AddListener( EnemyDoing() );
-        Debug.Log("Doing Something..");
-        Debug.Log("상대 턴 종료!");
-        
+        startEnemyTurn.RemoveAllListeners();
+        foreach (var monster in monsterList)
+        {
+            startEnemyTurn.AddListener(monster.DoingCurrentState);
+        }
+
         gm.isPlayerTurn = true;
-        // startEnemyTurn.AddListener(StartPlayerTurn);
+        startEnemyTurn.AddListener(StartPlayerTurn);
         
         startEnemyTurn.Invoke();
     }
@@ -108,4 +109,6 @@ public class TurnManager : MonoBehaviour
         Debug.Log("플레이어 HP 변경!");
         changePlayerHp.Invoke();
     }
+    
+
 }

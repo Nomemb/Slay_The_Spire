@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,16 +17,9 @@ public class CharacterSelect : MonoBehaviour
         GameManager.instance.currentType = characterType;                   // 선택된 캐릭터로 게임매니저 바꿔줌
 
         backgroundImage.sprite = characterBackgroundImages[(int)characterType];    // 해당 캐릭터 이미지로 BGI 변경
-        for(int i=0; i<characterButtonBackgrounds.Length; i++) 
+        for(var i=0; i<characterButtonBackgrounds.Length; i++)
         {
-            if(i == (int)characterType)
-            {
-                characterButtonBackgrounds[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                characterButtonBackgrounds[i].gameObject.SetActive(false);
-            }
+            characterButtonBackgrounds[i].gameObject.SetActive(i == (int)characterType);
         }
     }
 
@@ -36,9 +27,9 @@ public class CharacterSelect : MonoBehaviour
     {
         backgroundImage.gameObject.SetActive(false);
 
-        for (int i = 0; i < characterButtonBackgrounds.Length; i++)
+        foreach (var characterBackground in characterButtonBackgrounds)
         {
-            characterButtonBackgrounds[i].gameObject.SetActive(false);
+            characterBackground.gameObject.SetActive(false);
         }
     }
 

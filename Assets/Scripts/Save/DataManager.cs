@@ -41,6 +41,7 @@ public class DataManager : MonoBehaviour
             GameManager.instance.playerMaxHp = saveData.maxHp;
             GameManager.instance.playerGold = saveData.gold;
             GameManager.instance.playerPower = saveData.addedStrength;
+            GameManager.instance.ascensionLevel = saveData.ascensionLevel;
         }
         //}
     }
@@ -60,6 +61,7 @@ public class DataManager : MonoBehaviour
         saveData.maxHp = GameManager.instance.playerMaxHp;
         saveData.gold = GameManager.instance.playerGold;
         saveData.addedStrength = GameManager.instance.playerPower;
+        saveData.ascensionLevel = GameManager.instance.ascensionLevel;
 
         string json = JsonUtility.ToJson(saveData, true);           // true로 읽기 쉽게 표시
 
