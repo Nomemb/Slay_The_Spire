@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum MonsterState
 {
@@ -11,18 +12,28 @@ public enum MonsterState
 }
 public abstract class BaseMonster : MonoBehaviour
 {
-    public int Hp { get; protected set; }
-    public int MaxHp { get; protected set; }
-    public int AddedStrength { get; protected set; }
-    public int Damage { get; protected set; }
-    public int Block { get; protected set; }
+    [field: Header("Stats")]
+    [field:SerializeField] protected int Hp { get; set; }
+    [field:SerializeField] private int MaxHp { get; set; }
+    [field:SerializeField] protected int AddedStrength { get; set; }
+    [field:SerializeField] protected int Damage { get; set; }
+    [field:SerializeField] protected int Block { get; set; }
 
-    protected TurnManager tm;
+    private TurnManager tm;
+    
+    [Space(10f)]
+    [Header("States")]
     [SerializeField] protected MonsterState currentState;
     [SerializeField] protected MonsterState prevState;
     [SerializeField] protected int sameStateCount;
 
+    [Space(10f)]
+    [Header("UI")]
     [SerializeField] private HpInteraction hpInter;
+    [Tooltip("0: Idle, 1: Attack, 2: Defense, 3: Buff, 4: Debuff")]
+    [SerializeField] protected Sprite[] stateSprites;
+    public Image ImageCurrentState;
+    public Text TextCurrentDamage;
     
     protected virtual void Start()
     {
@@ -30,6 +41,7 @@ public abstract class BaseMonster : MonoBehaviour
         ChangeNextState();
         tm = FindObjectOfType<TurnManager>();
         tm.monsterList.Add(this);
+        MaxHp = Hp;
         hpInter = GetComponentInChildren<HpInteraction>();
         hpInter.UpdateHpBar(Hp, MaxHp);
     }
@@ -62,37 +74,50 @@ public abstract class BaseMonster : MonoBehaviour
 
     protected virtual void ChangeNextState()
     {
+        ImageCurrentState.sprite = stateSprites[(int)currentState];
+        
+        if (currentState == MonsterState.Attack)
+        {
+            TextCurrentDamage.gameObject.SetActive(true);
+            TextCurrentDamage.text = (AddedStrength+Damage).ToString();
+        }
+        else
+        {
+            TextCurrentDamage.gameObject.SetActive(false);
+        }
     }
     protected virtual void Attack()
     {
-        Debug.Log("Attack ");
-        GameManager.instance.playerHp -= (AddedStrength + Damage);
+        var currentDamage = AddedStrength + Damage;
+        Debug.Log("Attack " + currentDamage);
+        GameManager.instance.playerHp -= currentDamage;
         tm.ChangedPlayerHp();
     }
 
     protected virtual void Defense()
     {
-        
+        Debug.Log("Defense " + Block);
     }
 
     protected virtual void Buff()
-    {
-        
+    { 
+        Debug.Log("Buff");
+
     }
 
     protected virtual void DeBuff()
     {
-        
+        Debug.Log("DeBuff");
+
     }
 
     public virtual void OnDamage(int onDamage)
     {
-        Hp -= onDamage;
+        Hp = Math.Max(Hp - onDamage, 0);
         hpInter.UpdateHpBar(Hp, MaxHp);
         if (Hp <= 0)
         {
             tm.monsterList.Remove(this);
-            
         }
     }
 }

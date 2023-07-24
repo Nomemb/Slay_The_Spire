@@ -5,26 +5,28 @@ using UnityEngine;
 public class CardDisplay : MonoBehaviour
 {
     public List<Card> cards;
-    public GameObject cardPrefab;
-    public GameObject handUI;
 
-    public List<GameObject> cardUI;
-    
+    public List<GameObject> cardUI = new List<GameObject>();
     public void ImageSetting()
     {
-        cards = GameManager.instance.hand;
-        foreach (var card in cards)
+        foreach (var card in GameManager.instance.hand)
         {
-            var newCard = Instantiate(cardPrefab, handUI.transform);
-            var cardInfo = newCard.GetComponent<CardInfo>();
-            cardInfo.card = card;
-            cardUI.Add(newCard);
+            GameObject tempCard = Instantiate(card, this.transform.position, Quaternion.identity);
+            tempCard.transform.SetParent(this.transform);
+            cardUI.Add(tempCard);
+
         }
     }
 
     public void EndPlayerTurn()
     {
-        while (cardUI.Any())
+        while (cards.Count != 0)
+        {
+            Destroy(cards[0]);
+            cards.RemoveAt(0);
+        }
+        
+        while (cardUI.Count != 0)
         {
             Destroy(cardUI[0]);
             cardUI.RemoveAt(0);

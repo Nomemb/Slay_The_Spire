@@ -30,10 +30,13 @@ public class RedLouse : Louse
             currentState = currentState == MonsterState.Attack ? MonsterState.Buff : MonsterState.Attack;
             sameStateCount = 0;
         }
+
+        base.ChangeNextState();
     }
 
     protected override void Buff()
     {
+        base.Buff();
         AddedStrength = GameManager.instance.ascensionLevel >= 17 ? AddedStrength + 4 : AddedStrength + 3;
     }
 }

@@ -1,99 +1,40 @@
 {
-    "cardData": [
+    "card": [
         {
-            "cardName": "타격",
-            "cardImageName": "strike",
-            "cardColor": 0,
-            "cardType": 0,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "피해를 6 줍니다."
+            "instanceID": 27852
         },
         {
-            "cardName": "타격",
-            "cardImageName": "strike",
-            "cardColor": 0,
-            "cardType": 0,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "피해를 6 줍니다."
+            "instanceID": 27852
         },
         {
-            "cardName": "타격",
-            "cardImageName": "strike",
-            "cardColor": 0,
-            "cardType": 0,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "피해를 6 줍니다."
+            "instanceID": 27852
         },
         {
-            "cardName": "타격",
-            "cardImageName": "strike",
-            "cardColor": 0,
-            "cardType": 0,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "피해를 6 줍니다."
+            "instanceID": 27852
         },
         {
-            "cardName": "타격",
-            "cardImageName": "strike",
-            "cardColor": 0,
-            "cardType": 0,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "피해를 6 줍니다."
+            "instanceID": 27852
         },
         {
-            "cardName": "수비",
-            "cardImageName": "defend",
-            "cardColor": 0,
-            "cardType": 1,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "방어도를 5 얻습니다."
+            "instanceID": 27854
         },
         {
-            "cardName": "수비",
-            "cardImageName": "defend",
-            "cardColor": 0,
-            "cardType": 1,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "방어도를 5 얻습니다."
+            "instanceID": 27854
         },
         {
-            "cardName": "수비",
-            "cardImageName": "defend",
-            "cardColor": 0,
-            "cardType": 1,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "방어도를 5 얻습니다."
+            "instanceID": 27854
         },
         {
-            "cardName": "수비",
-            "cardImageName": "defend",
-            "cardColor": 0,
-            "cardType": 1,
-            "cardRarity": 0,
-            "cardValue": 1,
-            "cardDesc": "방어도를 5 얻습니다."
+            "instanceID": 27854
         },
         {
-            "cardName": "강타",
-            "cardImageName": "bash",
-            "cardColor": 0,
-            "cardType": 0,
-            "cardRarity": 0,
-            "cardValue": 2,
-            "cardDesc": "피해를 8 줍니다.\n취약을 2 부여합니다."
+            "instanceID": 27856
         }
     ],
     "characterType": 0,
     "hp": 80,
     "maxHp": 80,
     "gold": 99,
-    "addedStrength": 0
+    "addedStrength": 0,
+    "ascensionLevel": 0
 }

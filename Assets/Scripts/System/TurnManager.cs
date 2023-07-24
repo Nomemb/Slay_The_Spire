@@ -11,6 +11,7 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private CardDisplay hand;
     [SerializeField] private GameManager gm;
     [SerializeField] private UIManager um;
+    [SerializeField] private HpInteraction playerHpUi;
     
 
     public UnityEvent startBattle;
@@ -36,6 +37,7 @@ public class TurnManager : MonoBehaviour
     {
         // StartBattle Event
         startBattle.AddListener(gm.BattleStart);
+        startBattle.AddListener(um.Init);
         startBattle.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
         startBattle.AddListener(hand.ImageSetting);
         startBattle.AddListener(um.UpdateDeckCountUI);
@@ -58,6 +60,7 @@ public class TurnManager : MonoBehaviour
         
         // ChangedPlayerHp Event
         changePlayerHp.AddListener(um.UpdateHpUI);
+        changePlayerHp.AddListener(()=>playerHpUi.UpdateHpBar(gm.playerHp, gm.playerMaxHp));
 
     }
     private void StartBattle()
@@ -93,6 +96,7 @@ public class TurnManager : MonoBehaviour
         }
 
         gm.isPlayerTurn = true;
+        gm.currentMana = gm.maxMana;
         startEnemyTurn.AddListener(StartPlayerTurn);
         
         startEnemyTurn.Invoke();

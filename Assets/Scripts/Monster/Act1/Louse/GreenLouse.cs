@@ -32,5 +32,7 @@ public class GreenLouse : Louse
             currentState = currentState == MonsterState.Attack ? MonsterState.DeBuff : MonsterState.Attack;
             sameStateCount = 0;
         }
+        base.ChangeNextState();
+
     }
 }

@@ -37,6 +37,14 @@ public class UIManager : MonoBehaviour
     public Text usedDeckCount;
     public Text expiredDeckCount;
 
+    [Header("Cursor")] 
+    public GameObject cursorObject;
+    public Image imageCursor;
+
+    [Header("BattleUI")] 
+    public GameObject battleUI;
+    private Camera camera;
+
     void Awake()
     {
         if (instance == null)
@@ -47,23 +55,27 @@ public class UIManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    public void Init()
     {
-        
         playerInfo.characterType.text = "the " + GameManager.instance.currentType;
         playerInfo.heartText.text = GameManager.instance.playerHp + "/" + GameManager.instance.playerMaxHp;
         playerInfo.goldText.text = GameManager.instance.playerGold.ToString();
 
         deckCount.text = GameManager.instance.fixedDeck.Count.ToString();
+        camera = Camera.main;
 
-        if (!SceneManager.GetActiveScene().name.Equals("NeowScene"))
+        if (SceneManager.GetActiveScene().name.Equals("NeowScene"))
         {
-            drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
-            usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
-            expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
+            battleUI.SetActive(false);
+            return;
         }
-    }
 
+        battleUI.SetActive(true);
+        
+        drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
+        usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
+        expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
+    }
     public void UpdateHpUI()
     {
         playerInfo.heartText.text = GameManager.instance.playerHp + "/" + GameManager.instance.playerMaxHp;
@@ -86,5 +98,4 @@ public class UIManager : MonoBehaviour
         usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
         expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
     }
-
 }

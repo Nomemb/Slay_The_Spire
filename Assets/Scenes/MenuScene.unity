@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e498e6e9e94d2b4e90e191b1857fca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleStart:
+    m_PersistentCalls:
+      m_Calls: []
   playerTurnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -159,6 +162,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   playerCardCountChange:
+    m_PersistentCalls:
+      m_Calls: []
+  playerHpChange:
+    m_PersistentCalls:
+      m_Calls: []
+  relicAdded:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &3258307
@@ -1711,6 +1720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465255361}
   - component: {fileID: 465255360}
+  - component: {fileID: 465255362}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1738,12 +1748,16 @@ MonoBehaviour:
   usedDeck: []
   expiredDeck: []
   hand: []
+  cardDB: {fileID: 0}
   playerHp: 0
   playerMaxHp: 0
   playerGold: 0
   playerPower: 0
+  ascensionLevel: 0
   maxHandCount: 10
   currentDrawCardCount: 5
+  currentMana: 0
+  maxMana: 0
 --- !u!4 &465255361
 Transform:
   m_ObjectHideFlags: 0
@@ -1759,6 +1773,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &465255362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465255359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa64ac32e3f9410448ab7bfd31652f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ironCladCardPool:
+  - {fileID: 3892924776348316509, guid: 249b6227642538046ba5df152709e099, type: 3}
+  - {fileID: 3892924776348316509, guid: ff3844d2e09a8b443b18cd79f45bfeef, type: 3}
+  - {fileID: 3892924776348316509, guid: b759f5ba60bb0cc43b4e79401aa67006, type: 3}
 --- !u!1001 &483437596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3099,6 +3129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66722343357097846abb89a855edfe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: 
 --- !u!4 &1302516386
 Transform:
   m_ObjectHideFlags: 0

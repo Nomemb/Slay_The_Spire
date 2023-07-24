@@ -1,59 +1,61 @@
+using System;
 using UnityEngine;
+using UnityEngine.XR;
 
 public enum CardColor{red, green, blue, purple, colorless, status, curse}
 public enum CardType{attack, skill, power}
 public enum CardRarity{common, uncommon, rare}
 
-[System.Serializable]
-public class Card  
+public enum CardUseType{normal, target}
+[Serializable]
+public abstract class Card : MonoBehaviour
 {
-    public string cardName;                 // 카드 이름
-    public string cardImageName;            // 카드 이미지 이름
-    public CardColor cardColor;             // 카드 색깔
-    public CardType cardType;               // 카드 타입 ( 공격, 스킬, 파워 )
-    public CardRarity cardRarity;           // 카드 희귀도 ( 일반, 희귀, 특별 )
-    public int cardValue;                   // 카드 에너지
-    public string cardDesc;                 // 카드 설명
-
-    private GameManager gm = GameManager.instance;
+    public CardData cardData;
     
-    public Card()
+    protected GameManager gm = GameManager.instance;
+    protected CardDisplay cd;
+    protected void Start()
     {
+        cd = GetComponentInParent<CardDisplay>();
+        cd.cards.Add(this);
+    }
+    public void UseCard(BaseMonster target = null)
+    {
+        gm.currentMana -= cardData.cardValue;
+
+        ActivationCard(target);
+        UsageCard();
+        UIManager.instance.UpdateCardCount();
     }
     
-    public Card(string cardName, string cardImageName, CardColor cardColor, CardType cardType, CardRarity cardRarity, int cardValue, string cardDesc)
+    public bool CanUseCard()
     {
-        this.cardName = cardName;
-        this.cardImageName = cardImageName;
-        this.cardColor = cardColor;
-        this.cardType = cardType;
-        this.cardRarity = cardRarity;
-        this.cardValue = cardValue;
-        this.cardDesc = cardDesc;
+        return gm.currentMana >= cardData.cardValue;
     }
 
-    public void UseCard()
+    protected virtual void ActivationCard(BaseMonster target = null)
     {
-        // DoingSomething();
-        
-        /*
-        if(card == "휘발성")
-        {
-            gm.expiredDeck.Add(this);
-        }
-         */
-        if (cardType != CardType.power)
-        {
-            gm.usedDeck.Add(this);
-            gm.hand.Remove(this);
-            Debug.Log(cardName + " 사용");
-        }
+        Debug.Log(cardData.CardName + " 사용");
+        // Doing Something();
     }
 
+    protected void UsageCard()
+    {
+        int thisIndex = cd.cards.IndexOf(this);
+        if (cardData.cardType != CardType.power)
+        {
+            gm.usedDeck.Add(gm.hand[thisIndex]);
+        };
+        gm.hand.RemoveAt(thisIndex);
+        cd.cards.RemoveAt(thisIndex);
+        Destroy(cd.cardUI[thisIndex]);
+        cd.cardUI.RemoveAt(thisIndex);
+    }
     public void Enchant()
     {
         
     }
+
     
 }
 
