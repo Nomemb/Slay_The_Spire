@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8676442985766010177}
   - component: {fileID: 8676442985766010178}
   - component: {fileID: 8676442985766010179}
-  - component: {fileID: 5064486804410950519}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -116,32 +115,3 @@ MonoBehaviour:
   _animationName: Idle
   loop: 0
   timeScale: 1
---- !u!114 &5064486804410950519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8676442985766010188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffacf90860b1a48468ed44b002756e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterType: 0
-  isPlayerTurn: 1
-  onPlayerTurn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: ae384688c2a78f649a2ec71570f07e57, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

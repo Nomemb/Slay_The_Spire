@@ -38,9 +38,7 @@ public class TurnManager : MonoBehaviour
         // StartBattle Event
         startBattle.AddListener(gm.BattleStart);
         startBattle.AddListener(um.Init);
-        startBattle.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
-        startBattle.AddListener(hand.ImageSetting);
-        startBattle.AddListener(um.UpdateDeckCountUI);
+        startBattle.AddListener(StartPlayerTurn); 
         
         // StartPlayerTurn Event
         startPlayerTurn.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));

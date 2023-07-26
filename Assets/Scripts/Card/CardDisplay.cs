@@ -7,8 +7,10 @@ public class CardDisplay : MonoBehaviour
     public List<Card> cards;
 
     public List<GameObject> cardUI = new List<GameObject>();
+    
     public void ImageSetting()
     {
+        Debug.Log("ImageSetting " + GameManager.instance.hand.Count);
         foreach (var card in GameManager.instance.hand)
         {
             GameObject tempCard = Instantiate(card, this.transform.position, Quaternion.identity);

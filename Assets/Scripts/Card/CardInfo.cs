@@ -135,14 +135,13 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (cardData.cardUseType != CardUseType.normal) return;
-        if (Input.mousePosition.y <= 500) return;
+        if (cardData.cardUseType != CardUseType.normal || Input.mousePosition.y <= 500 || !card.CanUseCard()) return;
         card.UseCard();
 
-        if (card.cardData.cardType != CardType.power)
-        {
-            GameManager.instance.usedDeck.Add(this.gameObject);
-        }
-        Destroy(this.gameObject, 0.5f);
+        // if (card.cardData.cardType != CardType.power)
+        // {
+        //     GameManager.instance.usedDeck.Add(this.gameObject);
+        // }
+        // Destroy(this.gameObject, 0.5f);
     }
 }

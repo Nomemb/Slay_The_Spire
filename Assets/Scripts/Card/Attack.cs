@@ -6,7 +6,6 @@ public abstract class Attack : Card
 {
     protected override void ActivationCard(BaseMonster target = null)
     {
-        if (!base.CanUseCard()) return;
         if (target == null)
         {
             Debug.Log("타겟 설정되지 않음");
