@@ -27,23 +27,7 @@ public class UIManager : MonoBehaviour
     public Text deckCount;
     public Button settingButton;
 
-    [Header("Deck")] 
-    public Button drawDeckButton;
-
-    public Button usedDeckButton;
-    public Button expiredDeckButton;
     
-    public Text drawDeckCount;
-    public Text usedDeckCount;
-    public Text expiredDeckCount;
-
-    [Header("Cursor")] 
-    public GameObject cursorObject;
-    public Image imageCursor;
-
-    [Header("BattleUI")] 
-    public GameObject battleUI;
-    private Camera camera;
 
     void Awake()
     {
@@ -55,6 +39,10 @@ public class UIManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void Start()
+    {
+        Init();
+    }
     public void Init()
     {
         playerInfo.characterType.text = "the " + GameManager.instance.currentType;
@@ -62,19 +50,6 @@ public class UIManager : MonoBehaviour
         playerInfo.goldText.text = GameManager.instance.playerGold.ToString();
 
         deckCount.text = GameManager.instance.fixedDeck.Count.ToString();
-        camera = Camera.main;
-
-        if (SceneManager.GetActiveScene().name.Equals("NeowScene"))
-        {
-            battleUI.SetActive(false);
-            return;
-        }
-
-        battleUI.SetActive(true);
-        
-        drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
-        usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
-        expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
     }
     public void UpdateHpUI()
     {
@@ -90,12 +65,5 @@ public class UIManager : MonoBehaviour
     {
         deckCount.text = GameManager.instance.fixedDeck.Count.ToString();
     }
-
-    public void UpdateCardCount()
-    {
-        expiredDeckButton.gameObject.SetActive(GameManager.instance.expiredDeck.Count > 0);
-        drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
-        usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
-        expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
-    }
+    
 }

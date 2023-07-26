@@ -122,14 +122,14 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         }
         else
         {
-            UIManager.instance.cursorObject.gameObject.SetActive(true);
+            //UIManager.instance.cursorObject.gameObject.SetActive(true);
             transform.position = initPos;
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        UIManager.instance.cursorObject.gameObject.SetActive(false);
+        //UIManager.instance.cursorObject.gameObject.SetActive(false);
         transform.position = originPos;
     }
 

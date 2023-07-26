@@ -9,10 +9,9 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private CharacterType characterType;
     [SerializeField] bool isPlayerTurn;
     [SerializeField] private CardDisplay hand;
-    [SerializeField] private GameManager gm;
-    [SerializeField] private UIManager um;
     [SerializeField] private HpInteraction playerHpUi;
-    
+
+    [SerializeField] private UIBattleScene battleScene;
 
     public UnityEvent startBattle;
     public UnityEvent startPlayerTurn;
@@ -21,13 +20,30 @@ public class TurnManager : MonoBehaviour
     public UnityEvent changePlayerCardCount;
     public UnityEvent changePlayerHp;
 
+    private GameManager gm;
+    private UIManager um;
     public List<BaseMonster> monsterList = null;
+    
+    void Awake()
+    {
+        if (instance == null) 
+            instance = this;
+        else 
+            Destroy(gameObject);
+        
+    }
+    
     private void Start()
     {
-        isPlayerTurn = GameManager.instance.isPlayerTurn;
-        characterType = GameManager.instance.currentType;
-        gm = FindObjectOfType<GameManager>();
-        um = FindObjectOfType<UIManager>();
+        gm = GameManager.instance;
+        um = UIManager.instance;
+        
+        isPlayerTurn = gm.isPlayerTurn;
+        characterType = gm.currentType;
+        
+        um.Init();
+        battleScene.Init();
+        hand = battleScene.GetComponentInChildren<CardDisplay>();
         EventSetting();
         
         StartBattle();
@@ -36,8 +52,9 @@ public class TurnManager : MonoBehaviour
     private void EventSetting()
     {
         // StartBattle Event
-        startBattle.AddListener(gm.BattleStart);
         startBattle.AddListener(um.Init);
+        startBattle.AddListener(battleScene.Init);
+        startBattle.AddListener(gm.BattleStart);
         startBattle.AddListener(StartPlayerTurn); 
         
         // StartPlayerTurn Event
@@ -48,13 +65,13 @@ public class TurnManager : MonoBehaviour
         // EndPlayerTurn Event
         endPlayerTurn.AddListener(gm.EndPlayerTurn);
         endPlayerTurn.AddListener(hand.EndPlayerTurn);
-        endPlayerTurn.AddListener(um.UpdateCardCount);
+        endPlayerTurn.AddListener(battleScene.UpdateCardCount);
         endPlayerTurn.AddListener(StartEnemyTurn);
         
         // StartEnemyTurn Event
         
         // ChangePlayerCardCount Event
-        changePlayerCardCount.AddListener(um.UpdateCardCount);
+        changePlayerCardCount.AddListener(battleScene.UpdateCardCount);
         
         // ChangedPlayerHp Event
         changePlayerHp.AddListener(um.UpdateHpUI);
@@ -102,7 +119,6 @@ public class TurnManager : MonoBehaviour
 
     public void ChangePlayerCardCount()
     {
-        Debug.Log("플레이어 드로우!");
         changePlayerCardCount.Invoke();
     }
 

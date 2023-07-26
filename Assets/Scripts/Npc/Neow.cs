@@ -76,7 +76,7 @@ public class Neow : MonoBehaviour
 
     private void MoveScene()
     {
-        SceneManager.LoadScene("BattleScene");
         DataManager.instance.JsonSave();
+        SceneManager.LoadScene("BattleScene");
     }
 }

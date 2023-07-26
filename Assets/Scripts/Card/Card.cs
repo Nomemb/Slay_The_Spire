@@ -25,7 +25,7 @@ public abstract class Card : MonoBehaviour
 
         ActivationCard(target);
         UsageCard();
-        UIManager.instance.UpdateCardCount();
+        TurnManager.instance.ChangePlayerCardCount();
     }
     
     public bool CanUseCard()
