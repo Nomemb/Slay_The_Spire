@@ -30,9 +30,4 @@ public abstract class BaseCharacter
         GameManager.instance.playerGold = this.Gold;
         GameManager.instance.playerPower = this.AddedStrength;
     }
-
-    public virtual void InitCard()
-    {
-        GameManager.instance.fixedDeck.Clear();
-    }
 }

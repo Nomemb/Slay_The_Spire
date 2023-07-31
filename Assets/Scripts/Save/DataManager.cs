@@ -23,43 +23,41 @@ public class DataManager : MonoBehaviour
 
     public void JsonLoad()
     {
-        Debug.Log("JsonLoad");
-
         var loadJson = File.ReadAllText(path);
         var saveData = JsonUtility.FromJson<SaveData>(loadJson);
 
-        if (saveData != null)
+        if (saveData == null) return;
+        
+        GameManager.instance.fixedDeck.Clear();
+        foreach (var card in saveData.card)
         {
-            GameManager.instance.fixedDeck.Clear();
-            foreach (var card in saveData.cardData)
-            {
-                GameManager.instance.fixedDeck.Add(card);
-            }
-
-            GameManager.instance.currentType = saveData.characterType;
-            GameManager.instance.playerHp = saveData.hp;
-            GameManager.instance.playerMaxHp = saveData.maxHp;
-            GameManager.instance.playerGold = saveData.gold;
-            GameManager.instance.playerPower = saveData.addedStrength;
+            GameManager.instance.fixedDeck.Add(card);
         }
-        //}
+
+        GameManager.instance.currentType = saveData.characterType;
+        GameManager.instance.playerHp = saveData.hp;
+        GameManager.instance.playerMaxHp = saveData.maxHp;
+        GameManager.instance.playerGold = saveData.gold;
+        GameManager.instance.playerPower = saveData.addedStrength;
+        GameManager.instance.ascensionLevel = saveData.ascensionLevel;
     }
 
     // 캐릭터 선택 후 출정 누르면 실행됨.
     public void JsonSave()
     {
         SaveData saveData = new SaveData();
-        saveData.cardData.Clear();
+        saveData.card.Clear();
         foreach (var card in GameManager.instance.fixedDeck)
         {
-            saveData.cardData.Add(card);
+            saveData.card.Add(card);
         }
-
+        
         saveData.characterType = GameManager.instance.currentType;
         saveData.hp = GameManager.instance.playerHp;
         saveData.maxHp = GameManager.instance.playerMaxHp;
         saveData.gold = GameManager.instance.playerGold;
         saveData.addedStrength = GameManager.instance.playerPower;
+        saveData.ascensionLevel = GameManager.instance.ascensionLevel;
 
         string json = JsonUtility.ToJson(saveData, true);           // true로 읽기 쉽게 표시
 

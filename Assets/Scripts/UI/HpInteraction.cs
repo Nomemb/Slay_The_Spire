@@ -1,23 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HpInteraction : MonoBehaviour
 {
-    GameObject target;
-
-    private int hp;
-    private int maxHp;
-    private void Start()
+    [SerializeField] private Text hpText;
+    [SerializeField] private Slider hpSlider;
+    public void UpdateHpBar(int hp, int maxHp)
     {
-        if(target.CompareTag("Player"))
-        {
-            hp = GameManager.instance.playerHp;
-            maxHp = GameManager.instance.playerMaxHp;
-        }
-        else
-        {
-
-        }
+        hpText.text = hp + "/" + maxHp;
+        hpSlider.value = 1 - (float)hp / maxHp;
     }
 }

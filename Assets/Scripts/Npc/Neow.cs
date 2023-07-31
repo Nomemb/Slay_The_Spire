@@ -57,8 +57,6 @@ public class Neow : MonoBehaviour
 
     private void ClearFailedOption()
     {
-
-        
         var newButton2 = Instantiate(buttonPrefab, interaction.transform);
         var btn2 = newButton2.GetComponent<Button>();
         var text2 = newButton2.GetComponentInChildren<Text>();
@@ -78,7 +76,7 @@ public class Neow : MonoBehaviour
 
     private void MoveScene()
     {
-        SceneManager.LoadScene("BattleScene");
         DataManager.instance.JsonSave();
+        SceneManager.LoadScene("BattleScene");
     }
 }

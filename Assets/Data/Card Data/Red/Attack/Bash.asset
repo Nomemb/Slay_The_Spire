@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da71fcd095b39d4fb0e6e85e27aa79b, type: 3}
+  m_Name: Bash
+  m_EditorClassIdentifier: 
+  cardName: "\uAC15\uD0C0"
+  cardImageName: bash
+  cardColor: 0
+  cardType: 0
+  cardRarity: 0
+  cardUseType: 1
+  cardValue: 2
+  damage: 8
+  defense: 0
+  buffDuration: 0
+  deBuffDuration: 2
+  e_cardValue: 2
+  e_damage: 10
+  e_defense: 0
+  e_buffDuration: 0
+  e_deBuffDuration: 3
+  cardDesc: "\uD53C\uD574\uB97C 8 \uC90D\uB2C8\uB2E4.\n\uCDE8\uC57D\uC744 2 \uBD80\uC5EC\uD569\uB2C8\uB2E4."

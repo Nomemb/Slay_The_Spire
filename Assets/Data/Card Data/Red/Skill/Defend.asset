@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da71fcd095b39d4fb0e6e85e27aa79b, type: 3}
+  m_Name: Defend
+  m_EditorClassIdentifier: 
+  cardName: "\uC218\uBE44"
+  cardImageName: defend
+  cardColor: 0
+  cardType: 1
+  cardRarity: 0
+  cardUseType: 0
+  cardValue: 1
+  damage: 0
+  defense: 5
+  buffDuration: 0
+  deBuffDuration: 0
+  e_cardValue: 1
+  e_damage: 0
+  e_defense: 8
+  e_buffDuration: 0
+  e_deBuffDuration: 0
+  cardDesc: "\uBC29\uC5B4\uB3C4\uB97C 5 \uC5BB\uC2B5\uB2C8\uB2E4."
