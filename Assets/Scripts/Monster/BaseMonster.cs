@@ -1,5 +1,7 @@
 using System;
+using Spine.Unity;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum MonsterState
@@ -10,7 +12,7 @@ public enum MonsterState
     Buff,
     DeBuff
 }
-public abstract class BaseMonster : MonoBehaviour
+public abstract class BaseMonster : MonoBehaviour, IDamageable
 {
     [field: Header("Stats")]
     [field:SerializeField] protected int Hp { get; set; }
@@ -19,6 +21,7 @@ public abstract class BaseMonster : MonoBehaviour
     [field:SerializeField] protected int Damage { get; set; }
     [field:SerializeField] protected int Block { get; set; }
 
+    protected int currentDamage;
     private TurnManager tm;
     
     [Space(10f)]
@@ -32,17 +35,42 @@ public abstract class BaseMonster : MonoBehaviour
     [SerializeField] private HpInteraction hpInter;
     [Tooltip("0: Idle, 1: Attack, 2: Defense, 3: Buff, 4: Debuff")]
     [SerializeField] protected Sprite[] stateSprites;
-    public Image ImageCurrentState;
-    public Text TextCurrentDamage;
+    public Image imageCurrentState;
+    public Text textCurrentDamage;
+    public GameObject buffUI;
+
+    [Space(10f)]
+    [Header("Animation")]
+    [SerializeField] protected SkeletonAnimation skAnim;
     
+    [Space(10f)]
+    [Header("BuffSystem")]
+    public SharedDebuff enemyShareState;
+    public UniqueDebuffToEnemy enemyUniqueState;
+    
+    private BuffSystem bs;
+    private DebuffSystem dbS;
+
+    [SerializeField] protected PlayerController player;
     protected virtual void Start()
     {
         currentState = MonsterState.Idle;
+        currentDamage = AddedStrength + Damage;
+        
         ChangeNextState();
         tm = FindObjectOfType<TurnManager>();
+        player = FindObjectOfType<PlayerController>();
+        
         tm.monsterList.Add(this);
         MaxHp = Hp;
-        hpInter = GetComponentInChildren<HpInteraction>();
+        
+        bs = GetComponent<BuffSystem>();
+        dbS = GetComponent<DebuffSystem>();
+
+        enemyShareState = 0x00000000;
+        enemyUniqueState = 0x00000000;
+        
+        //hpInter = GetComponentInChildren<HpInteraction>();
         hpInter.UpdateHpBar(Hp, MaxHp);
     }
 
@@ -61,7 +89,7 @@ public abstract class BaseMonster : MonoBehaviour
                 Defense();
                 break;
             case MonsterState.DeBuff:
-                DeBuff();
+                Debuff();
                 break;
             
             case MonsterState.Idle:
@@ -69,26 +97,27 @@ public abstract class BaseMonster : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        skAnim.AnimationState.AddAnimation(0, "idle", true, 0f);
         ChangeNextState();
     }
 
     protected virtual void ChangeNextState()
     {
-        ImageCurrentState.sprite = stateSprites[(int)currentState];
+        imageCurrentState.sprite = stateSprites[(int)currentState];
         
         if (currentState == MonsterState.Attack)
         {
-            TextCurrentDamage.gameObject.SetActive(true);
-            TextCurrentDamage.text = (AddedStrength+Damage).ToString();
+            textCurrentDamage.gameObject.SetActive(true);
+            textCurrentDamage.text = currentDamage.ToString();
         }
         else
         {
-            TextCurrentDamage.gameObject.SetActive(false);
+            textCurrentDamage.gameObject.SetActive(false);
         }
     }
     protected virtual void Attack()
     {
-        var currentDamage = AddedStrength + Damage;
+        currentDamage = AddedStrength + Damage;
         Debug.Log("Attack " + currentDamage);
         GameManager.instance.playerHp -= currentDamage;
         tm.ChangedPlayerHp();
@@ -100,14 +129,14 @@ public abstract class BaseMonster : MonoBehaviour
     }
 
     protected virtual void Buff()
-    { 
+    {
         Debug.Log("Buff");
 
     }
 
-    protected virtual void DeBuff()
+    protected virtual void Debuff()
     {
-        Debug.Log("DeBuff");
+        Debug.Log("Debuff");
 
     }
 
@@ -117,7 +146,9 @@ public abstract class BaseMonster : MonoBehaviour
         hpInter.UpdateHpBar(Hp, MaxHp);
         if (Hp <= 0)
         {
+            Debug.Log(gameObject.name + " 사망");
             tm.monsterList.Remove(this);
+            Destroy(this.gameObject);
         }
     }
 }

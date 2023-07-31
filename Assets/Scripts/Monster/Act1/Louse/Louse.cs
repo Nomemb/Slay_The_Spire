@@ -13,9 +13,14 @@ public abstract class Louse : BaseMonster
         base.Start();
         curlUp = Random.Range(3, 8);
         SetStatsByAscensionLevel();
-        Debug.Log("Hp : " + Hp + " Damage : " + Damage + " Curl UP : " + curlUp);
     }
 
+    protected override void Attack()
+    {
+        skAnim.AnimationState.SetAnimation(0, "transitiontoclosed", false);
+        base.Attack();
+    }
+    
     private void SetStatsByAscensionLevel()
     {
         if (GameManager.instance.ascensionLevel >= 2)

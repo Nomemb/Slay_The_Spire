@@ -9,13 +9,12 @@ public abstract class Attack : Card
         if (target == null)
         {
             Debug.Log("타겟 설정되지 않음");
+            return;
         }
-        else
-        {
-            Debug.Log("타겟 : " + target.name);
-            int onDamage = cardData.Damage + gm.playerPower;
-            Debug.Log(onDamage);
-            target.OnDamage(onDamage);
-        }
+        
+        Debug.Log("타겟 : " + target.name);
+        int onDamage = cardData.Damage + gm.playerPower;
+        Debug.Log(onDamage);
+        target.OnDamage(onDamage);
     }
 }

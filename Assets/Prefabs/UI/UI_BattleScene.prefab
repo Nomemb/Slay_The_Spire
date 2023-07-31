@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3828292107021634442}
   - component: {fileID: -4413966869766542060}
   m_Layer: 5
-  m_Name: UIBattleScene
+  m_Name: UI_BattleScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

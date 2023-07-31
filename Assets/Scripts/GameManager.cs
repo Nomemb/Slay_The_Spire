@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -48,11 +49,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         ascensionLevel = 0;
         cardDB = GetComponent<CardDataBase>();
-    }
-
-    private void Start()
-    {
-        //DataManager.instance.JsonLoad();
     }
 
     public void BattleStart()
@@ -135,7 +131,7 @@ public class GameManager : MonoBehaviour
                 currCharacter.SetCharacterStat();
                 break;
             }
-        }
+        }   
         fixedDeck.Clear();
         cardDB.InitCard();
         DataManager.instance.JsonSave();

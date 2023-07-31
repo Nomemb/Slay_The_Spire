@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GreenLouse : Louse
 {
@@ -11,7 +13,7 @@ public class GreenLouse : Louse
         Damage = Random.Range(5, 8);
         base.Start();
     }
-
+    
     protected override void ChangeNextState()
     {
         prevState = currentState;
@@ -33,6 +35,13 @@ public class GreenLouse : Louse
             sameStateCount = 0;
         }
         base.ChangeNextState();
+    }
 
+    protected override void Debuff()
+    {
+        skAnim.AnimationState.SetAnimation(0, "rear", false);
+        player.dbS.AddShareDebuff("Weak", 2);
+        
+        base.Debuff();
     }
 }
