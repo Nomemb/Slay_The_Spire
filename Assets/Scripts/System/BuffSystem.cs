@@ -94,7 +94,7 @@ namespace System
     
     public class BuffSystem : MonoBehaviour
     {
-        public Dictionary<string, int> buffDict = new Dictionary<string, int>();
+        public Dictionary<string, int> sharedBuffDict = new Dictionary<string, int>();
         
         public SharedBuff sharedState;
         public PlayerBuff playerState;
@@ -103,7 +103,9 @@ namespace System
         public GameObject buffUi;
         public GameObject uiPrefab;
         
-        private void Start()
+        public List<GameObject> buffUI = new List<GameObject>();
+
+        private void Awake()
         {
             Init();
         }
@@ -114,7 +116,63 @@ namespace System
             playerState = 0x00000000;
             enemyState = 0x00000000;
             
-            buffDict.Clear();
+            sharedBuffDict.Clear();
+        }
+        
+        public void AddShareBuff(string buffName, int duration = 0)
+        {
+            SharedBuff buff = (SharedBuff)Enum.Parse(typeof(SharedBuff), buffName);
+            if ((sharedState & buff) != buff)
+            {
+                Debug.Log(buff + " 디버프 생성");
+                sharedState |= buff;
+                sharedBuffDict.Add(buffName, duration);
+
+                GameObject temp = Instantiate(uiPrefab, transform.position, Quaternion.identity);
+                BuffInfo info = temp.GetComponent<BuffInfo>();
+                info.buffName = buffName;
+                info.UpdateBuffDuration(duration);
+                temp.transform.SetParent(buffUi.transform, false);
+                buffUI.Add(temp);
+            }
+            else
+            {
+                sharedBuffDict[buffName] += duration;
+                Debug.Log("현재 " + buffName + " 디버프 : " + sharedBuffDict[buffName]);
+                foreach (var debuffIcon in buffUI)
+                {
+                    var info = debuffIcon.GetComponent<BuffInfo>();
+                    if(info.buffName != buffName) continue;
+
+                    info.UpdateBuffDuration(sharedBuffDict[buffName]);
+                }
+            }
+
+            PrintBuffDictLog();
+        }
+        
+        private void PrintBuffDictLog()
+        {
+            foreach (var debuff in sharedBuffDict)
+            {
+                Debug.Log(debuff.Key + " " + debuff.Value);
+            }
+        }
+        
+        public void UpdateBuffCountByTurnEnd()
+        {
+            DecreaseShareBuffDictByTurnEnd();
+        }
+
+        private void DecreaseShareBuffDictByTurnEnd()
+        {
+            foreach (var buff in sharedBuffDict)
+            {
+                var temp = (SharedBuff)Enum.Parse(typeof(SharedBuff), buff.Key);
+                Debug.Log(temp + " " + (byte)temp);
+            }
+
+            PrintBuffDictLog();
         }
     }
 }

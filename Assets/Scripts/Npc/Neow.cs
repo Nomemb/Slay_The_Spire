@@ -64,6 +64,7 @@ public class Neow : MonoBehaviour
         if (GameManager.instance == null) return;
         var addMaxHealth = Mathf.RoundToInt(GameManager.instance.playerMaxHp / 10);
         text2.text = "[ 최대 체력 + " + addMaxHealth + " 증가 ]";
+        btn2.onClick.AddListener(()=>AddMaxHealth(addMaxHealth));
         btn2.onClick.AddListener(MoveScene);
         
         var newButton = Instantiate(buttonPrefab, interaction.transform);
@@ -78,5 +79,11 @@ public class Neow : MonoBehaviour
     {
         DataManager.instance.JsonSave();
         SceneManager.LoadScene("BattleScene");
+    }
+
+    private void AddMaxHealth(int addMaxHealth)
+    {
+        GameManager.instance.playerMaxHp += addMaxHealth;
+        GameManager.instance.playerHp = GameManager.instance.playerMaxHp;
     }
 }

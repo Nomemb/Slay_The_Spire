@@ -39,6 +39,7 @@ public class RedLouse : Louse
     {
         base.Buff();
         skAnim.AnimationState.SetAnimation(0, "rear", false);
+        
 
         AddedStrength = GameManager.instance.ascensionLevel >= 17 ? AddedStrength + 4 : AddedStrength + 3;
     }

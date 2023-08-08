@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     // 게임 플레이 관련
     public CharacterType currentType;
     public bool isPlayerTurn = true;
-    //public PlayerController player;
+    public PlayerController player;
 
     // 덱 관련
     public List<GameObject> fixedDeck = new List<GameObject>();         // 게임 내내 보유하고 있는 카드풀

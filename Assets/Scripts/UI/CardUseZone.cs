@@ -19,7 +19,6 @@ public class CardUseZone : MonoBehaviour, IDropHandler
 
         if (!card.CanUseCard()) return;
         
-        Debug.Log("Ondrop : " + monster.name);
         card.UseCard(monster);
     }
 }

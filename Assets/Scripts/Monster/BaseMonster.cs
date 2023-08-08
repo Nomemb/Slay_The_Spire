@@ -48,8 +48,8 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable
     public SharedDebuff enemyShareState;
     public UniqueDebuffToEnemy enemyUniqueState;
     
-    private BuffSystem bs;
-    private DebuffSystem dbS;
+    protected BuffSystem bs;
+    protected DebuffSystem dbS;
 
     [SerializeField] protected PlayerController player;
     protected virtual void Start()
@@ -104,7 +104,8 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable
     protected virtual void ChangeNextState()
     {
         imageCurrentState.sprite = stateSprites[(int)currentState];
-        
+        currentDamage = AddedStrength + Damage; 
+
         if (currentState == MonsterState.Attack)
         {
             textCurrentDamage.gameObject.SetActive(true);
@@ -117,7 +118,11 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable
     }
     protected virtual void Attack()
     {
-        currentDamage = AddedStrength + Damage;
+        if ((player.dbS.sharedState & SharedDebuff.Vulnerable) == SharedDebuff.Vulnerable)
+        {
+            currentDamage = (int)Math.Ceiling(currentDamage * 1.5);
+        }
+
         Debug.Log("Attack " + currentDamage);
         GameManager.instance.playerHp -= currentDamage;
         tm.ChangedPlayerHp();
@@ -142,6 +147,12 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable
 
     public virtual void OnDamage(int onDamage)
     {
+        // 취약 상태라면 ( 데미지를 50% 더 받음 )
+        if ((dbS.sharedState & SharedDebuff.Vulnerable) == SharedDebuff.Vulnerable)
+        {
+            onDamage = (int)Math.Ceiling(onDamage * 1.5);
+        }
+        Debug.Log(onDamage);
         Hp = Math.Max(Hp - onDamage, 0);
         hpInter.UpdateHpBar(Hp, MaxHp);
         if (Hp <= 0)

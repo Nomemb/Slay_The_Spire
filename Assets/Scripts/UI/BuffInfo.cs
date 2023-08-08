@@ -32,4 +32,9 @@ public class BuffInfo : MonoBehaviour
         }
         return img;
     }
+
+    public void UpdateBuffDuration(int duration)
+    {
+        buffDuration.text = duration.ToString();
+    }
 }

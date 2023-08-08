@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Card Data", menuName = "SO/Card Data")]
@@ -44,10 +45,7 @@ public class CardData : ScriptableObject
     public int e_Damage => e_damage;
     [SerializeField] private int e_defense;           // 카드 방어도
     public int e_Defense => e_defense;
-    
-    // public BuffType buffType;
-    // public DeBuffType deBuffType;
-    
+
     [SerializeField] private int e_buffDuration;     // 버프 지속시간
     public int e_BuffDuration => e_buffDuration;
     
@@ -56,6 +54,5 @@ public class CardData : ScriptableObject
     
     [Header("Card Text")]
     [Multiline(4)]
-    public string cardDesc;                        // 카드 설명
-
+    public List<string> cardDesc;                        // 카드 설명
 }

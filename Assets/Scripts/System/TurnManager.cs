@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,12 +8,15 @@ namespace System
     public class TurnManager : MonoBehaviour
     {
         public static TurnManager instance;
+        
+        [Header("PlayerState")]
+        [Space(3f)]
         [SerializeField] private CharacterType characterType;
         [SerializeField] bool isPlayerTurn;
+        
+        [SerializeField] private UIBattleScene battleScene;
         [SerializeField] private CardDisplay hand;
         [SerializeField] private HpInteraction playerHpUi;
-
-        [SerializeField] private UIBattleScene battleScene;
 
         public UnityEvent startBattle;
         public UnityEvent startPlayerTurn;
@@ -21,11 +25,21 @@ namespace System
         public UnityEvent changePlayerCardCount;
         public UnityEvent changePlayerHp;
 
-        private GameManager gm;
-        private UIManager um;
-        private PlayerController player;
+        [Space(10f)]
+        [Header("Components")]
+        [Space(3f)]
+        [SerializeField] private GameManager gm;
+        [SerializeField] private UIManager um;
+        [SerializeField] private PlayerController player;
         public List<BaseMonster> monsterList = null;
-    
+
+        [Space(10f)] [Header("Action")] [Space(3f)]
+        public BuffSystem playerBuff;
+        public DebuffSystem playerDebuff;
+        
+        
+        
+        
         void Awake()
         {
             if (instance == null) 
@@ -47,6 +61,7 @@ namespace System
             battleScene.Init();
             hand = battleScene.GetComponentInChildren<CardDisplay>();
             player = FindObjectOfType<PlayerController>();
+            gm.player = player;
             EventSetting();
         
             StartBattle();
@@ -59,7 +74,8 @@ namespace System
             startBattle.AddListener(battleScene.Init);
             startBattle.AddListener(gm.BattleStart);
             startBattle.AddListener(player.BattleStart);
-            startBattle.AddListener(StartPlayerTurn); 
+            startBattle.AddListener(StartPlayerTurn);
+            startBattle.AddListener(ChangedPlayerHp);
         
             // StartPlayerTurn Event
             startPlayerTurn.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
@@ -70,6 +86,8 @@ namespace System
             endPlayerTurn.AddListener(gm.EndPlayerTurn);
             endPlayerTurn.AddListener(hand.EndPlayerTurn);
             endPlayerTurn.AddListener(battleScene.UpdateCardCount);
+            endPlayerTurn.AddListener(playerBuff.UpdateBuffCountByTurnEnd);
+            endPlayerTurn.AddListener(playerDebuff.UpdateDebuffCountByTurnEnd);
             endPlayerTurn.AddListener(StartEnemyTurn);
         
             // StartEnemyTurn Event
@@ -108,10 +126,12 @@ namespace System
             if (gm.isPlayerTurn) return;
         
             Debug.Log("상대 턴 시작!");
-            startEnemyTurn.RemoveAllListeners();
+
             foreach (var monster in monsterList)
             {
                 startEnemyTurn.AddListener(monster.DoingCurrentState);
+                var buffSys = monster.GetComponent<BuffSystem>();
+                var debuffSys = monster.GetComponent<DebuffSystem>();
             }
 
             gm.isPlayerTurn = true;
@@ -119,6 +139,15 @@ namespace System
             startEnemyTurn.AddListener(StartPlayerTurn);
         
             startEnemyTurn.Invoke();
+            startEnemyTurn.RemoveAllListeners();
+            foreach (var monster in monsterList)
+            {
+                var buffSys = monster.GetComponent<BuffSystem>();
+                var debuffSys = monster.GetComponent<DebuffSystem>();
+                
+                startEnemyTurn.AddListener(buffSys.UpdateBuffCountByTurnEnd);
+                startEnemyTurn.AddListener(debuffSys.UpdateDebuffCountByTurnEnd);
+            }
         }
 
         public void ChangePlayerCardCount()
@@ -128,7 +157,6 @@ namespace System
 
         public void ChangedPlayerHp()
         {
-            Debug.Log("플레이어 HP 변경!");
             changePlayerHp.Invoke();
         }
     

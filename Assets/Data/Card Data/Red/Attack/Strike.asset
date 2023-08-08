@@ -19,7 +19,7 @@ MonoBehaviour:
   cardRarity: 0
   cardUseType: 1
   cardValue: 1
-  damage: 6
+  damage: 3
   defense: 0
   buffDuration: 0
   deBuffDuration: 0
@@ -28,4 +28,7 @@ MonoBehaviour:
   e_defense: 0
   e_buffDuration: 0
   e_deBuffDuration: 0
-  cardDesc: "\uD53C\uD574\uB97C 6 \uC90D\uB2C8\uB2E4."
+  cardDesc:
+  - "\uD53C\uD574\uB97C "
+  - Damage
+  - " \uC90D\uB2C8\uB2E4."
