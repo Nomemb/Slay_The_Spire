@@ -12,7 +12,7 @@ public class CardDisplay : MonoBehaviour
     {
         foreach (var card in GameManager.instance.hand)
         {
-            GameObject tempCard = Instantiate(card, transform.position, Quaternion.identity);
+            var tempCard = Instantiate(card, transform.position, Quaternion.identity);
             tempCard.transform.SetParent(transform);
             cardUI.Add(tempCard);
         }

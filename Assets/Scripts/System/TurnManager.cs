@@ -20,6 +20,7 @@ namespace System
 
         public UnityEvent startBattle;
         public UnityEvent startPlayerTurn;
+        public UnityEvent isClearStage;
         public UnityEvent endPlayerTurn;
         public UnityEvent startEnemyTurn;
         public UnityEvent changePlayerCardCount;
@@ -31,6 +32,7 @@ namespace System
         [SerializeField] private GameManager gm;
         [SerializeField] private UIManager um;
         [SerializeField] private PlayerController player;
+        [SerializeField] private RewardSystem reward;
         public List<BaseMonster> monsterList = null;
 
         [Space(10f)] [Header("Action")] [Space(3f)]
@@ -62,6 +64,7 @@ namespace System
             hand = battleScene.GetComponentInChildren<CardDisplay>();
             player = FindObjectOfType<PlayerController>();
             gm.player = player;
+            reward = battleScene.GetComponentInChildren<RewardSystem>();
             EventSetting();
         
             StartBattle();
@@ -81,6 +84,9 @@ namespace System
             startPlayerTurn.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
             startPlayerTurn.AddListener(hand.ImageSetting);
             startPlayerTurn.AddListener(um.UpdateDeckCountUI);
+            
+            // IsClearStage Event
+            isClearStage.AddListener(reward.ViewReward);
         
             // EndPlayerTurn Event
             endPlayerTurn.AddListener(gm.EndPlayerTurn);
@@ -159,7 +165,17 @@ namespace System
         {
             changePlayerHp.Invoke();
         }
-    
 
+
+        public void IsClearStage()
+        {
+            if (!IsCleared()) return;
+
+            isClearStage.Invoke();
+        }
+        private bool IsCleared()
+        {
+            return monsterList.Count == 0;
+        }
     }
 }

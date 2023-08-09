@@ -159,6 +159,7 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable
         {
             Debug.Log(gameObject.name + " 사망");
             tm.monsterList.Remove(this);
+            tm.IsClearStage();
             Destroy(this.gameObject);
         }
     }

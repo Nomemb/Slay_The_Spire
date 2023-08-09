@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7470bc9063b378b46bdf0dec311a61d5
+guid: d5ac50992b46fb341a0b15460a829980
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gold_0
+      name: rewardScreenSheet_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 45
-        width: 4
-        height: 6
+        x: 39
+        y: 11
+        width: 543
+        height: 679
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,29 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeaef14c5723ee147b87fa3992e9aa99
-      internalID: -631347259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gold_1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 15
-        width: 43
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d5f3738331ce714c8cdecb8763e3aeb
-      internalID: 1103839597
+      spriteID: c97fc2219574b69438f25ef206cc3a8f
+      internalID: -1290343958
       vertices: []
       indices: 
       edges: []
@@ -157,8 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gold_0: -631347259
-      gold_1: 1103839597
+      rewardScreenSheet_0: -1290343958
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

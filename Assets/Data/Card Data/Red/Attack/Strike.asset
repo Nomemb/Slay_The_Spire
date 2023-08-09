@@ -19,7 +19,7 @@ MonoBehaviour:
   cardRarity: 0
   cardUseType: 1
   cardValue: 1
-  damage: 3
+  damage: 6
   defense: 0
   buffDuration: 0
   deBuffDuration: 0
