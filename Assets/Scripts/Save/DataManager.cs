@@ -40,12 +40,13 @@ public class DataManager : MonoBehaviour
         GameManager.instance.playerGold = saveData.gold;
         GameManager.instance.playerPower = saveData.addedStrength;
         GameManager.instance.ascensionLevel = saveData.ascensionLevel;
+        if(saveData.hasRelics.Count != 0) RelicManager.instance.hasRelics = saveData.hasRelics;
     }
 
     // 캐릭터 선택 후 출정 누르면 실행됨.
     public void JsonSave()
     {
-        SaveData saveData = new SaveData();
+        var saveData = new SaveData();
         saveData.card.Clear();
         foreach (var card in GameManager.instance.fixedDeck)
         {
@@ -58,8 +59,9 @@ public class DataManager : MonoBehaviour
         saveData.gold = GameManager.instance.playerGold;
         saveData.addedStrength = GameManager.instance.playerPower;
         saveData.ascensionLevel = GameManager.instance.ascensionLevel;
+        if(RelicManager.instance) saveData.hasRelics = RelicManager.instance.hasRelics;
 
-        string json = JsonUtility.ToJson(saveData, true);           // true로 읽기 쉽게 표시
+        var json = JsonUtility.ToJson(saveData, true);           // true로 읽기 쉽게 표시
 
         File.WriteAllText(path, json);
     }    

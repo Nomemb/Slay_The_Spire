@@ -80,12 +80,7 @@ namespace System
                 sharedState |= debuff;
                 sharedDebuffDict.Add(debuffName, duration);
 
-                GameObject temp = Instantiate(uiPrefab, transform.position, Quaternion.identity);
-                BuffInfo info = temp.GetComponent<BuffInfo>();
-                info.buffName = debuffName;
-                info.buffDuration.text = duration.ToString();
-                temp.transform.SetParent(debuffUi.transform, false);
-                debuffUI.Add(temp);
+                AddDebuff(debuffName, duration);
             }
             else
             {
@@ -102,7 +97,16 @@ namespace System
 
             PrintDebuffDictLog();
         }
-        
+
+        private void AddDebuff(string debuffName, int duration = 0)
+        {
+            GameObject temp = Instantiate(uiPrefab, transform.position, Quaternion.identity);
+            BuffInfo info = temp.GetComponent<BuffInfo>();
+            info.buffName = debuffName;
+            info.buffDuration.text = duration.ToString();
+            temp.transform.SetParent(debuffUi.transform, false);
+            debuffUI.Add(temp);
+        }
         private void PrintDebuffDictLog()
         {
             foreach (var debuff in sharedDebuffDict)

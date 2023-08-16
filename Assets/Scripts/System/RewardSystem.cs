@@ -24,7 +24,7 @@ public class RewardSystem : MonoBehaviour
         var amountGold = rewardGold.GetComponentInChildren<Text>();
         var rewardGoldBtn = rewardGold.GetComponentInChildren<Button>();
 
-        var stageType = sm.currentStage.stageType;
+        var stageType = sm.currentStage.encounterType;
         var gold = 0;
         switch (stageType)
         {

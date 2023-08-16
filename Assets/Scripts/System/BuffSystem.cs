@@ -5,6 +5,7 @@ using UnityEngine.UI;
 // https://slay-the-spire.fandom.com/wiki/Buffs#Player
 namespace System
 {
+    [Flags]
     public enum SharedBuff
     {
         Artifact,
@@ -64,6 +65,7 @@ namespace System
         
     }
 
+    [Flags]
     public enum EnemyBuff
     {
         Angry,
@@ -95,6 +97,7 @@ namespace System
     public class BuffSystem : MonoBehaviour
     {
         public Dictionary<string, int> sharedBuffDict = new Dictionary<string, int>();
+        public Dictionary<string, int> enemyBuffDict = new Dictionary<string, int>();
         
         public SharedBuff sharedState;
         public PlayerBuff playerState;
@@ -121,24 +124,19 @@ namespace System
         
         public void AddShareBuff(string buffName, int duration = 0)
         {
-            SharedBuff buff = (SharedBuff)Enum.Parse(typeof(SharedBuff), buffName);
+            var buff = (SharedBuff)Enum.Parse(typeof(SharedBuff), buffName);
             if ((sharedState & buff) != buff)
             {
-                Debug.Log(buff + " 디버프 생성");
+                Debug.Log(buff + " 버프 생성");
                 sharedState |= buff;
                 sharedBuffDict.Add(buffName, duration);
 
-                GameObject temp = Instantiate(uiPrefab, transform.position, Quaternion.identity);
-                BuffInfo info = temp.GetComponent<BuffInfo>();
-                info.buffName = buffName;
-                info.UpdateBuffDuration(duration);
-                temp.transform.SetParent(buffUi.transform, false);
-                buffUI.Add(temp);
+                AddBuff(buffName, duration);
             }
             else
             {
                 sharedBuffDict[buffName] += duration;
-                Debug.Log("현재 " + buffName + " 디버프 : " + sharedBuffDict[buffName]);
+                Debug.Log("현재 " + buffName + " 버프 : " + sharedBuffDict[buffName]);
                 foreach (var debuffIcon in buffUI)
                 {
                     var info = debuffIcon.GetComponent<BuffInfo>();
@@ -150,7 +148,31 @@ namespace System
 
             PrintBuffDictLog();
         }
-        
+
+        public void AddEnemyBuff(string buffName, int duration = 0)
+        {
+            EnemyBuff buff = (EnemyBuff)Enum.Parse(typeof(EnemyBuff), buffName);
+            if ((enemyState & buff) != buff)
+            {
+                Debug.Log(buff + " 버프 생성");
+                enemyState |= buff;
+                enemyBuffDict.Add(buffName, duration);
+
+                AddBuff(buffName, duration);
+            }
+        }
+
+        private void AddBuff(string buffName, int duration = 0)
+        {
+            GameObject temp = Instantiate(uiPrefab, transform.position, Quaternion.identity);
+            BuffInfo info = temp.GetComponent<BuffInfo>();
+            temp.name = buffName;
+            info.buffName = buffName;
+            info.UpdateBuffDuration(duration);
+            temp.transform.SetParent(buffUi.transform, false);
+            buffUI.Add(temp);
+        }
+
         private void PrintBuffDictLog()
         {
             foreach (var debuff in sharedBuffDict)
@@ -173,6 +195,15 @@ namespace System
             }
 
             PrintBuffDictLog();
+        }
+
+        public void RemoveBuff(Dictionary<string, int> dict, string buffName)
+        {
+            if (dict.ContainsKey(buffName))
+            {
+                Destroy(buffUI[buffUI.FindIndex(x=> string.Compare(x.name, buffName, StringComparison.OrdinalIgnoreCase)==0)]);
+                dict.Remove(buffName);
+            }
         }
     }
 }

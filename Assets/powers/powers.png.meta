@@ -588,7 +588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 128/closeUp
+      name: 128/curlUp
       rect:
         serializedVersion: 2
         x: 352
@@ -602,8 +602,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4842fe30829a0a410800000000000000
-      internalID: 1486373866362053764
+      spriteID: 977fb996df60ec4e0800000000000000
+      internalID: -1959621102391265415
       vertices: []
       indices: 
       edges: []
@@ -3507,7 +3507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 48/closeUp
+      name: 48/curlUp
       rect:
         serializedVersion: 2
         x: 1301
@@ -3521,8 +3521,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad80955487943cc00800000000000000
-      internalID: 919659529822079194
+      spriteID: a95465c4d1b2dc8e0800000000000000
+      internalID: -1671632481849817702
       vertices: []
       indices: 
       edges: []
@@ -5997,7 +5997,6 @@ TextureImporter:
       128/carddraw: 2745905698716730251
       128/channel: -8603322023270550939
       128/choke: -7809893499683817835
-      128/closeUp: 1486373866362053764
       128/combust: 4961052864402969660
       128/confusion: -919375458318592781
       128/conserve: -5486745387740381953
@@ -6005,6 +6004,7 @@ TextureImporter:
       128/controlled_change: 1297741996604553970
       128/corruption: -5499235703822234903
       128/curiosity: -2121753445791581445
+      128/curlUp: -1959621102391265415
       128/darkembrace: -9078726649972736884
       128/defenseNext: -8839501244124473896
       128/demonForm: 5016663925881315534
@@ -6136,7 +6136,6 @@ TextureImporter:
       48/carddraw: 1864931240542889957
       48/channel: 1533745920735114522
       48/choke: -2871168049459569217
-      48/closeUp: 919659529822079194
       48/combust: 2597720848312578155
       48/confusion: 8173829962593824985
       48/conserve: -2398738650093881010
@@ -6144,6 +6143,7 @@ TextureImporter:
       48/controlled_change: -9209963883664316750
       48/corruption: -3033167685492046995
       48/curiosity: -6115674057577751132
+      48/curlUp: -1671632481849817702
       48/darkembrace: 6374309984670894882
       48/defenseNext: -7111158740647042065
       48/demonForm: 6387591338423808186

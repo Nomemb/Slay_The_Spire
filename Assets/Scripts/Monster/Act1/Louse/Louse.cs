@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Louse : BaseMonster
@@ -8,10 +5,11 @@ public abstract class Louse : BaseMonster
     [SerializeField] private bool hasCurlUp = true;
     [SerializeField] protected int curlUp;
     
-    protected virtual void Start()
+    protected override void Start()
     {
         base.Start();
         curlUp = Random.Range(3, 8);
+        bs.AddEnemyBuff("CurlUp");
         SetStatsByAscensionLevel();
     }
 
@@ -21,27 +19,34 @@ public abstract class Louse : BaseMonster
         base.Attack();
     }
     
-    private void SetStatsByAscensionLevel()
+    protected override void SetStatsByAscensionLevel()
     {
-        if (GameManager.instance.ascensionLevel >= 2)
+        if (ascensionLevel >= 2)
         {
-            Damage++;
+            damage++;
         }
 
-        if (GameManager.instance.ascensionLevel >= 7)
+        if (ascensionLevel >= 7)
         {
-            Hp++;
+            hp++;
             curlUp = Random.Range(4, 9);
         }
 
-        if (GameManager.instance.ascensionLevel >= 17)
+        if (ascensionLevel >= 17)
         {
             curlUp = Random.Range(9, 13);
         }
     }
 
-    public void OnDamage()
+    public override void OnDamage(int onDamage)
     {
-        if (hasCurlUp) Block = curlUp;
+        base.OnDamage(onDamage);
+        if (hasCurlUp)
+        {
+            block = curlUp;
+            hasCurlUp = false;
+            bs.RemoveBuff(bs.enemyBuffDict, "CurlUp");
+            hpInter.UpdateBlockBar(block, hp, maxHp);
+        }
     }
 }

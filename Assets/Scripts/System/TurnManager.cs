@@ -31,6 +31,7 @@ namespace System
         [Space(3f)]
         [SerializeField] private GameManager gm;
         [SerializeField] private UIManager um;
+        [SerializeField] private RelicManager rm;
         [SerializeField] private PlayerController player;
         [SerializeField] private RewardSystem reward;
         public List<BaseMonster> monsterList = null;
@@ -38,10 +39,7 @@ namespace System
         [Space(10f)] [Header("Action")] [Space(3f)]
         public BuffSystem playerBuff;
         public DebuffSystem playerDebuff;
-        
-        
-        
-        
+
         void Awake()
         {
             if (instance == null) 
@@ -55,6 +53,7 @@ namespace System
         {
             gm = GameManager.instance;
             um = UIManager.instance;
+            rm = RelicManager.instance;
         
             isPlayerTurn = gm.isPlayerTurn;
             characterType = gm.currentType;
@@ -66,8 +65,6 @@ namespace System
             gm.player = player;
             reward = battleScene.GetComponentInChildren<RewardSystem>();
             EventSetting();
-        
-            StartBattle();
         }
 
         private void EventSetting()
@@ -81,6 +78,8 @@ namespace System
             startBattle.AddListener(ChangedPlayerHp);
         
             // StartPlayerTurn Event
+            startPlayerTurn.AddListener(gm.StartPlayerTurn);
+            startPlayerTurn.AddListener(()=>playerHpUi.UpdateBlockBar(gm.block,gm.playerHp, gm.playerMaxHp));
             startPlayerTurn.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
             startPlayerTurn.AddListener(hand.ImageSetting);
             startPlayerTurn.AddListener(um.UpdateDeckCountUI);
@@ -103,10 +102,11 @@ namespace System
         
             // ChangedPlayerHp Event
             changePlayerHp.AddListener(um.UpdateHpUI);
+            changePlayerHp.AddListener(()=>playerHpUi.UpdateBlockBar(gm.block, gm.playerHp, gm.playerMaxHp));
             changePlayerHp.AddListener(()=>playerHpUi.UpdateHpBar(gm.playerHp, gm.playerMaxHp));
 
         }
-        private void StartBattle()
+        public void StartBattle()
         {
             Debug.Log("전투 시작!");
 
@@ -117,6 +117,7 @@ namespace System
             Debug.Log("플레이어 턴 시작!");
 
             startPlayerTurn.Invoke();
+            Debug.Log(monsterList.Count);
         }
     
         public void EndPlayerTurn()
@@ -135,6 +136,7 @@ namespace System
 
             foreach (var monster in monsterList)
             {
+                monster.ResetBlock();
                 startEnemyTurn.AddListener(monster.DoingCurrentState);
                 var buffSys = monster.GetComponent<BuffSystem>();
                 var debuffSys = monster.GetComponent<DebuffSystem>();

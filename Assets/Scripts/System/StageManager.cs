@@ -9,10 +9,21 @@ public enum EncounterType
     Boss
 }
 
+public enum StageType
+{
+    Unknown,
+    Shop,
+    TreasureRoom,
+    Rest,
+    Enemy,
+    Elite,
+    Boss
+}
 public class Stage
 {
-    public EncounterType stageType;
-    public List<BaseMonster> monsterData;
+    public EncounterType encounterType;
+    public StageType stageType;
+    public List<GameObject> monsterData;
     public Stage[] nextStages;
 }
 [System.Serializable]
@@ -30,20 +41,22 @@ public class StageManager : MonoBehaviour
     {
         currentStage = new Stage
         {
-            stageType = EncounterType.Normal
+            encounterType = EncounterType.Normal,
+            stageType = StageType.Unknown
         };
 
         Init();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     void Init()
     {
         monsterList.Add("RedLouse", monsterPrefabs[0]);
+        monsterList.Add("GreenLouse", monsterPrefabs[1]);
+    }
+
+    public void GenerateWeakMonsters()
+    {
+        int rand = Random.Range(1, 5);
+        
     }
 }

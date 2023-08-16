@@ -10,6 +10,6 @@ public class Ironclad : BaseCharacter
         Debug.Log("Ironclad Start");
         this.MaxHp = 80;
         this.Hp = MaxHp;
+        this.initRelicName = "Burning Blood";
     }
-    
 }

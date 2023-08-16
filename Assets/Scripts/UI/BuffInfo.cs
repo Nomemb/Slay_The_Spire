@@ -35,6 +35,13 @@ public class BuffInfo : MonoBehaviour
 
     public void UpdateBuffDuration(int duration)
     {
+        if (duration == 0)
+        {
+            buffDuration.gameObject.SetActive(false);
+            return;
+        }
+        
+        buffDuration.gameObject.SetActive(true);
         buffDuration.text = duration.ToString();
     }
 }

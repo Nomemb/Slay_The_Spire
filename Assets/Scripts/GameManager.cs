@@ -32,12 +32,14 @@ public class GameManager : MonoBehaviour
     public int playerGold;
     public int playerPower;
     public int ascensionLevel;
+ 
 
     // 게임 규칙 관련
     [SerializeField] private int maxHandCount = 10;              // 최대로 들고있을 수 있는 카드의 수
     public int currentDrawCardCount = 5;
     public int currentMana;
     public int maxMana;
+    public int block;
     
     void Awake()
     {
@@ -110,6 +112,7 @@ public class GameManager : MonoBehaviour
             {
                 Ironclad currCharacter = new Ironclad();
                 currCharacter.SetCharacterStat();
+                currCharacter.GetInitRelic();
                 break;
             }
 
@@ -117,27 +120,34 @@ public class GameManager : MonoBehaviour
             {
                 Silent currCharacter = new Silent();
                 currCharacter.SetCharacterStat();
+                currCharacter.GetInitRelic();
                 break;
             }
             case CharacterType.Defect:
             {
                 Defect currCharacter = new Defect();
                 currCharacter.SetCharacterStat();
+                currCharacter.GetInitRelic();
                 break;
             }
             case CharacterType.Watcher:
             {
                 Watcher currCharacter = new Watcher();
                 currCharacter.SetCharacterStat();
+                currCharacter.GetInitRelic();
                 break;
             }
         }   
         fixedDeck.Clear();
         cardDB.InitCard();
         DataManager.instance.JsonSave();
-        SceneManager.LoadScene("NeowScene");
+        SceneManager.LoadScene("BattleScene");
     }
 
+    public void StartPlayerTurn()
+    {
+        block = 0;
+    }
     public void EndPlayerTurn()
     {
         isPlayerTurn = false;
