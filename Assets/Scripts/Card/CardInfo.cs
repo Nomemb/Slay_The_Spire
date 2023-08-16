@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -14,7 +15,7 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     
     // 카드 드래그, 드랍 관련 변수
     public Vector3 originPos;
-    private Vector3 initPos;
+    [SerializeField] private Vector3 initPos;
     
     public Card card;
     public CardData cardData;
@@ -27,10 +28,16 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public Text cardUIName;                                                      // 카드 UI 이름
     public Text cardUIValue;                                                     // 카드 UI 에너지
 
+
+    public int currentDamage;
+    public int currentDefense;
     private void Start()
     {
         cardData = card.cardData;
-        cardDesc.text = cardData.cardDesc;
+        
+        currentDamage = card.CardDamage;
+        
+        cardDesc.text = UpdateDesc();
         cardBackGround.sprite = ChangeCardBackGroundSprite();
         cardImage.sprite = ChangeCardImageSprite();
         cardFrame.sprite = ChangeCardFrameSprite();
@@ -43,11 +50,39 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         initPos = transform.position;
     }
 
-    private Sprite ChangeCardImageSprite()
+    private string UpdateDesc()
+    {
+        StringBuilder temp = new StringBuilder();
+        for (int i = 0; i < cardData.cardDesc.Count; ++i)
+        {
+            switch (cardData.cardDesc[i])
+            {
+                case "Damage":
+                    temp.Append(currentDamage.ToString());
+                    Debug.Log("Damage");
+                    break;
+                case "BuffDuration":
+                    temp.Append(cardData.BuffDuration.ToString());
+                    break;
+                case "DebuffDuration":
+                    temp.Append(cardData.DebuffDuration.ToString());
+                    break;
+                case "Defense":
+                    temp.Append(cardData.Defense.ToString());
+                    Debug.Log("Defense");
+                    break;
+                default:
+                    temp.Append(cardData.cardDesc[i]);
+                    break;
+            }
+        }
+        return temp.ToString();
+    }
+    private Sprite ChangeCardBackGroundSprite()
     {
         Sprite img = null;
-        var path = cardData.cardColor + "/" + cardData.cardType + "/" + cardData.CardImageName;
-        foreach (var sprite in cardImagesSprites)
+        var path = "512/bg_" + cardData.cardType + "_" + cardData.cardColor;
+        foreach (var sprite in cardBackGroundSprites)
         {
             if (sprite.name != path) continue;
             img = sprite;
@@ -56,11 +91,11 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         return img;
     }
     
-    private Sprite ChangeCardBackGroundSprite()
+    private Sprite ChangeCardImageSprite()
     {
         Sprite img = null;
-        var path = "512/bg_" + cardData.cardType + "_" + cardData.cardColor;
-        foreach (var sprite in cardBackGroundSprites)
+        var path = cardData.cardColor + "/" + cardData.cardType + "/" + cardData.CardImageName;
+        foreach (var sprite in cardImagesSprites)
         {
             if (sprite.name != path) continue;
             img = sprite;

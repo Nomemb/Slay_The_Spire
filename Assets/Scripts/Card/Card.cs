@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.XR;
 
 public enum CardColor{red, green, blue, purple, colorless, status, curse}
 public enum CardType{attack, skill, power}
@@ -14,10 +13,17 @@ public abstract class Card : MonoBehaviour
     
     protected GameManager gm = GameManager.instance;
     protected CardDisplay cd;
+
+    protected int cardDamage;
+    public int CardDamage => cardDamage;
+
+    protected int cardDefense;
+    public int CardDefense => cardDefense;
     protected void Start()
     {
         cd = GetComponentInParent<CardDisplay>();
         cd.cards.Add(this);
+        cardDamage = cardData.Damage + gm.playerPower;
     }
     public void UseCard(BaseMonster target = null)
     {

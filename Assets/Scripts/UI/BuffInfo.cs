@@ -32,4 +32,16 @@ public class BuffInfo : MonoBehaviour
         }
         return img;
     }
+
+    public void UpdateBuffDuration(int duration)
+    {
+        if (duration == 0)
+        {
+            buffDuration.gameObject.SetActive(false);
+            return;
+        }
+        
+        buffDuration.gameObject.SetActive(true);
+        buffDuration.text = duration.ToString();
+    }
 }

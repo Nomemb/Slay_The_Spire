@@ -389,6 +389,87 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.90588236}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &2321460080540160838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8831088668592011783}
+  - component: {fileID: 4906337629531027827}
+  - component: {fileID: 571700045252146160}
+  m_Layer: 5
+  m_Name: Relics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8831088668592011783
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321460080540160838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8064733806882965365}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 7.5, y: -52}
+  m_SizeDelta: {x: -15, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4906337629531027827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321460080540160838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &571700045252146160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321460080540160838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a450c051c722b240a225b328c3910f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relicZone: {fileID: 2321460080540160838}
+  relics:
+  - {fileID: 812768613874904008, guid: efc31347b5fd6df4e8cfcbd0bf3c206d, type: 3}
+  - {fileID: 0}
+  hasRelics: []
 --- !u!1 &3740110250051387019
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1080,7 @@ RectTransform:
   - {fileID: 94314466774492687}
   - {fileID: 1349008875324700429}
   - {fileID: 1515549660292814892}
+  - {fileID: 8831088668592011783}
   m_Father: {fileID: 6400708549184651528}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1728,15 +1810,6 @@ MonoBehaviour:
   deckButton: {fileID: 6400708549184651531}
   deckCount: {fileID: 6400708549184651530}
   settingButton: {fileID: 1834951689988002696}
-  drawDeckButton: {fileID: 0}
-  usedDeckButton: {fileID: 0}
-  expiredDeckButton: {fileID: 0}
-  drawDeckCount: {fileID: 0}
-  usedDeckCount: {fileID: 0}
-  expiredDeckCount: {fileID: 0}
-  cursorObject: {fileID: 0}
-  imageCursor: {fileID: 0}
-  battleUI: {fileID: 0}
 --- !u!1 &6400708549016181636
 GameObject:
   m_ObjectHideFlags: 0

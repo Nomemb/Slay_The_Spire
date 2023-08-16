@@ -5,6 +5,7 @@ using UnityEngine.UI;
 // https://slay-the-spire.fandom.com/wiki/Buffs#Player
 namespace System
 {
+    [Flags]
     public enum SharedBuff
     {
         Artifact,
@@ -64,6 +65,7 @@ namespace System
         
     }
 
+    [Flags]
     public enum EnemyBuff
     {
         Angry,
@@ -94,7 +96,8 @@ namespace System
     
     public class BuffSystem : MonoBehaviour
     {
-        public Dictionary<string, int> buffDict = new Dictionary<string, int>();
+        public Dictionary<string, int> sharedBuffDict = new Dictionary<string, int>();
+        public Dictionary<string, int> enemyBuffDict = new Dictionary<string, int>();
         
         public SharedBuff sharedState;
         public PlayerBuff playerState;
@@ -103,7 +106,9 @@ namespace System
         public GameObject buffUi;
         public GameObject uiPrefab;
         
-        private void Start()
+        public List<GameObject> buffUI = new List<GameObject>();
+
+        private void Awake()
         {
             Init();
         }
@@ -114,7 +119,91 @@ namespace System
             playerState = 0x00000000;
             enemyState = 0x00000000;
             
-            buffDict.Clear();
+            sharedBuffDict.Clear();
+        }
+        
+        public void AddShareBuff(string buffName, int duration = 0)
+        {
+            var buff = (SharedBuff)Enum.Parse(typeof(SharedBuff), buffName);
+            if ((sharedState & buff) != buff)
+            {
+                Debug.Log(buff + " 버프 생성");
+                sharedState |= buff;
+                sharedBuffDict.Add(buffName, duration);
+
+                AddBuff(buffName, duration);
+            }
+            else
+            {
+                sharedBuffDict[buffName] += duration;
+                Debug.Log("현재 " + buffName + " 버프 : " + sharedBuffDict[buffName]);
+                foreach (var debuffIcon in buffUI)
+                {
+                    var info = debuffIcon.GetComponent<BuffInfo>();
+                    if(info.buffName != buffName) continue;
+
+                    info.UpdateBuffDuration(sharedBuffDict[buffName]);
+                }
+            }
+
+            PrintBuffDictLog();
+        }
+
+        public void AddEnemyBuff(string buffName, int duration = 0)
+        {
+            EnemyBuff buff = (EnemyBuff)Enum.Parse(typeof(EnemyBuff), buffName);
+            if ((enemyState & buff) != buff)
+            {
+                Debug.Log(buff + " 버프 생성");
+                enemyState |= buff;
+                enemyBuffDict.Add(buffName, duration);
+
+                AddBuff(buffName, duration);
+            }
+        }
+
+        private void AddBuff(string buffName, int duration = 0)
+        {
+            GameObject temp = Instantiate(uiPrefab, transform.position, Quaternion.identity);
+            BuffInfo info = temp.GetComponent<BuffInfo>();
+            temp.name = buffName;
+            info.buffName = buffName;
+            info.UpdateBuffDuration(duration);
+            temp.transform.SetParent(buffUi.transform, false);
+            buffUI.Add(temp);
+        }
+
+        private void PrintBuffDictLog()
+        {
+            foreach (var debuff in sharedBuffDict)
+            {
+                Debug.Log(debuff.Key + " " + debuff.Value);
+            }
+        }
+        
+        public void UpdateBuffCountByTurnEnd()
+        {
+            DecreaseShareBuffDictByTurnEnd();
+        }
+
+        private void DecreaseShareBuffDictByTurnEnd()
+        {
+            foreach (var buff in sharedBuffDict)
+            {
+                var temp = (SharedBuff)Enum.Parse(typeof(SharedBuff), buff.Key);
+                Debug.Log(temp + " " + (byte)temp);
+            }
+
+            PrintBuffDictLog();
+        }
+
+        public void RemoveBuff(Dictionary<string, int> dict, string buffName)
+        {
+            if (dict.ContainsKey(buffName))
+            {
+                Destroy(buffUI[buffUI.FindIndex(x=> string.Compare(x.name, buffName, StringComparison.OrdinalIgnoreCase)==0)]);
+                dict.Remove(buffName);
+            }
         }
     }
 }

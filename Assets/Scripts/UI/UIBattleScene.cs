@@ -43,6 +43,7 @@ public class UIBattleScene : MonoBehaviour
 
     public void UpdateCardCount()
     {
+        
         expiredDeckButton.gameObject.SetActive(GameManager.instance.expiredDeck.Count > 0);
         drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
         usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();

@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class GreenLouse : Louse
@@ -9,15 +5,15 @@ public class GreenLouse : Louse
 
     protected override void Start()
     {
-        Hp = Random.Range(11, 18);
-        Damage = Random.Range(5, 8);
+        hp = Random.Range(11, 18);
+        damage = Random.Range(5, 8);
         base.Start();
     }
     
     protected override void ChangeNextState()
     {
         prevState = currentState;
-        if (GameManager.instance.ascensionLevel >= 17)
+        if (ascensionLevel >= 17)
         {
             if (prevState == MonsterState.DeBuff) currentState = MonsterState.Attack;
             sameStateCount = 0;

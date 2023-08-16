@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public BuffSystem bs;
     public DebuffSystem dbS;
     
-    private void Start()
+    private void Awake()
     {
         bs = GetComponent<BuffSystem>();
         dbS = GetComponent<DebuffSystem>();

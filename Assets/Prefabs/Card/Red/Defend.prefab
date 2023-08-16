@@ -743,7 +743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3892924776348316508}
-  - component: {fileID: 6328665003041958983}
+  - component: {fileID: 4155331288315332920}
   - component: {fileID: 8705913204051616916}
   - component: {fileID: 8746528412121765060}
   m_Layer: 5
@@ -778,7 +778,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 302, y: 419}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6328665003041958983
+--- !u!114 &4155331288315332920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -787,11 +787,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3892924776348316509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acaa1b29718464b41aa47fbd7a0d0564, type: 3}
+  m_Script: {fileID: 11500000, guid: 2506fa0246ec17646bdea77f9a17efd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: fed6bfa389ebaf24181c6224bda367d4, type: 2}
-  thisGameObject: {fileID: 0}
 --- !u!114 &8705913204051616916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,7 +898,8 @@ MonoBehaviour:
   - {fileID: -5782867269424725959, guid: c7c2f47e438c30945b2d52c0f6e06122, type: 3}
   - {fileID: 2105835222224730126, guid: 28fe69d369fef8d49bba42a91c5e312d, type: 3}
   originPos: {x: 0, y: 0, z: 0}
-  card: {fileID: 6328665003041958983}
+  initPos: {x: 0, y: 0, z: 0}
+  card: {fileID: 4155331288315332920}
   cardData: {fileID: 11400000, guid: fed6bfa389ebaf24181c6224bda367d4, type: 2}
   cardBackGround: {fileID: 3892924775534294386}
   cardDesc: {fileID: 3892924775559608769}
@@ -909,6 +909,8 @@ MonoBehaviour:
   cardBanner: {fileID: 3892924776512101407}
   cardUIName: {fileID: 3892924774823461363}
   cardUIValue: {fileID: 3892924775346043577}
+  currentDamage: 0
+  currentDefense: 0
 --- !u!61 &8746528412121765060
 BoxCollider2D:
   m_ObjectHideFlags: 0

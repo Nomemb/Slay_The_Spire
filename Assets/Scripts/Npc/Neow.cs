@@ -15,6 +15,12 @@ public class Neow : MonoBehaviour
     // 생성 관련 변수들
     public GameObject interaction;
     public GameObject buttonPrefab;
+    
+    // 창 처리
+    [SerializeField] private GameObject neow;
+    [SerializeField] private GameObject battle;
+    [SerializeField] private GameObject characterBattleUI;
+
 
     private void Start()
     {
@@ -64,19 +70,30 @@ public class Neow : MonoBehaviour
         if (GameManager.instance == null) return;
         var addMaxHealth = Mathf.RoundToInt(GameManager.instance.playerMaxHp / 10);
         text2.text = "[ 최대 체력 + " + addMaxHealth + " 증가 ]";
-        btn2.onClick.AddListener(MoveScene);
+        btn2.onClick.AddListener(()=>AddMaxHealth(addMaxHealth));
+        btn2.onClick.AddListener(BattleStart);
         
         var newButton = Instantiate(buttonPrefab, interaction.transform);
         var btn = newButton.GetComponent<Button>();
         var text = newButton.GetComponentInChildren<Text>();
 
         text.text = "[ 앞으로 3번의 전투 동안 적의 체력이 1이 됩니다 ]";
-        btn.onClick.AddListener(MoveScene);
+        btn.onClick.AddListener(()=>rm.GetRelic("Lament"));
+        btn.onClick.AddListener(BattleStart);
     }
 
-    private void MoveScene()
+    private void BattleStart()
     {
         DataManager.instance.JsonSave();
-        SceneManager.LoadScene("BattleScene");
+        characterBattleUI.SetActive(true);
+        battle.SetActive(true);
+        neow.SetActive(false);
+        TurnManager.instance.StartBattle();
+    }
+
+    private void AddMaxHealth(int addMaxHealth)
+    {
+        GameManager.instance.playerMaxHp += addMaxHealth;
+        GameManager.instance.playerHp = GameManager.instance.playerMaxHp;
     }
 }

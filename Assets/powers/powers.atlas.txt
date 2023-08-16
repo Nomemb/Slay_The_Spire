@@ -165,7 +165,7 @@ repeat: none
   orig: 128, 128
   offset: 24, 18
   index: -1
-128/closeUp
+128/curlUp
   rotate: false
   xy: 352, 499
   size: 87, 79
@@ -1138,7 +1138,7 @@ repeat: none
   orig: 48, 48
   offset: 9, 7
   index: -1
-48/closeUp
+48/curlUp
   rotate: false
   xy: 1301, 667
   size: 34, 30

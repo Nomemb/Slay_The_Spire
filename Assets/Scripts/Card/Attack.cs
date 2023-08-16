@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,12 @@ public abstract class Attack : Card
         }
         
         Debug.Log("타겟 : " + target.name);
-        int onDamage = cardData.Damage + gm.playerPower;
-        Debug.Log(onDamage);
-        target.OnDamage(onDamage);
+        // 약화 상태라면 ( 공격력 25% 감소 )
+        cardDamage = cardData.Damage + gm.playerPower;
+        if ((gm.player.dbS.sharedState & SharedDebuff.Weak) == SharedDebuff.Weak)
+        {
+            cardDamage = (int)Math.Floor((cardData.Damage + gm.playerPower) * 0.75);
+        }
+        target.OnDamage(cardDamage);
     }
 }

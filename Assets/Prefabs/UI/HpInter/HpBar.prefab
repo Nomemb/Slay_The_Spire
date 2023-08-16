@@ -103,7 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420c67792cfbb6144a7d6d8f31b02598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  hpText: {fileID: 6331240233785327438}
+  hpSlider: {fileID: 6331240232978566950}
+  hpBG: {fileID: 0}
+  blockUI: {fileID: 0}
+  blockText: {fileID: 0}
+  blockSlider: {fileID: 0}
 --- !u!1 &6331240233046322412
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +292,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 94e7f93f146d168418b3707d75b6c2a9, type: 3}
-    m_FontSize: 22
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2

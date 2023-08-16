@@ -12,22 +12,23 @@ public abstract class BaseCharacter
 
     public int Gold { get; protected set; }            // 돈
 
+    public string initRelicName;
     protected BaseCharacter()
     {
         AddedStrength = 0;
         Gold = 99;
     }
 
-    public virtual void Attack(int damage)
-    {
-        Debug.Log("Attack ");
-    }
-    
     public void SetCharacterStat()
     {
         GameManager.instance.playerHp = this.Hp;
         GameManager.instance.playerMaxHp = this.MaxHp;
         GameManager.instance.playerGold = this.Gold;
         GameManager.instance.playerPower = this.AddedStrength;
+    }
+
+    public void GetInitRelic()
+    {
+        //RelicManager.instance.GetRelic(this.initRelicName);
     }
 }

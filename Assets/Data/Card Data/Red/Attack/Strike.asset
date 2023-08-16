@@ -28,4 +28,7 @@ MonoBehaviour:
   e_defense: 0
   e_buffDuration: 0
   e_deBuffDuration: 0
-  cardDesc: "\uD53C\uD574\uB97C 6 \uC90D\uB2C8\uB2E4."
+  cardDesc:
+  - "\uD53C\uD574\uB97C "
+  - Damage
+  - " \uC90D\uB2C8\uB2E4."

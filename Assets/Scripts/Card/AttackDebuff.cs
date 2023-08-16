@@ -19,6 +19,6 @@ public class AttackDebuff : Attack, IDebuffable
     protected override void ActivationCard(BaseMonster target = null)
     {
         base.ActivationCard(target);
-        Debuff(target.gameObject);
+        if (target != null) Debuff(target.gameObject);
     }
 }

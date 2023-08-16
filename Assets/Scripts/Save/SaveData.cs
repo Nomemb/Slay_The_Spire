@@ -14,4 +14,6 @@ public class SaveData
     public int gold;
     public int addedStrength;
     public int ascensionLevel;
+
+    public List<GameObject> hasRelics;
 }

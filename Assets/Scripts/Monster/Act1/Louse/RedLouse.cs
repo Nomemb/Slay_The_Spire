@@ -8,17 +8,18 @@ public class RedLouse : Louse
     // Start is called before the first frame update
     protected override void Start()
     {
-        Hp = Random.Range(10, 16);
-        Damage = Random.Range(5, 8);
+        hp = Random.Range(10, 16);
+        damage = Random.Range(5, 8);
         base.Start();
     }
     protected override void ChangeNextState()
     {
         prevState = currentState;
-        if (GameManager.instance.ascensionLevel >= 17)
+        if (ascensionLevel >= 17)
         {
             if (prevState == MonsterState.Buff) currentState = MonsterState.Attack;
             sameStateCount = 0;
+            base.ChangeNextState();
             return;
         }
         
@@ -39,7 +40,8 @@ public class RedLouse : Louse
     {
         base.Buff();
         skAnim.AnimationState.SetAnimation(0, "rear", false);
+        
 
-        AddedStrength = GameManager.instance.ascensionLevel >= 17 ? AddedStrength + 4 : AddedStrength + 3;
+        addedStrength = ascensionLevel >= 17 ? addedStrength + 4 : addedStrength + 3;
     }
 }
