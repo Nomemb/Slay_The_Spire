@@ -19,9 +19,9 @@ public class JawWorm : BaseMonster
     private bool isFirstTurn = true;
     protected override void Start()
     {
-        base.Start();
         hp = Random.Range(40, 45);
         SetStatsByAscensionLevel();
+        base.Start();
         current = JawWormPattern.Idle;
     }
 
@@ -96,8 +96,7 @@ public class JawWorm : BaseMonster
                 current = JawWormPattern.Chomp;
             }
         }
-        base.ChangeNextState();
-
+        ChangeSpriteForState();
     }
 
     private void ChangeDuplicateState(int aRate, int bRate, JawWormPattern aType, JawWormPattern bType)
@@ -106,21 +105,29 @@ public class JawWorm : BaseMonster
         var nextState = Random.Range(1, aRate + bRate + 1);
         current = nextState <= aRate ? aType : bType;
         currentState = current == JawWormPattern.Bellow ? MonsterState.Buff : MonsterState.Attack;
-        base.ChangeNextState();
+        ChangeSpriteForState();
+    }
+
+    private void ChangeSpriteForState()
+    {
+        imageCurrentState.sprite = stateSprites[(int)current];
+        GetDamage();
+        currentDamage = addedStrength + damage; 
+
+        if (currentState == MonsterState.Attack)
+        {
+            textCurrentDamage.gameObject.SetActive(true);
+            textCurrentDamage.text = currentDamage.ToString();
+        }
+        else
+        {
+            textCurrentDamage.gameObject.SetActive(false);
+        }
     }
     protected override void Attack()
     {
         skAnim.AnimationState.SetAnimation(0, "chomp", false);
-        if (current == JawWormPattern.Chomp)
-        {
-            damage = chompDamage;
-        }
-        else if (current == JawWormPattern.Thrash)
-        {
-            damage = 7;
-            block = 5;
-        }
-
+        GetDamage();
         base.Attack();
     }
 
@@ -129,5 +136,19 @@ public class JawWorm : BaseMonster
         addedStrength += bellowPower;
         block = bellowBlock;
         base.Buff();
+    }
+
+    private void GetDamage()
+    {
+        if (current == JawWormPattern.Chomp)
+        {
+            damage = chompDamage;
+        }
+        else if (current == JawWormPattern.Thrash)
+        {
+            damage = 7;
+            block = 5;
+            hpInter.UpdateBlockBar(block,hp,maxHp);
+        }
     }
 }
