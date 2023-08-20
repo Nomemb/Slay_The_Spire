@@ -14,8 +14,6 @@ public class RewardSystem : MonoBehaviour
     {
         rewardPanel.SetActive(true);
         InstantRewardGold();
-        
-
     }
 
     private void InstantRewardGold()

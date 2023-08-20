@@ -147,8 +147,12 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     
     public void OnBeginDrag(PointerEventData eventData)
     {
-        GameManager.instance.onDrag = true;
-        currentCardOnDrag = true;
+        if (!GameManager.instance.onDrag)
+        {
+            GameManager.instance.onDrag = true;
+            currentCardOnDrag = true;
+        }
+
         //if (transform != null) transform.position = eventData.position;
     }
 
@@ -195,7 +199,9 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (GameManager.instance.onDrag) return;
         EnlargeCard(false);
+        GameManager.instance.onDrag = false;
     }
 
     private void EnlargeCard(bool isEnlarge)

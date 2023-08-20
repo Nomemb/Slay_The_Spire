@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     {
         DataManager.instance.JsonLoad();
         Debug.Log("Gm. GameStart");
+        isPlayerTurn = true;
+        EndPlayerTurn();
         usedDeck.Clear();                               // 혹시 모르니 비워 줌
         drawDeck.Clear();
         usedDeck = fixedDeck.ToList();                  // fixedDeck을 복사해 옴

@@ -27,7 +27,7 @@ public class Stage
     public EncounterType encounterType;
     public StageType stageType;
     public List<GameObject> monsterData = new List<GameObject>();
-    public Stage[] nextStages;
+    public List<Stage> nextStages = new List<Stage>();
 }
 [System.Serializable]
 public class DictionaryOfMonster : SerializableDictionary<string, GameObject> { }
@@ -68,15 +68,27 @@ public class StageManager : MonoBehaviour
     public void GenerateWeakMonsters()
     {
         int rand = Random.Range(1, 5);
+        Stage nextStage = new Stage
+        {
+            encounterType = EncounterType.Normal,
+            stageType = StageType.Enemy
+        };
+        
         if (rand <= 3)
         {
             currentStage.monsterData.Add(monsterList["RedLouse"]);
             currentStage.monsterData.Add(monsterList["GreenLouse"]);
+
+            nextStage.monsterData.Add(monsterList["JawWorm"]);
+
         }
         else
         {
             currentStage.monsterData.Add(monsterList["JawWorm"]);
+            nextStage.monsterData.Add(monsterList["RedLouse"]);
+            nextStage.monsterData.Add(monsterList["GreenLouse"]);
         }
+        currentStage.nextStages.Add(nextStage);
     }
 
     public void CreateStageMonster()
@@ -90,5 +102,14 @@ public class StageManager : MonoBehaviour
             var newMonster = Instantiate(monster, monster.transform.position, quaternion.identity); ;
             newMonster.transform.SetParent(spawnZone.transform);
         }
+    }
+
+    public void GotoNextStage()
+    {
+        GotoNextStage(currentStage.nextStages[0]);
+    }
+    private void GotoNextStage(Stage nextStage)
+    {
+        currentStage = nextStage;
     }
 }
