@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum EncounterType
 {
@@ -33,8 +35,11 @@ public class StageManager : MonoBehaviour
 {
     public Stage currentStage;
 
-     public DictionaryOfMonster monsterList = new DictionaryOfMonster();
-     [SerializeField] private List<GameObject> monsterPrefabs;
+    public DictionaryOfMonster monsterList = new DictionaryOfMonster(); 
+    [SerializeField] private List<GameObject> monsterPrefabs;
+    [SerializeField] private GameObject spawnZone;
+
+    private Vector3 spawnZonePos;
     
     // Start is called before the first frame update
     void Start()
@@ -50,13 +55,22 @@ public class StageManager : MonoBehaviour
     
     void Init()
     {
-        monsterList.Add("RedLouse", monsterPrefabs[0]);
-        monsterList.Add("GreenLouse", monsterPrefabs[1]);
+        spawnZonePos = spawnZone.transform.position;
+        foreach (var monster in monsterPrefabs)
+        {
+            monsterList.Add(monster.name, monster);
+        }
     }
 
     public void GenerateWeakMonsters()
     {
         int rand = Random.Range(1, 5);
+        var newMonster1 = Instantiate(monsterList["RedLouse"], spawnZonePos, quaternion.identity);
+        var newMonster2 = Instantiate(monsterList["GreenLouse"], spawnZonePos, quaternion.identity);
         
+        newMonster1.transform.SetParent(spawnZone.transform);
+        newMonster2.transform.SetParent(spawnZone.transform);
+
+            
     }
 }

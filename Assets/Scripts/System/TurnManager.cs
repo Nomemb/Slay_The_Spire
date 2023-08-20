@@ -31,6 +31,7 @@ namespace System
         [Space(3f)]
         [SerializeField] private GameManager gm;
         [SerializeField] private UIManager um;
+        [SerializeField] private StageManager sm;
         [SerializeField] private RelicManager rm;
         [SerializeField] private PlayerController player;
         [SerializeField] private RewardSystem reward;
@@ -54,7 +55,7 @@ namespace System
             gm = GameManager.instance;
             um = UIManager.instance;
             rm = RelicManager.instance;
-        
+
             isPlayerTurn = gm.isPlayerTurn;
             characterType = gm.currentType;
         
@@ -62,6 +63,7 @@ namespace System
             battleScene.Init();
             hand = battleScene.GetComponentInChildren<CardDisplay>();
             player = FindObjectOfType<PlayerController>();
+            sm = FindObjectOfType<StageManager>();
             gm.player = player;
             reward = battleScene.GetComponentInChildren<RewardSystem>();
             EventSetting();
@@ -74,6 +76,7 @@ namespace System
             startBattle.AddListener(battleScene.Init);
             startBattle.AddListener(gm.BattleStart);
             startBattle.AddListener(player.BattleStart);
+            startBattle.AddListener(sm.GenerateWeakMonsters);
             startBattle.AddListener(StartPlayerTurn);
             startBattle.AddListener(ChangedPlayerHp);
         

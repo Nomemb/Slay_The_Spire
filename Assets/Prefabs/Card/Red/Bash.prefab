@@ -898,6 +898,8 @@ MonoBehaviour:
   - {fileID: -5782867269424725959, guid: c7c2f47e438c30945b2d52c0f6e06122, type: 3}
   - {fileID: 2105835222224730126, guid: 28fe69d369fef8d49bba42a91c5e312d, type: 3}
   originPos: {x: 0, y: 0, z: 0}
+  initPos: {x: 0, y: 0, z: 0}
+  onPointerPos: {x: 0, y: 200, z: 0}
   card: {fileID: 3091650593388494929}
   cardData: {fileID: 11400000, guid: 8a09634625ecd6a4a961b0e621539097, type: 2}
   cardBackGround: {fileID: 3892924775534294386}
@@ -908,6 +910,8 @@ MonoBehaviour:
   cardBanner: {fileID: 3892924776512101407}
   cardUIName: {fileID: 3892924774823461363}
   cardUIValue: {fileID: 3892924775346043577}
+  currentDamage: 0
+  currentDefense: 0
 --- !u!61 &8746528412121765060
 BoxCollider2D:
   m_ObjectHideFlags: 0
