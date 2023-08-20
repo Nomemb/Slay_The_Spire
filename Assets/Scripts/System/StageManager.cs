@@ -21,11 +21,12 @@ public enum StageType
     Elite,
     Boss
 }
+[System.Serializable]
 public class Stage
 {
     public EncounterType encounterType;
     public StageType stageType;
-    public List<GameObject> monsterData;
+    public List<GameObject> monsterData = new List<GameObject>();
     public Stage[] nextStages;
 }
 [System.Serializable]
@@ -60,17 +61,34 @@ public class StageManager : MonoBehaviour
         {
             monsterList.Add(monster.name, monster);
         }
+        
+        GenerateWeakMonsters();
     }
 
     public void GenerateWeakMonsters()
     {
         int rand = Random.Range(1, 5);
-        var newMonster1 = Instantiate(monsterList["RedLouse"], spawnZonePos, quaternion.identity);
-        var newMonster2 = Instantiate(monsterList["GreenLouse"], spawnZonePos, quaternion.identity);
-        
-        newMonster1.transform.SetParent(spawnZone.transform);
-        newMonster2.transform.SetParent(spawnZone.transform);
+        if (rand <= 3)
+        {
+            currentStage.monsterData.Add(monsterList["RedLouse"]);
+            currentStage.monsterData.Add(monsterList["GreenLouse"]);
+        }
+        else
+        {
+            currentStage.monsterData.Add(monsterList["JawWorm"]);
+        }
+    }
 
-            
+    public void CreateStageMonster()
+    {
+        CreateMonster();
+    }
+    private void CreateMonster()
+    {
+        foreach (var monster in currentStage.monsterData)
+        {
+            var newMonster = Instantiate(monster, monster.transform.position, quaternion.identity); ;
+            newMonster.transform.SetParent(spawnZone.transform);
+        }
     }
 }

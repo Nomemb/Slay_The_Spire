@@ -76,7 +76,7 @@ namespace System
             startBattle.AddListener(battleScene.Init);
             startBattle.AddListener(gm.BattleStart);
             startBattle.AddListener(player.BattleStart);
-            startBattle.AddListener(sm.GenerateWeakMonsters);
+            startBattle.AddListener(sm.CreateStageMonster);
             startBattle.AddListener(StartPlayerTurn);
             startBattle.AddListener(ChangedPlayerHp);
         
