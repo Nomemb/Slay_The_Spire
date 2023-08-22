@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         usedDeck.Clear();                               // 혹시 모르니 비워 줌
         drawDeck.Clear();
         usedDeck = fixedDeck.ToList();                  // fixedDeck을 복사해 옴
+        currentMana = maxMana;
         Shuffle();
     }
 

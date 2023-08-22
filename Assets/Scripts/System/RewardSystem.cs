@@ -18,7 +18,7 @@ public class RewardSystem : MonoBehaviour
 
     private void InstantRewardGold()
     {
-        var rewardGold = Instantiate(rewardPrefabs[0], this.transform, true);
+        var rewardGold = ObjectPool.GetObject();
         var amountGold = rewardGold.GetComponentInChildren<Text>();
         var rewardGoldBtn = rewardGold.GetComponentInChildren<Button>();
 
@@ -41,8 +41,8 @@ public class RewardSystem : MonoBehaviour
         // if(relic) 처리해야함 ( 차후에 )
         amountGold.text = gold.ToString() + " 골드";
         rewardGoldBtn.onClick.AddListener(()=>RewardGold(gold));
-        rewardGoldBtn.onClick.AddListener(()=>Destroy(rewardGold));
-
+        rewardGoldBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardGold));
+        
 
         rewardGold.transform.SetParent(rewardBox.transform);
     }
@@ -52,5 +52,15 @@ public class RewardSystem : MonoBehaviour
         GameManager.instance.playerGold += gold;
         UIManager.instance.UpdateGoldUI();
         DataManager.instance.JsonSave();
+    }
+
+    public void ClearReward()
+    {
+        for (int i = 0; i < rewardBox.transform.childCount; i++)
+        {
+            
+        }
+
+        
     }
 }

@@ -26,6 +26,8 @@ public class UIBattleScene : MonoBehaviour
     [Header("BattleUI")]
     private Camera camera;
 
+    public Text manaCount;
+    
     private void Start()
     {
         Init();
@@ -36,9 +38,8 @@ public class UIBattleScene : MonoBehaviour
     {
         camera = Camera.main;
 
-        drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
-        usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
-        expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
+        UpdateCardCount();
+        UpdateManaCount();
     }
 
     public void UpdateCardCount()
@@ -48,5 +49,10 @@ public class UIBattleScene : MonoBehaviour
         drawDeckCount.text = GameManager.instance.drawDeck.Count.ToString();
         usedDeckCount.text = GameManager.instance.usedDeck.Count.ToString();
         expiredDeckCount.text = GameManager.instance.expiredDeck.Count.ToString();
+    }
+
+    public void UpdateManaCount()
+    {
+        manaCount.text = GameManager.instance.currentMana + "/" + GameManager.instance.maxMana;
     }
 }

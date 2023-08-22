@@ -28,7 +28,7 @@ public abstract class Card : MonoBehaviour
     public void UseCard(BaseMonster target = null)
     {
         gm.currentMana -= cardData.cardValue;
-
+        TurnManager.instance.ChangedPlayerMana();
         ActivationCard(target);
         UsageCard();
         TurnManager.instance.ChangePlayerCardCount();
