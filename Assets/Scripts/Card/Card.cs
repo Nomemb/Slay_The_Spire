@@ -48,15 +48,27 @@ public abstract class Card : MonoBehaviour
     protected void UsageCard()
     {
         int thisIndex = cd.cards.IndexOf(this);
+        AddCardToUsedDeck();
+        RemoveCard(thisIndex);
+    }
+
+    protected void AddCardToUsedDeck()
+    {
+        var thisIndex = cd.cards.IndexOf(this);
         if (cardData.cardType != CardType.power)
         {
             gm.usedDeck.Add(gm.hand[thisIndex]);
         };
-        gm.hand.RemoveAt(thisIndex);
-        cd.cards.RemoveAt(thisIndex);
-        Destroy(cd.cardUI[thisIndex]);
-        cd.cardUI.RemoveAt(thisIndex);
     }
+
+    private void RemoveCard(int index)
+    {
+        gm.hand.RemoveAt(index);
+        cd.cards.RemoveAt(index);
+        Destroy(cd.cardUI[index]);
+        cd.cardUI.RemoveAt(index);  
+    }
+
     public void Enchant()
     {
         

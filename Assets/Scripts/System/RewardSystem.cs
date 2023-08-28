@@ -8,10 +8,12 @@ public class RewardSystem : MonoBehaviour
     [SerializeField] private StageManager sm;
 
     [SerializeField] private GameObject rewardPanel;
+    [SerializeField] private List<GameObject> concealedUI;
     [SerializeField] private GameObject[] rewardPrefabs;
     [SerializeField] private GameObject rewardBox;
     public void ViewReward()
     {
+        SetUI(false);
         rewardPanel.SetActive(true);
         InstantRewardGold();
     }
@@ -47,6 +49,18 @@ public class RewardSystem : MonoBehaviour
         rewardGold.transform.SetParent(rewardBox.transform);
     }
 
+    private void InstantRewardCard()
+    {
+        var rewardCard = ObjectPool.GetObject();
+        var rewardText = rewardCard.GetComponentInChildren<Text>();
+        var rewardCardBtn = rewardCard.GetComponentInChildren<Button>();
+
+        rewardText.text = "카드 획득";
+
+        rewardCardBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardCard));
+        rewardCardBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardCard));
+    }
+
     private void RewardGold(int gold)
     {
         GameManager.instance.playerGold += gold;
@@ -54,13 +68,24 @@ public class RewardSystem : MonoBehaviour
         DataManager.instance.JsonSave();
     }
 
+    private void RewardCard()
+    {
+        
+    }
+
     public void ClearReward()
     {
         for (int i = 0; i < rewardBox.transform.childCount; i++)
         {
-            
+            ObjectPool.ReturnObject(rewardBox.transform.GetChild(0).gameObject);
         }
+    }
 
-        
+    public void SetUI(bool active)
+    {
+        foreach (var ui in concealedUI)
+        {
+            ui.SetActive(active);
+        }
     }
 }

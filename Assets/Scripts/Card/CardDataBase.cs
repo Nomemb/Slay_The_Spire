@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CardDataBase : MonoBehaviour
 {
+    public static CardDataBase instance;
+    
     [Tooltip("0~1 : Base\n" +
              "2~  : Common Attack")] 
     [SerializeField] private List<GameObject> ironCladCardPool;
@@ -37,5 +39,13 @@ public class CardDataBase : MonoBehaviour
             
             gm.fixedDeck.Add(thisCard);
         }
+    }
+
+    public static GameObject AddNewCard()
+    {
+        GameObject newCard = instance.ironCladCardPool[3];
+        Debug.Log(newCard.name + " 추가");
+
+        return newCard;
     }
 }

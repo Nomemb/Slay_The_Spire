@@ -16,10 +16,10 @@ public class ObjectPool : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        Initalize(initCount);
+        Initialize();
     }
 
-    private void Initalize(int initCount)
+    private void Initialize()
     {
         for (int i = 0; i < initCount; i++)
         {
