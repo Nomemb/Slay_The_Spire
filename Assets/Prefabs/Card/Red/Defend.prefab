@@ -745,6 +745,7 @@ GameObject:
   - component: {fileID: 3892924776348316508}
   - component: {fileID: 4155331288315332920}
   - component: {fileID: 8705913204051616916}
+  - component: {fileID: -8585585678023011438}
   - component: {fileID: 8746528412121765060}
   m_Layer: 5
   m_Name: Defend
@@ -897,9 +898,6 @@ MonoBehaviour:
   - {fileID: 8239256854276264752, guid: c7c2f47e438c30945b2d52c0f6e06122, type: 3}
   - {fileID: -5782867269424725959, guid: c7c2f47e438c30945b2d52c0f6e06122, type: 3}
   - {fileID: 2105835222224730126, guid: 28fe69d369fef8d49bba42a91c5e312d, type: 3}
-  originPos: {x: 0, y: 0, z: 0}
-  initPos: {x: 0, y: 0, z: 0}
-  onPointerPos: {x: 0, y: 200, z: 0}
   card: {fileID: 4155331288315332920}
   cardData: {fileID: 11400000, guid: fed6bfa389ebaf24181c6224bda367d4, type: 2}
   cardBackGround: {fileID: 3892924775534294386}
@@ -912,6 +910,24 @@ MonoBehaviour:
   cardUIValue: {fileID: 3892924775346043577}
   currentDamage: 0
   currentDefense: 0
+  isHand: 0
+--- !u!114 &-8585585678023011438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892924776348316509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974a7ef8b6153e048914163423d09371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originPos: {x: 0, y: 0, z: 0}
+  initPos: {x: 0, y: 0, z: 0}
+  onPointerPos: {x: 0, y: 200, z: 0}
+  card: {fileID: 4155331288315332920}
+  cardData: {fileID: 11400000, guid: fed6bfa389ebaf24181c6224bda367d4, type: 2}
 --- !u!61 &8746528412121765060
 BoxCollider2D:
   m_ObjectHideFlags: 0

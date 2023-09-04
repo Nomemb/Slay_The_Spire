@@ -79,7 +79,7 @@ public class RewardSystem : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             var newCard = Instantiate(GameManager.instance.GetNewCard(), selectNewCards.transform, true);
-            newCard.GetComponent<CardInfo>().enabled = false;
+            newCard.GetComponent<CardPointEvent>().enabled = false;
             Button newCardBtn = newCard.AddComponent<Button>() as Button;
             
             // newCardBtn.onClick.AddListener(); 선택하면 나머지 선택지를 다 지우고 fixedDeck에 해당 카드를 추가하는 함수
