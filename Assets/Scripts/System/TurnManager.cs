@@ -25,12 +25,14 @@ namespace System
         public UnityEvent startEnemyTurn;
         public UnityEvent changePlayerCardCount;
         public UnityEvent changePlayerHp;
+        public UnityEvent changePlayerMana;
 
         [Space(10f)]
         [Header("Components")]
         [Space(3f)]
         [SerializeField] private GameManager gm;
         [SerializeField] private UIManager um;
+        [SerializeField] private StageManager sm;
         [SerializeField] private RelicManager rm;
         [SerializeField] private PlayerController player;
         [SerializeField] private RewardSystem reward;
@@ -54,7 +56,7 @@ namespace System
             gm = GameManager.instance;
             um = UIManager.instance;
             rm = RelicManager.instance;
-        
+
             isPlayerTurn = gm.isPlayerTurn;
             characterType = gm.currentType;
         
@@ -62,6 +64,7 @@ namespace System
             battleScene.Init();
             hand = battleScene.GetComponentInChildren<CardDisplay>();
             player = FindObjectOfType<PlayerController>();
+            sm = FindObjectOfType<StageManager>();
             gm.player = player;
             reward = battleScene.GetComponentInChildren<RewardSystem>();
             EventSetting();
@@ -74,6 +77,7 @@ namespace System
             startBattle.AddListener(battleScene.Init);
             startBattle.AddListener(gm.BattleStart);
             startBattle.AddListener(player.BattleStart);
+            startBattle.AddListener(sm.CreateStageMonster);
             startBattle.AddListener(StartPlayerTurn);
             startBattle.AddListener(ChangedPlayerHp);
         
@@ -82,6 +86,7 @@ namespace System
             startPlayerTurn.AddListener(()=>playerHpUi.UpdateBlockBar(gm.block,gm.playerHp, gm.playerMaxHp));
             startPlayerTurn.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
             startPlayerTurn.AddListener(hand.ImageSetting);
+            startPlayerTurn.AddListener(battleScene.UpdateManaCount);
             startPlayerTurn.AddListener(um.UpdateDeckCountUI);
             
             // IsClearStage Event
@@ -105,6 +110,8 @@ namespace System
             changePlayerHp.AddListener(()=>playerHpUi.UpdateBlockBar(gm.block, gm.playerHp, gm.playerMaxHp));
             changePlayerHp.AddListener(()=>playerHpUi.UpdateHpBar(gm.playerHp, gm.playerMaxHp));
 
+            // ChangePlayerMana Event
+            changePlayerMana.AddListener(battleScene.UpdateManaCount);
         }
         public void StartBattle()
         {
@@ -168,6 +175,10 @@ namespace System
             changePlayerHp.Invoke();
         }
 
+        public void ChangedPlayerMana()
+        {
+            changePlayerMana.Invoke();
+        }
 
         public void IsClearStage()
         {

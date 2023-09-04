@@ -2,10 +2,10 @@ using System;
 using System.Text;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+
+public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     // 카드 이미지 풀 변수들
     [SerializeField] private Sprite[] cardImagesSprites;
@@ -16,7 +16,8 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     // 카드 드래그, 드랍 관련 변수
     public Vector3 originPos;
     [SerializeField] private Vector3 initPos;
-    
+    [SerializeField] private Vector3 onPointerPos;
+
     public Card card;
     public CardData cardData;
     public Image cardBackGround;                                                 // 카드 배경 ( 색상, 카드 타입 )
@@ -145,8 +146,12 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     
     public void OnBeginDrag(PointerEventData eventData)
     {
-        originPos = transform.position;
-        if (transform != null) transform.position = eventData.position;
+        if (!GameManager.instance.onDrag)
+        {
+            GameManager.instance.onDrag = true;
+        }
+
+        //if (transform != null) transform.position = eventData.position;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -158,7 +163,7 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         else
         {
             //UIManager.instance.cursorObject.gameObject.SetActive(true);
-            transform.position = initPos;
+            transform.position = initPos + onPointerPos;
         }
     }
 
@@ -166,17 +171,42 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         //UIManager.instance.cursorObject.gameObject.SetActive(false);
         transform.position = originPos;
+        GameManager.instance.onDrag = false;
     }
 
     public void OnDrop(PointerEventData eventData)
     {
         if (cardData.cardUseType != CardUseType.normal || Input.mousePosition.y <= 500 || !card.CanUseCard()) return;
         card.UseCard();
+        Debug.Log("SKill OnDrop");
+        GameManager.instance.onDrag = false;
+    }
+    
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (GameManager.instance.onDrag) return;
+        if(originPos == Vector3.zero) originPos = transform.position;
+        EnlargeCard(true);
+    }
 
-        // if (card.cardData.cardType != CardType.power)
-        // {
-        //     GameManager.instance.usedDeck.Add(this.gameObject);
-        // }
-        // Destroy(this.gameObject, 0.5f);
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (GameManager.instance.onDrag) return;
+        EnlargeCard(false);
+        GameManager.instance.onDrag = false;
+    }
+
+    private void EnlargeCard(bool isEnlarge)
+    {
+        if (isEnlarge)
+        {
+            var position = transform.position;
+            position = new Vector3(position.x, position.y + onPointerPos.y, position.z);
+            transform.position = position;
+        }
+        else
+        {
+            transform.position = originPos;
+        }
     }
 }

@@ -899,6 +899,7 @@ MonoBehaviour:
   - {fileID: 2105835222224730126, guid: 28fe69d369fef8d49bba42a91c5e312d, type: 3}
   originPos: {x: 0, y: 0, z: 0}
   initPos: {x: 0, y: 0, z: 0}
+  onPointerPos: {x: 0, y: 200, z: 0}
   card: {fileID: 4155331288315332920}
   cardData: {fileID: 11400000, guid: fed6bfa389ebaf24181c6224bda367d4, type: 2}
   cardBackGround: {fileID: 3892924775534294386}

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum EncounterType
 {
@@ -19,12 +21,13 @@ public enum StageType
     Elite,
     Boss
 }
+[System.Serializable]
 public class Stage
 {
     public EncounterType encounterType;
     public StageType stageType;
-    public List<GameObject> monsterData;
-    public Stage[] nextStages;
+    public List<GameObject> monsterData = new List<GameObject>();
+    public List<Stage> nextStages = new List<Stage>();
 }
 [System.Serializable]
 public class DictionaryOfMonster : SerializableDictionary<string, GameObject> { }
@@ -33,8 +36,11 @@ public class StageManager : MonoBehaviour
 {
     public Stage currentStage;
 
-     public DictionaryOfMonster monsterList = new DictionaryOfMonster();
-     [SerializeField] private List<GameObject> monsterPrefabs;
+    public DictionaryOfMonster monsterList = new DictionaryOfMonster(); 
+    [SerializeField] private List<GameObject> monsterPrefabs;
+    [SerializeField] private GameObject spawnZone;
+
+    private Vector3 spawnZonePos;
     
     // Start is called before the first frame update
     void Start()
@@ -50,13 +56,60 @@ public class StageManager : MonoBehaviour
     
     void Init()
     {
-        monsterList.Add("RedLouse", monsterPrefabs[0]);
-        monsterList.Add("GreenLouse", monsterPrefabs[1]);
+        spawnZonePos = spawnZone.transform.position;
+        foreach (var monster in monsterPrefabs)
+        {
+            monsterList.Add(monster.name, monster);
+        }
+        
+        GenerateWeakMonsters();
     }
 
     public void GenerateWeakMonsters()
     {
         int rand = Random.Range(1, 5);
+        Stage nextStage = new Stage
+        {
+            encounterType = EncounterType.Normal,
+            stageType = StageType.Enemy
+        };
         
+        if (rand <= 3)
+        {
+            currentStage.monsterData.Add(monsterList["RedLouse"]);
+            currentStage.monsterData.Add(monsterList["GreenLouse"]);
+
+            nextStage.monsterData.Add(monsterList["JawWorm"]);
+
+        }
+        else
+        {
+            currentStage.monsterData.Add(monsterList["JawWorm"]);
+            nextStage.monsterData.Add(monsterList["RedLouse"]);
+            nextStage.monsterData.Add(monsterList["GreenLouse"]);
+        }
+        currentStage.nextStages.Add(nextStage);
+    }
+
+    public void CreateStageMonster()
+    {
+        CreateMonster();
+    }
+    private void CreateMonster()
+    {
+        foreach (var monster in currentStage.monsterData)
+        {
+            var newMonster = Instantiate(monster, monster.transform.position, quaternion.identity); ;
+            newMonster.transform.SetParent(spawnZone.transform);
+        }
+    }
+
+    public void GotoNextStage()
+    {
+        GotoNextStage(currentStage.nextStages[0]);
+    }
+    private void GotoNextStage(Stage nextStage)
+    {
+        currentStage = nextStage;
     }
 }

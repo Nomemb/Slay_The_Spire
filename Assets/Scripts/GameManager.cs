@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public bool isPlayerTurn = true;
     public PlayerController player;
 
+    public bool onDrag;
+
     // 덱 관련
     public List<GameObject> fixedDeck = new List<GameObject>();         // 게임 내내 보유하고 있는 카드풀
 
@@ -57,9 +59,12 @@ public class GameManager : MonoBehaviour
     {
         DataManager.instance.JsonLoad();
         Debug.Log("Gm. GameStart");
+        isPlayerTurn = true;
+        EndPlayerTurn();
         usedDeck.Clear();                               // 혹시 모르니 비워 줌
         drawDeck.Clear();
         usedDeck = fixedDeck.ToList();                  // fixedDeck을 복사해 옴
+        currentMana = maxMana;
         Shuffle();
     }
 
@@ -156,5 +161,10 @@ public class GameManager : MonoBehaviour
             usedDeck.Add(hand[0]);
             hand.RemoveAt(0);
         }
+    }
+
+    public GameObject GetNewCard()
+    {
+        return cardDB.AddNewCard();
     }
 }

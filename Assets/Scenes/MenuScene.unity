@@ -4121,6 +4121,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7264759871878514373, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
+      propertyPath: ironCladCardPool.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264759871878514373, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
+      propertyPath: ironCladCardPool.Array.data[3]
+      value: 
+      objectReference: {fileID: 3892924776348316509, guid: b74c8b6cbb952e7449195ae1132a0b61, type: 3}
     - target: {fileID: 7264759871878514374, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
       propertyPath: m_RootOrder
       value: 8
