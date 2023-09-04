@@ -20,5 +20,8 @@ public class CardUseZone : MonoBehaviour, IDropHandler
         if (!card.CanUseCard()) return;
         
         card.UseCard(monster);
+        Debug.Log("Monster CardZone Drop");
+        GameManager.instance.onDrag = false;
+
     }
 }

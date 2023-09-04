@@ -8,6 +8,9 @@ public class RewardSystem : MonoBehaviour
     [SerializeField] private StageManager sm;
 
     [SerializeField] private GameObject rewardPanel;
+    [SerializeField] private GameObject rewardCardPanel;
+    [SerializeField] private GameObject selectNewCards;
+    
     [SerializeField] private List<GameObject> concealedUI;
     [SerializeField] private GameObject[] rewardPrefabs;
     [SerializeField] private GameObject rewardBox;
@@ -16,6 +19,7 @@ public class RewardSystem : MonoBehaviour
         SetUI(false);
         rewardPanel.SetActive(true);
         InstantRewardGold();
+        InstantRewardCard();
     }
 
     private void InstantRewardGold()
@@ -57,8 +61,10 @@ public class RewardSystem : MonoBehaviour
 
         rewardText.text = "카드 획득";
 
+        rewardCardBtn.onClick.AddListener(RewardCard);
         rewardCardBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardCard));
-        rewardCardBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardCard));
+        
+        rewardCard.transform.SetParent(rewardBox.transform);
     }
 
     private void RewardGold(int gold)
@@ -70,7 +76,19 @@ public class RewardSystem : MonoBehaviour
 
     private void RewardCard()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            var newCard = Instantiate(GameManager.instance.GetNewCard(), selectNewCards.transform, true);
+            newCard.GetComponent<CardInfo>().enabled = false;
+            Button newCardBtn = newCard.AddComponent<Button>() as Button;
+            
+            // newCardBtn.onClick.AddListener(); 선택하면 나머지 선택지를 다 지우고 fixedDeck에 해당 카드를 추가하는 함수
+        }
         
+        rewardPanel.SetActive(false);
+        rewardCardPanel.SetActive(true);
+
+
     }
 
     public void ClearReward()

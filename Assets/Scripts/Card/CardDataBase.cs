@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class CardDataBase : MonoBehaviour
 {
-    public static CardDataBase instance;
-    
     [Tooltip("0~1 : Base\n" +
              "2~  : Common Attack")] 
-    [SerializeField] private List<GameObject> ironCladCardPool;
+    [SerializeField] private List<GameObject> ironCladCardPool = new List<GameObject>();
 
     private Card card;
     private CardInfo cardInfo;
     private GameManager gm;
 
+    [SerializeField] private static int _cardPoolSize;
     private void Start()
     {
         gm = GameManager.instance;
@@ -24,6 +23,8 @@ public class CardDataBase : MonoBehaviour
         {
             InitIronClad();
         }
+
+        _cardPoolSize = ironCladCardPool.Count;
     }
 
     private void InitIronClad()
@@ -41,9 +42,10 @@ public class CardDataBase : MonoBehaviour
         }
     }
 
-    public static GameObject AddNewCard()
-    {
-        GameObject newCard = instance.ironCladCardPool[3];
+    public GameObject AddNewCard()
+    { ;
+        var randNum = Random.Range(0, _cardPoolSize);
+        var newCard = ironCladCardPool[randNum];
         Debug.Log(newCard.name + " 추가");
 
         return newCard;

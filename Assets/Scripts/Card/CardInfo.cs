@@ -17,8 +17,7 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public Vector3 originPos;
     [SerializeField] private Vector3 initPos;
     [SerializeField] private Vector3 onPointerPos;
-    private bool currentCardOnDrag;
-    
+
     public Card card;
     public CardData cardData;
     public Image cardBackGround;                                                 // 카드 배경 ( 색상, 카드 타입 )
@@ -150,7 +149,6 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (!GameManager.instance.onDrag)
         {
             GameManager.instance.onDrag = true;
-            currentCardOnDrag = true;
         }
 
         //if (transform != null) transform.position = eventData.position;
@@ -174,20 +172,14 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         //UIManager.instance.cursorObject.gameObject.SetActive(false);
         transform.position = originPos;
         GameManager.instance.onDrag = false;
-        currentCardOnDrag = false;
-
     }
 
     public void OnDrop(PointerEventData eventData)
     {
         if (cardData.cardUseType != CardUseType.normal || Input.mousePosition.y <= 500 || !card.CanUseCard()) return;
         card.UseCard();
-
-        // if (card.cardData.cardType != CardType.power)
-        // {
-        //     GameManager.instance.usedDeck.Add(this.gameObject);
-        // }
-        // Destroy(this.gameObject, 0.5f);
+        Debug.Log("SKill OnDrop");
+        GameManager.instance.onDrag = false;
     }
     
     public void OnPointerEnter(PointerEventData eventData)

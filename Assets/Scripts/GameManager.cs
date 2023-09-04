@@ -162,4 +162,9 @@ public class GameManager : MonoBehaviour
             hand.RemoveAt(0);
         }
     }
+
+    public GameObject GetNewCard()
+    {
+        return cardDB.AddNewCard();
+    }
 }
