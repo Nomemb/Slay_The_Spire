@@ -111,6 +111,6 @@ public class StageManager : MonoBehaviour
     private void GotoNextStage(Stage nextStage)
     {
         currentStage = nextStage;
-        Init();
+        GenerateWeakMonsters();
     }
 }

@@ -176,4 +176,5 @@ public class GameManager : MonoBehaviour
     {
         return cardDB.AddNewCard();
     }
+    
 }

@@ -82,7 +82,9 @@ public class RewardSystem : MonoBehaviour
             newCard.GetComponent<CardPointEvent>().enabled = false;
             Button newCardBtn = newCard.AddComponent<Button>() as Button;
             
-            // newCardBtn.onClick.AddListener(); 선택하면 나머지 선택지를 다 지우고 fixedDeck에 해당 카드를 추가하는 함수
+            newCardBtn.onClick.AddListener(()=>ChooseCard(newCard));
+            newCardBtn.onClick.AddListener(DataManager.instance.JsonSave);
+            newCardBtn.onClick.AddListener(UIManager.instance.UpdateDeckCountUI);
         }
         
         rewardPanel.SetActive(false);
@@ -97,6 +99,24 @@ public class RewardSystem : MonoBehaviour
         {
             ObjectPool.ReturnObject(rewardBox.transform.GetChild(0).gameObject);
         }
+    }
+
+    public void ChooseCard(GameObject newCard)
+    {
+        CardPointEvent cpe = newCard.GetComponent<CardPointEvent>();
+        cpe.enabled = true;
+        GameManager.instance.fixedDeck.Add(newCard);
+        ClearCardReward();
+    }
+    private void ClearCardReward()
+    {
+        foreach (Transform card in selectNewCards.transform)
+        {
+            Destroy(card.gameObject);
+        }
+        
+        rewardPanel.SetActive(true);
+        rewardCardPanel.SetActive(false);
     }
 
     public void SetUI(bool active)

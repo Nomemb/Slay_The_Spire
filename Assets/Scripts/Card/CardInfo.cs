@@ -34,6 +34,7 @@ public class CardInfo : MonoBehaviour
         cardData = card.cardData;
         
         currentDamage = card.CardDamage;
+        currentDefense = card.CardDefense;
         
         cardDesc.text = UpdateDesc();
         cardBackGround.sprite = ChangeCardBackGroundSprite();
@@ -67,7 +68,7 @@ public class CardInfo : MonoBehaviour
                     temp.Append(cardData.DebuffDuration.ToString());
                     break;
                 case "Defense":
-                    temp.Append(cardData.Defense.ToString());
+                    temp.Append(currentDefense.ToString());
                     Debug.Log("Defense");
                     break;
                 default:

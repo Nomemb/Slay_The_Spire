@@ -1,40 +1,40 @@
 {
     "card": [
         {
-            "instanceID": 28568
+            "instanceID": 28576
         },
         {
-            "instanceID": 28568
+            "instanceID": 28576
         },
         {
-            "instanceID": 28568
+            "instanceID": 28576
         },
         {
-            "instanceID": 28568
+            "instanceID": 28576
         },
         {
-            "instanceID": 28568
+            "instanceID": 28576
         },
         {
-            "instanceID": 28570
+            "instanceID": 28578
         },
         {
-            "instanceID": 28570
+            "instanceID": 28578
         },
         {
-            "instanceID": 28570
+            "instanceID": 28578
         },
         {
-            "instanceID": 28570
+            "instanceID": 28578
         },
         {
-            "instanceID": 28572
+            "instanceID": 28580
         }
     ],
     "characterType": 0,
     "hp": 88,
     "maxHp": 88,
-    "gold": 114,
+    "gold": 99,
     "addedStrength": 0,
     "ascensionLevel": 0,
     "hasRelics": []

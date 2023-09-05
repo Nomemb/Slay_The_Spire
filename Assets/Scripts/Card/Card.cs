@@ -31,6 +31,7 @@ public abstract class Card : MonoBehaviour
         
         cd.cards.Add(this);
         cardDamage = cardData.Damage + gm.playerPower;
+        cardDefense = cardData.Defense;
 
     }
     public void UseCard(BaseMonster target = null)

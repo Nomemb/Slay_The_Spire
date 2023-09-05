@@ -48,6 +48,7 @@ MonoBehaviour:
   currentType: 0
   isPlayerTurn: 1
   player: {fileID: 0}
+  onDrag: 0
   fixedDeck: []
   drawDeck: []
   usedDeck: []
@@ -63,6 +64,7 @@ MonoBehaviour:
   currentDrawCardCount: 5
   currentMana: 3
   maxMana: 3
+  block: 0
 --- !u!114 &7264759871878514373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,3 +81,4 @@ MonoBehaviour:
   - {fileID: 3892924776348316509, guid: 249b6227642538046ba5df152709e099, type: 3}
   - {fileID: 3892924776348316509, guid: ff3844d2e09a8b443b18cd79f45bfeef, type: 3}
   - {fileID: 3892924776348316509, guid: b759f5ba60bb0cc43b4e79401aa67006, type: 3}
+  - {fileID: 3892924776348316509, guid: b74c8b6cbb952e7449195ae1132a0b61, type: 3}
