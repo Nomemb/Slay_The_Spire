@@ -1890,6 +1890,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -597056041, guid: 1849c21967a72264e9c835aea337d133, type: 3}
+    - target: {fileID: 6455753133603458152, guid: aafea93a751a8e1429186e0fce7535e3, type: 3}
+      propertyPath: m_Spacing
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 6455753133603458159, guid: aafea93a751a8e1429186e0fce7535e3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 53
@@ -3043,7 +3047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1888201833
 AudioListener:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Defend : Skill
     {
         gm.block += cardData.Defense;
         TurnManager.instance.ChangedPlayerHp();
+        SoundManager.instance.PlaySound("GainDefense");
         base.ActivationCard(target);
     }
 }

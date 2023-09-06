@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -73,18 +74,22 @@ public class StageManager : MonoBehaviour
             encounterType = EncounterType.Normal,
             stageType = StageType.Enemy
         };
+        currentStage.monsterData.Clear();
         
         if (rand <= 3)
         {
             currentStage.monsterData.Add(monsterList["RedLouse"]);
             currentStage.monsterData.Add(monsterList["GreenLouse"]);
 
+            nextStage.monsterData.Clear();
             nextStage.monsterData.Add(monsterList["JawWorm"]);
 
         }
         else
         {
             currentStage.monsterData.Add(monsterList["JawWorm"]);
+            
+            nextStage.monsterData.Clear();
             nextStage.monsterData.Add(monsterList["RedLouse"]);
             nextStage.monsterData.Add(monsterList["GreenLouse"]);
         }
@@ -97,11 +102,22 @@ public class StageManager : MonoBehaviour
     }
     private void CreateMonster()
     {
+        var temp = RelicManager.instance.ActivateRelic("Lament");
+        
         foreach (var monster in currentStage.monsterData)
         {
-            var newMonster = Instantiate(monster, monster.transform.position, quaternion.identity); ;
+            var newMonster = Instantiate(monster, monster.transform.position, quaternion.identity);
             newMonster.transform.SetParent(spawnZone.transform);
         }
+
+        if (temp)
+        {
+            var lament = temp.GetComponent<Lament>();
+            lament.currentCount--;
+            Debug.Log(lament.currentCount);
+            lament.UpdateCount();
+        }
+        
     }
 
     public void GotoNextStage()

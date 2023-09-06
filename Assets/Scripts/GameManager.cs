@@ -172,9 +172,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameObject GetNewCard()
+    public KeyValuePair<GameObject, int> GetNewCard()
     {
         return cardDB.AddNewCard();
+    }
+
+    public void AddNewCard(int index)
+    {
+        cardDB.AddNewCard(index);
     }
     
 }

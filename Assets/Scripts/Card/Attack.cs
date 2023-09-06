@@ -20,6 +20,8 @@ public abstract class Attack : Card
         {
             cardDamage = (int)Math.Floor((cardData.Damage + gm.playerPower) * 0.75);
         }
+        
+        SoundManager.instance.PlaySound("Attack");
         target.OnDamage(cardDamage);
     }
 }

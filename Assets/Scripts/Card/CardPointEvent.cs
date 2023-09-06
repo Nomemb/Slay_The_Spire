@@ -29,7 +29,7 @@ public class CardPointEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         {
             GameManager.instance.onDrag = true;
         }
-
+        SoundManager.instance.PlaySound("CardSelect");
         //if (transform != null) transform.position = eventData.position;
     }
 

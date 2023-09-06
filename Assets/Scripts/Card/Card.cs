@@ -26,12 +26,12 @@ public abstract class Card : MonoBehaviour
 
     protected void Init()
     {
+        cardDamage = cardData.Damage + gm.playerPower;
+        cardDefense = cardData.Defense;
         cd = GetComponentInParent<CardDisplay>();
         if (cd == null) return;
         
         cd.cards.Add(this);
-        cardDamage = cardData.Damage + gm.playerPower;
-        cardDefense = cardData.Defense;
 
     }
     public void UseCard(BaseMonster target = null)

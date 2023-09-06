@@ -10,7 +10,8 @@ public class Relic : MonoBehaviour
     public string relicName;
     public Sprite image;
     public Text countText;
-    public int count;
+    public int currentCount;
+    public int maxCount;
 
     public Text relicDescText;
     [SerializeField] private bool hasCount;
@@ -21,13 +22,20 @@ public class Relic : MonoBehaviour
     {
         tm = TurnManager.instance;
         
-        if (!hasCount) return; 
-        countText.text = count.ToString();
+        if (!hasCount) return;
+        currentCount = maxCount;
+        countText.text = currentCount.ToString();
         countText.gameObject.SetActive(true);
     }
 
-    protected virtual void ActivateRelic()
+    public virtual void ActivateRelic()
     {
         
+    }
+
+    public void UpdateCount()
+    {
+        if (!hasCount) return; 
+        countText.text = currentCount.ToString();
     }
 }

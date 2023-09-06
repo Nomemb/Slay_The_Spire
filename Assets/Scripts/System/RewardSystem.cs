@@ -14,6 +14,7 @@ public class RewardSystem : MonoBehaviour
     [SerializeField] private List<GameObject> concealedUI;
     [SerializeField] private GameObject[] rewardPrefabs;
     [SerializeField] private GameObject rewardBox;
+    
     public void ViewReward()
     {
         SetUI(false);
@@ -78,13 +79,16 @@ public class RewardSystem : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            var newCard = Instantiate(GameManager.instance.GetNewCard(), selectNewCards.transform, true);
+            var newCardPair = GameManager.instance.GetNewCard();
+            
+            var newCard = Instantiate(newCardPair.Key, selectNewCards.transform, true);
             newCard.GetComponent<CardPointEvent>().enabled = false;
             Button newCardBtn = newCard.AddComponent<Button>() as Button;
             
-            newCardBtn.onClick.AddListener(()=>ChooseCard(newCard));
+            newCardBtn.onClick.AddListener(()=>ChooseCard(newCardPair.Value));
             newCardBtn.onClick.AddListener(DataManager.instance.JsonSave);
             newCardBtn.onClick.AddListener(UIManager.instance.UpdateDeckCountUI);
+            newCardBtn.onClick.AddListener(ClearCardReward);
         }
         
         rewardPanel.SetActive(false);
@@ -101,12 +105,9 @@ public class RewardSystem : MonoBehaviour
         }
     }
 
-    public void ChooseCard(GameObject newCard)
+    public void ChooseCard(int index)
     {
-        CardPointEvent cpe = newCard.GetComponent<CardPointEvent>();
-        cpe.enabled = true;
-        GameManager.instance.fixedDeck.Add(newCard);
-        ClearCardReward();
+        GameManager.instance.AddNewCard(index);
     }
     private void ClearCardReward()
     {

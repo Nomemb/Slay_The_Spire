@@ -69,11 +69,17 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable, IBlockable
         
         Debug.Log(this.name + " 추가");
         tm.monsterList.Add(this);
-        maxHp = hp;
-        
         bs = GetComponent<BuffSystem>();
         dbS = GetComponent<DebuffSystem>();
+        maxHp = hp;
 
+        var temp = RelicManager.instance.ActivateRelic("Lament");
+        if (temp)
+        {
+            var lament = temp.GetComponent<Lament>();
+            if(lament.currentCount > 0) hp = 1;
+        }
+        
         enemyShareState = 0x00000000;
         enemyUniqueState = 0x00000000;
         
@@ -139,7 +145,7 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable, IBlockable
         }
 
         currentDamage -= GameManager.instance.block;
-
+        SoundManager.instance.PlaySound("DefenseBreak");
         GameManager.instance.block = 0;
         GameManager.instance.playerHp -= currentDamage;
         tm.ChangedPlayerHp();
