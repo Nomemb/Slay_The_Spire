@@ -5,18 +5,13 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class CardInfo : MonoBehaviour
 {
     // 카드 이미지 풀 변수들
     [SerializeField] private Sprite[] cardImagesSprites;
     [SerializeField] private Sprite[] cardBackGroundSprites;
     [SerializeField] private Sprite[] cardFrameSprites;
     [SerializeField] private Sprite[] cardBannerSprites;
-    
-    // 카드 드래그, 드랍 관련 변수
-    public Vector3 originPos;
-    [SerializeField] private Vector3 initPos;
-    [SerializeField] private Vector3 onPointerPos;
 
     public Card card;
     public CardData cardData;
@@ -32,11 +27,14 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public int currentDamage;
     public int currentDefense;
+
+    [SerializeField] private bool isHand;
     private void Start()
     {
         cardData = card.cardData;
         
         currentDamage = card.CardDamage;
+        currentDefense = card.CardDefense;
         
         cardDesc.text = UpdateDesc();
         cardBackGround.sprite = ChangeCardBackGroundSprite();
@@ -48,7 +46,8 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         cardUIName.text = cardData.CardName;
         cardUIValue.text = cardData.cardValue.ToString();
 
-        initPos = transform.position;
+
+        isHand = true;
     }
 
     private string UpdateDesc()
@@ -69,7 +68,7 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                     temp.Append(cardData.DebuffDuration.ToString());
                     break;
                 case "Defense":
-                    temp.Append(cardData.Defense.ToString());
+                    temp.Append(currentDefense.ToString());
                     Debug.Log("Defense");
                     break;
                 default:
@@ -142,71 +141,5 @@ public class CardInfo : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             break;
         }
         return img;
-    }
-    
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (!GameManager.instance.onDrag)
-        {
-            GameManager.instance.onDrag = true;
-        }
-
-        //if (transform != null) transform.position = eventData.position;
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        if (cardData.cardType != CardType.attack)
-        {
-            transform.position = Input.mousePosition;
-        }
-        else
-        {
-            //UIManager.instance.cursorObject.gameObject.SetActive(true);
-            transform.position = initPos + onPointerPos;
-        }
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        //UIManager.instance.cursorObject.gameObject.SetActive(false);
-        transform.position = originPos;
-        GameManager.instance.onDrag = false;
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        if (cardData.cardUseType != CardUseType.normal || Input.mousePosition.y <= 500 || !card.CanUseCard()) return;
-        card.UseCard();
-        Debug.Log("SKill OnDrop");
-        GameManager.instance.onDrag = false;
-    }
-    
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (GameManager.instance.onDrag) return;
-        if(originPos == Vector3.zero) originPos = transform.position;
-        EnlargeCard(true);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (GameManager.instance.onDrag) return;
-        EnlargeCard(false);
-        GameManager.instance.onDrag = false;
-    }
-
-    private void EnlargeCard(bool isEnlarge)
-    {
-        if (isEnlarge)
-        {
-            var position = transform.position;
-            position = new Vector3(position.x, position.y + onPointerPos.y, position.z);
-            transform.position = position;
-        }
-        else
-        {
-            transform.position = originPos;
-        }
     }
 }

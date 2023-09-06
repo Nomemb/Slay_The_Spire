@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     // 게임 플레이 관련
+    [Header("GamePlay")]
     public CharacterType currentType;
     public bool isPlayerTurn = true;
     public PlayerController player;
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
     public bool onDrag;
 
     // 덱 관련
+    [Space(10f)]
+    [Header("Deck")]
     public List<GameObject> fixedDeck = new List<GameObject>();         // 게임 내내 보유하고 있는 카드풀
 
     public List<GameObject> drawDeck = new List<GameObject>();          // 전투에서 사용할 카드 ( fixedDeck을 복사해 옴 )
@@ -26,9 +29,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> hand = new List<GameObject>();              // 손패
 
     // 카드 데이터베이스
+    [Space(10f)]
+    [Header("Card Database")]
     [SerializeField] private CardDataBase cardDB;
     
     // 플레이어 저장 스탯 관련
+    [Space(10f)]
+    [Header("Player Stat")]
     public int playerHp;
     public int playerMaxHp;
     public int playerGold;
@@ -37,6 +44,8 @@ public class GameManager : MonoBehaviour
  
 
     // 게임 규칙 관련
+    [Space(10f)]
+    [Header("Game Rule")]
     [SerializeField] private int maxHandCount = 10;              // 최대로 들고있을 수 있는 카드의 수
     public int currentDrawCardCount = 5;
     public int currentMana;
@@ -163,8 +172,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameObject GetNewCard()
+    public KeyValuePair<GameObject, int> GetNewCard()
     {
         return cardDB.AddNewCard();
     }
+
+    public void AddNewCard(int index)
+    {
+        cardDB.AddNewCard(index);
+    }
+    
 }

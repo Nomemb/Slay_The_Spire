@@ -94,7 +94,8 @@ MonoBehaviour:
   relicName: "\uB2C8\uC624\uC6B0\uC758 \uBE44\uD0C4"
   image: {fileID: 1179055699, guid: aa0e2757271922348a5d3aebeb4d39bd, type: 3}
   countText: {fileID: 812768614894242624}
-  count: 3
+  currentCount: 3
+  maxCount: 3
   relicDescText: {fileID: 0}
   hasCount: 1
 --- !u!1 &812768614894242630
@@ -176,4 +177,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: -1

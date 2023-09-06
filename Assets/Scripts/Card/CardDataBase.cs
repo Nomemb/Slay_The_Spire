@@ -42,12 +42,18 @@ public class CardDataBase : MonoBehaviour
         }
     }
 
-    public GameObject AddNewCard()
-    { ;
+    public KeyValuePair<GameObject, int> AddNewCard()
+    {
         var randNum = Random.Range(0, _cardPoolSize);
         var newCard = ironCladCardPool[randNum];
-        Debug.Log(newCard.name + " 추가");
+        var pair = new KeyValuePair<GameObject, int>(newCard, randNum);
+        return pair;
+    }
 
-        return newCard;
+    public void AddNewCard(int index)
+    {
+        if (index >= ironCladCardPool.Count) return;
+        Debug.Log(ironCladCardPool[index].name + " 추가!");
+        gm.fixedDeck.Add(ironCladCardPool[index]);
     }
 }

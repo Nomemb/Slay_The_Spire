@@ -19,6 +19,7 @@ namespace System
         [SerializeField] private HpInteraction playerHpUi;
 
         public UnityEvent startBattle;
+        public UnityEvent checkRelic;
         public UnityEvent startPlayerTurn;
         public UnityEvent isClearStage;
         public UnityEvent endPlayerTurn;
@@ -75,12 +76,15 @@ namespace System
             // StartBattle Event
             startBattle.AddListener(um.Init);
             startBattle.AddListener(battleScene.Init);
+            startBattle.AddListener(sm.CreateStageMonster);
             startBattle.AddListener(gm.BattleStart);
             startBattle.AddListener(player.BattleStart);
-            startBattle.AddListener(sm.CreateStageMonster);
-            startBattle.AddListener(StartPlayerTurn);
+            startBattle.AddListener(CheckRelic);
             startBattle.AddListener(ChangedPlayerHp);
         
+            // CheckRelic Event
+            checkRelic.AddListener(StartPlayerTurn);
+            
             // StartPlayerTurn Event
             startPlayerTurn.AddListener(gm.StartPlayerTurn);
             startPlayerTurn.AddListener(()=>playerHpUi.UpdateBlockBar(gm.block,gm.playerHp, gm.playerMaxHp));
@@ -93,6 +97,7 @@ namespace System
             isClearStage.AddListener(reward.ViewReward);
         
             // EndPlayerTurn Event
+            endPlayerTurn.AddListener(()=>SoundManager.instance.PlaySound("EndTurn"));
             endPlayerTurn.AddListener(gm.EndPlayerTurn);
             endPlayerTurn.AddListener(hand.EndPlayerTurn);
             endPlayerTurn.AddListener(battleScene.UpdateCardCount);
@@ -119,12 +124,18 @@ namespace System
 
             startBattle.Invoke();
         }
+
+        public void CheckRelic()
+        {
+            Debug.Log("시작 유물 체크...");
+            
+            checkRelic.Invoke();
+        }
         public void StartPlayerTurn()
         {
             Debug.Log("플레이어 턴 시작!");
 
             startPlayerTurn.Invoke();
-            Debug.Log(monsterList.Count);
         }
     
         public void EndPlayerTurn()
@@ -145,8 +156,6 @@ namespace System
             {
                 monster.ResetBlock();
                 startEnemyTurn.AddListener(monster.DoingCurrentState);
-                var buffSys = monster.GetComponent<BuffSystem>();
-                var debuffSys = monster.GetComponent<DebuffSystem>();
             }
 
             gm.isPlayerTurn = true;
