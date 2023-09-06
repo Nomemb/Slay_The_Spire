@@ -29,20 +29,13 @@
         },
         {
             "instanceID": 28988
-        },
-        {
-            "instanceID": 28990
         }
     ],
     "characterType": 0,
-    "hp": 80,
-    "maxHp": 80,
-    "gold": 113,
+    "hp": 88,
+    "maxHp": 88,
+    "gold": 99,
     "addedStrength": 0,
     "ascensionLevel": 0,
-    "hasRelics": [
-        {
-            "instanceID": 42104
-        }
-    ]
+    "hasRelics": []
 }
