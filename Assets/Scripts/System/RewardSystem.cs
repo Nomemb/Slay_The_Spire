@@ -47,6 +47,7 @@ public class RewardSystem : MonoBehaviour
         }
         // if(relic) 처리해야함 ( 차후에 )
         amountGold.text = gold.ToString() + " 골드";
+        rewardGoldBtn.onClick.RemoveAllListeners();
         rewardGoldBtn.onClick.AddListener(()=>RewardGold(gold));
         rewardGoldBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardGold));
         
@@ -61,7 +62,8 @@ public class RewardSystem : MonoBehaviour
         var rewardCardBtn = rewardCard.GetComponentInChildren<Button>();
 
         rewardText.text = "카드 획득";
-
+        
+        rewardCardBtn.onClick.RemoveAllListeners();
         rewardCardBtn.onClick.AddListener(RewardCard);
         rewardCardBtn.onClick.AddListener(()=>ObjectPool.ReturnObject(rewardCard));
         
@@ -93,8 +95,6 @@ public class RewardSystem : MonoBehaviour
         
         rewardPanel.SetActive(false);
         rewardCardPanel.SetActive(true);
-
-
     }
 
     public void ClearReward()

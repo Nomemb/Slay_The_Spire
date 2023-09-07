@@ -19,6 +19,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private List<AudioClip> audioClips;
+    [SerializeField] private List<AudioClip> backgroundClips;
 
     
     public void PlaySound(string action)
@@ -53,6 +54,12 @@ public class SoundManager : MonoBehaviour
                 break;
 
         }
-        
+    }
+
+    public void ChangeBGM(int number)
+    {
+        audioSource.clip = backgroundClips[number];
+        audioSource.loop = true;
+        audioSource.Play();
     }
 }

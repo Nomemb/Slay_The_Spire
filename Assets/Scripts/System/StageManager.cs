@@ -113,7 +113,7 @@ public class StageManager : MonoBehaviour
         if (temp)
         {
             var lament = temp.GetComponent<Lament>();
-            lament.currentCount--;
+            lament.currentCount = Mathf.Max(lament.currentCount - 1, 0);
             Debug.Log(lament.currentCount);
             lament.UpdateCount();
         }

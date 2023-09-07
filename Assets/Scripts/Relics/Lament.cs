@@ -11,6 +11,7 @@ public class Lament : Relic
     protected override void Start()
     {
         base.Start();
+        currentCount = maxCount;
         Debug.Log("Lament 추가");
     }
 

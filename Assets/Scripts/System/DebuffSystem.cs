@@ -152,6 +152,28 @@ namespace System
 
             PrintDebuffDictLog();
         }
-        
+        public void RemoveDeBuff(Dictionary<string, int> dict, string debuffName)
+        {
+            if (dict.ContainsKey(debuffName))
+            {
+                var index = debuffUI.FindIndex(x =>
+                    string.Compare(x.name, debuffName, StringComparison.OrdinalIgnoreCase) == 0);
+                    
+                Debug.Log(index);
+                Destroy(debuffUI[index]);
+                debuffUI.RemoveAt(index);
+                dict.Remove(debuffName);
+            }
+        }
+
+        public void ResetBuff()
+        {
+            sharedDebuffDict = new Dictionary<string, int>();
+            foreach (Transform debuff in debuffUi.transform)
+            {
+                Destroy(debuff.gameObject);
+            }
+            Init();
+        }
     }
 }

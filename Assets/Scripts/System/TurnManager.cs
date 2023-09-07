@@ -27,6 +27,7 @@ namespace System
         public UnityEvent changePlayerCardCount;
         public UnityEvent changePlayerHp;
         public UnityEvent changePlayerMana;
+        public UnityEvent cardDrawEvent;
 
         [Space(10f)]
         [Header("Components")]
@@ -89,11 +90,12 @@ namespace System
             startPlayerTurn.AddListener(gm.StartPlayerTurn);
             startPlayerTurn.AddListener(()=>playerHpUi.UpdateBlockBar(gm.block,gm.playerHp, gm.playerMaxHp));
             startPlayerTurn.AddListener(()=>gm.DrawCard(gm.currentDrawCardCount));
-            startPlayerTurn.AddListener(hand.ImageSetting);
+            //startPlayerTurn.AddListener(hand.ImageSetting);
             startPlayerTurn.AddListener(battleScene.UpdateManaCount);
             startPlayerTurn.AddListener(um.UpdateDeckCountUI);
             
             // IsClearStage Event
+            isClearStage.AddListener(player.ClearStage);
             isClearStage.AddListener(reward.ViewReward);
         
             // EndPlayerTurn Event
@@ -117,6 +119,9 @@ namespace System
 
             // ChangePlayerMana Event
             changePlayerMana.AddListener(battleScene.UpdateManaCount);
+            
+            // CardDrawEvent
+            
         }
         public void StartBattle()
         {
@@ -198,6 +203,11 @@ namespace System
         private bool IsCleared()
         {
             return monsterList.Count == 0;
+        }
+
+        public void CardDrawEvent(GameObject newCard)
+        {
+            hand.CardDraw(newCard);
         }
     }
 }
