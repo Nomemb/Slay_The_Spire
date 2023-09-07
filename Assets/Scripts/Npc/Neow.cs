@@ -88,6 +88,7 @@ public class Neow : MonoBehaviour
         characterBattleUI.SetActive(true);
         battle.SetActive(true);
         neow.SetActive(false);
+        SoundManager.instance.ChangeBGM(1);
         TurnManager.instance.StartBattle();
     }
 

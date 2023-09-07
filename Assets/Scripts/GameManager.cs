@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
             }
         
             hand.Add(drawDeck[0]);
+            TurnManager.instance.CardDrawEvent(drawDeck[0]);
             drawDeck.RemoveAt(0);
             TurnManager.instance.ChangePlayerCardCount();
         }

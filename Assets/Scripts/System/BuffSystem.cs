@@ -120,6 +120,7 @@ namespace System
             enemyState = 0x00000000;
             
             sharedBuffDict.Clear();
+            buffUI.Clear();
         }
         
         public void AddShareBuff(string buffName, int duration = 0)
@@ -201,9 +202,24 @@ namespace System
         {
             if (dict.ContainsKey(buffName))
             {
-                Destroy(buffUI[buffUI.FindIndex(x=> string.Compare(x.name, buffName, StringComparison.OrdinalIgnoreCase)==0)]);
+                var index = buffUI.FindIndex(x =>
+                    string.Compare(x.name, buffName, StringComparison.OrdinalIgnoreCase) == 0);
+                
+                Destroy(buffUI[index]);
+                buffUI.RemoveAt(index);
                 dict.Remove(buffName);
             }
         }
+
+        public void ResetBuff()
+        {
+            sharedBuffDict = new Dictionary<string, int>();
+            foreach (Transform buff in buffUi.transform)
+            {
+                Destroy(buff.gameObject);
+            }
+            Init();
+        }
+        
     }
 }

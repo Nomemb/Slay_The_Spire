@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 660338868}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
@@ -2112,7 +2112,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 660338868}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Embark
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3906,6 +3906,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1392209776, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
+      propertyPath: backgroundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392209776, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
+      propertyPath: backgroundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ddc394eb4ee4284788487dda286399d, type: 3}
+    - target: {fileID: 1392209776, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
+      propertyPath: backgroundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0be9cb0646806364ba7a034ae49bd2c2, type: 3}
     - target: {fileID: 7264759871878514374, guid: 1d315bd4c6eda34498c5bdd69c8280d3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3974,6 +3986,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1747906135}
     m_Modifications:
+    - target: {fileID: 3734951211653504230, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6644606756759682977, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.22937012
@@ -3989,6 +4005,10 @@ PrefabInstance:
     - target: {fileID: 6644606756821727496, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644606756821727502, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6644606756857365506, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
       propertyPath: m_Pivot.x
@@ -4098,6 +4118,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.98358154
       objectReference: {fileID: 0}
+    - target: {fileID: 6644606757277179817, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644606757341555936, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6644606758090116370, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -4113,6 +4141,18 @@ PrefabInstance:
     - target: {fileID: 6882013923419652791, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.62739563
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786829259182495376, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 315723699}
+    - target: {fileID: 7786829259182495376, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1409419764}
+    - target: {fileID: 7786829259182495376, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a39dc47b9ea7b5408255f8dbc2bda5e, type: 3}

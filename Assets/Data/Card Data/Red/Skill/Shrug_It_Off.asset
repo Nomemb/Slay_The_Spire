@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da71fcd095b39d4fb0e6e85e27aa79b, type: 3}
+  m_Name: Shrug_It_Off
+  m_EditorClassIdentifier: 
+  cardName: "\uD758\uB824\uBCF4\uB0B4\uAE30"
+  cardImageName: shrug_it_off
+  cardColor: 0
+  cardType: 1
+  cardRarity: 0
+  cardUseType: 0
+  cardValue: 1
+  damage: 0
+  defense: 8
+  buffDuration: 0
+  deBuffDuration: 0
+  e_cardValue: 1
+  e_damage: 0
+  e_defense: 11
+  e_buffDuration: 0
+  e_deBuffDuration: 0
+  cardDesc:
+  - "\uBC29\uC5B4\uB3C4\uB97C "
+  - Defense
+  - " \uC5BB\uC2B5\uB2C8\uB2E4.\n"
+  - "\uCE74\uB4DC\uB97C 1\uC7A5 \uBF51\uC2B5\uB2C8\uB2E4."

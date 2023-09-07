@@ -18,6 +18,13 @@ public class CardDisplay : MonoBehaviour
         }
     }
 
+    public void CardDraw(GameObject newCard)
+    {
+        var tempCard = Instantiate(newCard, transform.position, Quaternion.identity);
+        tempCard.transform.SetParent(transform);
+        cardUI.Add(tempCard);
+    }
+
     public void EndPlayerTurn()
     {
         while (cards.Count != 0)

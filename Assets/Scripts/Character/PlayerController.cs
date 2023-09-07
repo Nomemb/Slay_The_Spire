@@ -21,4 +21,10 @@ public class PlayerController : MonoBehaviour
         bs.Init();
         dbS.Init();
     }
+
+    public void ClearStage()
+    {
+        bs.ResetBuff();
+        dbS.ResetBuff();
+    }
 }

@@ -36,6 +36,9 @@ public class ViewDeck : MonoBehaviour
             case "ExpiredDeck":
                 deckList = GameManager.instance.expiredDeck.ToList();
                 break;
+            
+            default:
+                break;
         }
 
         foreach (var card in deckList)
@@ -47,7 +50,7 @@ public class ViewDeck : MonoBehaviour
         }
     }
 
-    public void ResetDeckCard()
+    private void ResetDeckCard()
     {
         foreach (Transform card in grid.transform)
         {
