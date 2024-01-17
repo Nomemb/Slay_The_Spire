@@ -73,7 +73,7 @@ public abstract class BaseMonster : MonoBehaviour, IDamageable, IBlockable
         dbS = GetComponent<DebuffSystem>();
         maxHp = hp;
 
-        var temp = RelicManager.instance.ActivateRelic("Lament");
+        GameObject temp = RelicManager.instance.ActivateRelic("Lament");
         if (temp)
         {
             var lament = temp.GetComponent<Lament>();

@@ -29,7 +29,7 @@ public class ObjectPool : MonoBehaviour
 
     private GameObject CreateNewObject()
     {
-        var newObj = Instantiate(poolingObject);
+        GameObject newObj = Instantiate(poolingObject);
         newObj.gameObject.SetActive(false);
         newObj.transform.SetParent(transform);
         return newObj;
@@ -39,14 +39,14 @@ public class ObjectPool : MonoBehaviour
     {
         if(instance.poolingObjectQueue.Count > 0)
         {
-            var obj = instance.poolingObjectQueue.Dequeue();
+            GameObject obj = instance.poolingObjectQueue.Dequeue();
             obj.transform.SetParent(null);
             obj.gameObject.SetActive(true);
             return obj;
         }
         else
         {
-            var newObj = instance.CreateNewObject();
+            GameObject newObj = instance.CreateNewObject();
             newObj.gameObject.SetActive(true);
             newObj.transform.SetParent(null);
             return newObj;

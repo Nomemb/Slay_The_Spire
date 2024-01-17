@@ -81,7 +81,7 @@ public class CardInfo : MonoBehaviour
     private Sprite ChangeCardBackGroundSprite()
     {
         Sprite img = null;
-        var path = "512/bg_" + cardData.cardType + "_" + cardData.cardColor;
+        string path = "512/bg_" + cardData.cardType + "_" + cardData.cardColor;
         foreach (var sprite in cardBackGroundSprites)
         {
             if (sprite.name != path) continue;
@@ -94,7 +94,7 @@ public class CardInfo : MonoBehaviour
     private Sprite ChangeCardImageSprite()
     {
         Sprite img = null;
-        var path = cardData.cardColor + "/" + cardData.cardType + "/" + cardData.CardImageName;
+        string path = cardData.cardColor + "/" + cardData.cardType + "/" + cardData.CardImageName;
         foreach (var sprite in cardImagesSprites)
         {
             if (sprite.name != path) continue;
@@ -107,7 +107,7 @@ public class CardInfo : MonoBehaviour
     private Sprite ChangeCardFrameSprite()
     {
         Sprite img = null;
-        var path = "512/frame_" + cardData.cardType + "_" + cardData.cardRarity;
+        string path = "512/frame_" + cardData.cardType + "_" + cardData.cardRarity;
         foreach (var sprite in cardFrameSprites)
         {
             if (sprite.name != path) continue;
@@ -119,7 +119,7 @@ public class CardInfo : MonoBehaviour
 
     private string ChangeCardUITypeText()
     {
-        var typeText = cardData.cardType switch
+        string typeText = cardData.cardType switch
         {
             CardType.attack => "공격",
             CardType.skill => "스킬",
@@ -133,7 +133,7 @@ public class CardInfo : MonoBehaviour
     private Sprite ChangeCardBannerSprite()
     {
         Sprite img = null;
-        var path ="512/banner_" + cardData.cardRarity;
+        string path ="512/banner_" + cardData.cardRarity;
         foreach (var sprite in cardBannerSprites)
         {
             if (sprite.name != path) continue;

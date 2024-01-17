@@ -61,7 +61,7 @@ public class DataManager : MonoBehaviour
         saveData.ascensionLevel = GameManager.instance.ascensionLevel;
         if(RelicManager.instance) saveData.hasRelics = RelicManager.instance.hasRelics;
 
-        var json = JsonUtility.ToJson(saveData, true);           // true로 읽기 쉽게 표시
+        var json = JsonUtility.ToJson(saveData, true);
 
         File.WriteAllText(path, json);
     }    

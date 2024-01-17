@@ -10,7 +10,7 @@ public class ViewDeck : MonoBehaviour
     [SerializeField] private GameObject grid;
     public void ViewingDeckCard(string deckName)
     {
-        var deckList = new List<GameObject>();
+        List<GameObject> deckList = new List<GameObject>();
         if (scrollView.activeSelf)
         {
             ResetDeckCard();
@@ -43,8 +43,8 @@ public class ViewDeck : MonoBehaviour
 
         foreach (var card in deckList)
         {
-            var tempCard = Instantiate(card, transform.position, Quaternion.identity);
-            var cpe = tempCard.GetComponent<CardPointEvent>();
+            GameObject tempCard = Instantiate(card, transform.position, Quaternion.identity);
+            CardPointEvent cpe = tempCard.GetComponent<CardPointEvent>();
             cpe.enabled = false;
             tempCard.transform.SetParent(grid.transform);
         }

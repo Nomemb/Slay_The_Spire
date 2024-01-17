@@ -102,7 +102,7 @@ public class StageManager : MonoBehaviour
     }
     private void CreateMonster()
     {
-        var temp = RelicManager.instance.ActivateRelic("Lament");
+        GameObject temp = RelicManager.instance.ActivateRelic("Lament");
         
         foreach (var monster in currentStage.monsterData)
         {

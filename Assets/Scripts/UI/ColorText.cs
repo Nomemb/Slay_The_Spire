@@ -10,7 +10,7 @@ public class ColorText : MonoBehaviour
 
     private void Start()
     {
-        var length = uiText.text.Length;
+        int length = uiText.text.Length;
         uiText.text = uiText.text[0] + "<color=#" + colorCode + ">" + uiText.text[1..(length - 1)] + "</color>" +
                       uiText.text[length - 1];
     }

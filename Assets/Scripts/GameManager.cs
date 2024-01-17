@@ -79,10 +79,10 @@ public class GameManager : MonoBehaviour
 
     public void Shuffle()
     {
-        var count = usedDeck.Count;
+        int count = usedDeck.Count;
         for(var i=0; i<count; i++)
         {
-            var rand = Random.Range(0, usedDeck.Count);
+            int rand = Random.Range(0, usedDeck.Count);
             drawDeck.Add(usedDeck[rand]);
             usedDeck.RemoveAt(rand);
         }

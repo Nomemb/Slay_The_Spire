@@ -23,7 +23,7 @@ public class RedLouse : Louse
             return;
         }
         
-        var nextState = Random.Range(1, 101);
+        int nextState = Random.Range(1, 101);
         currentState = nextState <= 25 ? MonsterState.Buff : MonsterState.Attack;
 
         sameStateCount = prevState == currentState ? sameStateCount+1 : 0;

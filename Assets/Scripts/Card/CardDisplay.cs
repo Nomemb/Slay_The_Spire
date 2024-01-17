@@ -12,7 +12,7 @@ public class CardDisplay : MonoBehaviour
     {
         foreach (var card in GameManager.instance.hand)
         {
-            var tempCard = Instantiate(card, transform.position, Quaternion.identity);
+            GameObject tempCard = Instantiate(card, transform.position, Quaternion.identity);
             tempCard.transform.SetParent(transform);
             cardUI.Add(tempCard);
         }
@@ -20,7 +20,7 @@ public class CardDisplay : MonoBehaviour
 
     public void CardDraw(GameObject newCard)
     {
-        var tempCard = Instantiate(newCard, transform.position, Quaternion.identity);
+        GameObject tempCard = Instantiate(newCard, transform.position, Quaternion.identity);
         tempCard.transform.SetParent(transform);
         cardUI.Add(tempCard);
     }

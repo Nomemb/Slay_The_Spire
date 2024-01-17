@@ -44,9 +44,9 @@ public class CardDataBase : MonoBehaviour
 
     public KeyValuePair<GameObject, int> AddNewCard()
     {
-        var randNum = Random.Range(0, _cardPoolSize);
-        var newCard = ironCladCardPool[randNum];
-        var pair = new KeyValuePair<GameObject, int>(newCard, randNum);
+        int randNum = Random.Range(0, _cardPoolSize);
+        GameObject newCard = ironCladCardPool[randNum];
+        KeyValuePair<GameObject,int> pair = new KeyValuePair<GameObject, int>(newCard, randNum);
         return pair;
     }
 

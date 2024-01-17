@@ -12,7 +12,7 @@ public class AttackDebuff : Attack, IDebuffable
             Debug.Log("타겟 설정되지 않음");
             return;
         }
-        var debuffSystem = target.GetComponent<DebuffSystem>();
+        DebuffSystem debuffSystem = target.GetComponent<DebuffSystem>();
         debuffSystem.AddShareDebuff("Vulnerable", cardData.DebuffDuration);
     }
 

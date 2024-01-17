@@ -23,7 +23,7 @@ public class BuffInfo : MonoBehaviour
     private Sprite ChangeBuffImageSprite()
     {
         Sprite img = null;
-        var path = "48/" + buffName;
+        string path = "48/" + buffName;
         foreach (var sprite in buffImageSprites)
         {
             if (Compare(path, sprite.name, StringComparison.OrdinalIgnoreCase) != 0) continue;

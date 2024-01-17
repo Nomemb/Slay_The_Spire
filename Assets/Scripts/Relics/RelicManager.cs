@@ -29,7 +29,7 @@ public class RelicManager : MonoBehaviour
         {
             if (Compare(relic.name, relicName, StringComparison.OrdinalIgnoreCase) != 0) continue;
             hasRelics.Add(relic);
-            var _relic = Instantiate(relic, transform.position, Quaternion.identity);
+            GameObject _relic = Instantiate(relic, transform.position, Quaternion.identity);
             _relic.transform.SetParent(relicZone.transform);
         }
     }
