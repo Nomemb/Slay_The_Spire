@@ -171,8 +171,8 @@ namespace System
             startEnemyTurn.RemoveAllListeners();
             foreach (var monster in monsterList)
             {
-                var buffSys = monster.GetComponent<BuffSystem>();
-                var debuffSys = monster.GetComponent<DebuffSystem>();
+                BuffSystem buffSys = monster.GetComponent<BuffSystem>();
+                DebuffSystem debuffSys = monster.GetComponent<DebuffSystem>();
                 
                 startEnemyTurn.AddListener(buffSys.UpdateBuffCountByTurnEnd);
                 startEnemyTurn.AddListener(debuffSys.UpdateDebuffCountByTurnEnd);

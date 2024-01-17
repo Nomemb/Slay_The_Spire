@@ -62,7 +62,7 @@ public abstract class Card : MonoBehaviour
 
     protected void AddCardToUsedDeck()
     {
-        var thisIndex = cd.cards.IndexOf(this);
+        int thisIndex = cd.cards.IndexOf(this);
         if (cardData.cardType != CardType.power)
         {
             gm.usedDeck.Add(gm.hand[thisIndex]);

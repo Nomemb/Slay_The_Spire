@@ -102,7 +102,7 @@ public class JawWorm : BaseMonster
     private void ChangeDuplicateState(int aRate, int bRate, JawWormPattern aType, JawWormPattern bType)
     {
         sameStateCount = 0;
-        var nextState = Random.Range(1, aRate + bRate + 1);
+        int nextState = Random.Range(1, aRate + bRate + 1);
         current = nextState <= aRate ? aType : bType;
         currentState = current == JawWormPattern.Bellow ? MonsterState.Buff : MonsterState.Attack;
         ChangeSpriteForState();

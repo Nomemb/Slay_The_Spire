@@ -122,8 +122,8 @@ namespace System
 
         private void DecreaseSharedDebuffDictByTurnEnd()
         {
-            var index = 0;
-            var removeDebuff = new List<string>();
+            int index = 0;
+            List<string> removeDebuff = new List<string>();
             foreach (var debuff in sharedDebuffDict.ToList())
             {
                 var temp = (SharedDebuff)Enum.Parse(typeof(SharedDebuff), debuff.Key);
@@ -139,7 +139,7 @@ namespace System
                  else
                  {
                     sharedDebuffDict[debuff.Key]--;
-                    var info = debuffUI[index].GetComponent<BuffInfo>();
+                    BuffInfo info = debuffUI[index].GetComponent<BuffInfo>();
                     info.UpdateBuffDuration(sharedDebuffDict[debuff.Key]);
                     index++;
                 }
@@ -156,7 +156,7 @@ namespace System
         {
             if (dict.ContainsKey(debuffName))
             {
-                var index = debuffUI.FindIndex(x =>
+                int index = debuffUI.FindIndex(x =>
                     string.Compare(x.name, debuffName, StringComparison.OrdinalIgnoreCase) == 0);
                     
                 Debug.Log(index);

@@ -125,7 +125,7 @@ namespace System
         
         public void AddShareBuff(string buffName, int duration = 0)
         {
-            var buff = (SharedBuff)Enum.Parse(typeof(SharedBuff), buffName);
+            SharedBuff buff = (SharedBuff)Enum.Parse(typeof(SharedBuff), buffName);
             if ((sharedState & buff) != buff)
             {
                 Debug.Log(buff + " 버프 생성");
@@ -140,7 +140,7 @@ namespace System
                 Debug.Log("현재 " + buffName + " 버프 : " + sharedBuffDict[buffName]);
                 foreach (var debuffIcon in buffUI)
                 {
-                    var info = debuffIcon.GetComponent<BuffInfo>();
+                    BuffInfo info = debuffIcon.GetComponent<BuffInfo>();
                     if(info.buffName != buffName) continue;
 
                     info.UpdateBuffDuration(sharedBuffDict[buffName]);
@@ -191,7 +191,7 @@ namespace System
         {
             foreach (var buff in sharedBuffDict)
             {
-                var temp = (SharedBuff)Enum.Parse(typeof(SharedBuff), buff.Key);
+                SharedBuff temp = (SharedBuff)Enum.Parse(typeof(SharedBuff), buff.Key);
                 Debug.Log(temp + " " + (byte)temp);
             }
 
@@ -202,7 +202,7 @@ namespace System
         {
             if (dict.ContainsKey(buffName))
             {
-                var index = buffUI.FindIndex(x =>
+                int index = buffUI.FindIndex(x =>
                     string.Compare(x.name, buffName, StringComparison.OrdinalIgnoreCase) == 0);
                 
                 Destroy(buffUI[index]);

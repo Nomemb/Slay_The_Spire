@@ -1,52 +1,40 @@
 {
     "card": [
         {
-            "instanceID": 33540
+            "instanceID": 30506
         },
         {
-            "instanceID": 33540
+            "instanceID": 30506
         },
         {
-            "instanceID": 33540
+            "instanceID": 30506
         },
         {
-            "instanceID": 33540
+            "instanceID": 30506
         },
         {
-            "instanceID": 33540
+            "instanceID": 30506
         },
         {
-            "instanceID": 33542
+            "instanceID": 30508
         },
         {
-            "instanceID": 33542
+            "instanceID": 30508
         },
         {
-            "instanceID": 33542
+            "instanceID": 30508
         },
         {
-            "instanceID": 33542
+            "instanceID": 30508
         },
         {
-            "instanceID": 33544
-        },
-        {
-            "instanceID": 33546
-        },
-        {
-            "instanceID": 33548
-        },
-        {
-            "instanceID": 33550
-        },
-        {
-            "instanceID": 33540
+            "instanceID": 30510
         }
     ],
     "characterType": 0,
-    "hp": 64,
+    "hp": 88,
     "maxHp": 88,
-    "gold": 136,
+    "gold": 99,
     "addedStrength": 0,
     "ascensionLevel": 0,
     "hasRelics": []

@@ -25,12 +25,12 @@ public class RewardSystem : MonoBehaviour
 
     private void InstantRewardGold()
     {
-        var rewardGold = ObjectPool.GetObject();
-        var amountGold = rewardGold.GetComponentInChildren<Text>();
-        var rewardGoldBtn = rewardGold.GetComponentInChildren<Button>();
+        GameObject rewardGold = ObjectPool.GetObject();
+        Text amountGold = rewardGold.GetComponentInChildren<Text>();
+        Button rewardGoldBtn = rewardGold.GetComponentInChildren<Button>();
 
-        var stageType = sm.currentStage.encounterType;
-        var gold = 0;
+        EncounterType stageType = sm.currentStage.encounterType;
+        int gold = 0;
         switch (stageType)
         {
             case EncounterType.Normal:
@@ -57,9 +57,9 @@ public class RewardSystem : MonoBehaviour
 
     private void InstantRewardCard()
     {
-        var rewardCard = ObjectPool.GetObject();
-        var rewardText = rewardCard.GetComponentInChildren<Text>();
-        var rewardCardBtn = rewardCard.GetComponentInChildren<Button>();
+        GameObject rewardCard = ObjectPool.GetObject();
+        Text rewardText = rewardCard.GetComponentInChildren<Text>();
+        Button rewardCardBtn = rewardCard.GetComponentInChildren<Button>();
 
         rewardText.text = "카드 획득";
         
@@ -81,9 +81,9 @@ public class RewardSystem : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            var newCardPair = GameManager.instance.GetNewCard();
+            KeyValuePair<GameObject, int> newCardPair = GameManager.instance.GetNewCard();
             
-            var newCard = Instantiate(newCardPair.Key, selectNewCards.transform, true);
+            GameObject newCard = Instantiate(newCardPair.Key, selectNewCards.transform, true);
             newCard.GetComponent<CardPointEvent>().enabled = false;
             Button newCardBtn = newCard.AddComponent<Button>() as Button;
             

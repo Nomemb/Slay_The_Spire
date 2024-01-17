@@ -79,7 +79,7 @@ public class CardPointEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         if (isEnlarge)
         {
-            var position = transform.position;
+            Vector3 position = transform.position;
             position = new Vector3(position.x, position.y + onPointerPos.y, position.z);
             transform.position = position;
         }

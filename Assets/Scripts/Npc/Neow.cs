@@ -63,9 +63,9 @@ public class Neow : MonoBehaviour
 
     private void ClearFailedOption()
     {
-        var newButton2 = Instantiate(buttonPrefab, interaction.transform);
-        var btn2 = newButton2.GetComponent<Button>();
-        var text2 = newButton2.GetComponentInChildren<Text>();
+        GameObject newButton2 = Instantiate(buttonPrefab, interaction.transform);
+        Button btn2 = newButton2.GetComponent<Button>();
+        Text text2 = newButton2.GetComponentInChildren<Text>();
 
         if (GameManager.instance == null) return;
         var addMaxHealth = Mathf.RoundToInt(GameManager.instance.playerMaxHp / 10);
@@ -73,9 +73,9 @@ public class Neow : MonoBehaviour
         btn2.onClick.AddListener(()=>AddMaxHealth(addMaxHealth));
         btn2.onClick.AddListener(BattleStart);
         
-        var newButton = Instantiate(buttonPrefab, interaction.transform);
-        var btn = newButton.GetComponent<Button>();
-        var text = newButton.GetComponentInChildren<Text>();
+        GameObject newButton = Instantiate(buttonPrefab, interaction.transform);
+        Button btn = newButton.GetComponent<Button>();
+        Text text = newButton.GetComponentInChildren<Text>();
 
         text.text = "[ 앞으로 3번의 전투 동안 적의 체력이 1이 됩니다 ]";
         btn.onClick.AddListener(()=>rm.GetRelic("Lament"));
